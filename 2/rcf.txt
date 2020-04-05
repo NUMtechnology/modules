@@ -1,0 +1,30 @@
+*class(
+  *id=n;
+  *name=name
+);
+*class(
+  *id=a;
+  *name=address
+);
+*class(
+  *id=p;
+  *name=postcode_zip
+);
+*class(
+  *id=c;
+  *name=country
+);
+*class(
+  *id=t;
+  *name=type
+);
+*class(
+  *id=i;
+  *name=identifier;
+  *superclass=str
+);
+*class(
+  *id=tl;
+  *name=telephone;
+  *superclass=str
+);

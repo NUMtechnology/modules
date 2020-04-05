@@ -1,0 +1,27 @@
+config(
+  root(
+    expect=[n;t;i;a;p;c;tl];
+    required=[n;t]
+  );
+  n(
+    label="Enter the owner's name (company or individual)."
+  );
+  t(
+    label="Enter the type of entity (1 = individual, 2 = organisation, 3 = government / state)."
+  );
+  i(
+    label="Enter an identifier for the entity (e.g. company registration number for an organisation)."
+  );
+  a(
+    label="Enter the address of the owner, not including the postcode / zip or country. Split new lines using the caret (^) character."
+  );
+  p(
+    label="Enter the postcode / zip of the owner."
+  );
+  c(
+    label="Enter the country of the owner."
+  );
+  tl(
+    label="Enter a telephone number for the owner."
+  )  
+);

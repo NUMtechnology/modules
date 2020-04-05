@@ -1,0 +1,554 @@
+_L=en;
+_C=gb;
+
+{
+  !L?
+     _L=en
+};
+{
+  !C?
+     _C=gb
+};
+
+_locale_file = "%L%-%C";
+{
+  locale_file=en-gb/en-us/es-es?
+    _locale_file_uri = "https://modules.num.uk/1/locales/%locale_file%.txt"
+  /?
+    _locale_file_uri = "https://modules.num.uk/1/locales/en-us.txt"
+};
+
+*LOAD=%locale_file_uri;
+
+config(
+  root(
+    expect=[entity];
+    required=[entity]
+  );
+
+  entity(
+    expect=[n;c;h];
+    priority=(n=30);
+    hidden=[h];
+    required=[n;c]
+  );
+
+  link();
+
+  entity_link(
+    expect=[n;q];
+    priority=(n=30);
+    required=[n;q]
+  );
+
+  media(
+    expect=[v;d]
+  );
+
+  i(
+    label=Provide some brief introductory text
+  );
+
+  h(
+    label=Opening hours;
+    expect=[str]
+  );
+
+  tz(
+    label=Enter the time zone city
+  );
+
+  q(
+    label=NUM query
+  );
+
+  l_();
+
+  q_();
+
+  p(
+    expect=[b];
+    priority=(b=20);
+    placeholder_text=%locale.p.default
+  );
+
+  pl(
+    placeholder_text=%locale.p.default
+  );
+
+  o(
+    expect=[s];
+    placeholder_text=%locale.o.default
+  );
+
+  ol(
+    placeholder_text=%locale.o.default
+  );
+
+  dp(
+    expect=[d];
+    placeholder_text=%locale.dp.default
+  );
+
+  dpl(
+    placeholder_text=%locale.dp.default
+  );
+
+  e(
+    expect=[r];
+    placeholder_text=%locale.e.default
+  );
+
+  el(
+    expect[r];
+    placeholder_text=%locale.e.default
+  );
+
+  l(
+    expect=[d];
+    placeholder_text=%locale.l.default
+  );
+
+  ll(
+    placeholder_text=%locale.l.default
+  );
+
+  f(
+    expect=[d];
+    placeholder_text=%locale.f.default
+  );
+
+  fl(
+    placeholder_text=%locale.f.default
+  );
+
+  n(
+    label=Enter the name
+  );
+
+  c(
+    expect=[link];
+    required=[link]
+  );
+
+  b(
+    label=Enter some information about the person;
+    type=textarea
+  );
+
+  s(
+    label=Enter the company slogan or strapline
+  );
+
+  d(
+    label=Enter a description
+  );
+
+  r(
+    label=Enter the role
+  );
+
+  v(
+    label=Enter the value
+  );
+
+  ac(
+    expect=[str]
+  );
+
+  t(
+    expect=[h];
+    hidden=[h];
+    placeholder_text=%locale.t.default;
+    priority=(h=-10);
+    validate(
+      method=schema;
+      prefix="tel://"
+    )
+  );
+
+  sm(
+    expect=[h];
+    hidden=[h];
+    placeholder_text=%locale.sm.default;
+    validate(
+      method=schema;
+      prefix="sms://"
+    )
+  );
+
+  u(
+    placeholder_text=%locale.u.default;
+    validate(
+      method=schema;
+      prefix="https://"
+    )
+  );
+
+  uu(
+    placeholder_text=%locale.u.default;
+    validate(
+      method=schema;
+      prefix="http://"
+    )
+  );
+
+  g(
+    placeholder_text=%locale.g.default;
+    validate(
+      method=schema;
+      prefix="gps://"
+    )
+  );
+
+  a(
+    placeholder_text=%locale.a.default
+  );
+
+  fx(
+    expect=[h];
+    hidden=[h]
+  );
+
+  em(
+    validate(
+      method=email
+    )
+  );
+
+  aa(
+    placeholder_text=%locale.aa.default;
+    validate(
+      method=href;
+      prefix="https://play.google.com/store/apps/details?id="
+    );
+    icon=https://www.logos.uk/num/play.google.com-100.png
+  );
+
+  as(
+    placeholder_text=%locale.as.default;
+    validate(
+      method=href;
+      prefix="https://itunes.apple.com/app/"
+    );
+    icon=https://www.logos.uk/num/apps.apple.com-100.png
+  );
+
+  bt(
+    placeholder_text=%locale.bt.default;
+    validate(
+      method=href;
+      prefix="https://tieba.baidu.com/"
+    );
+    icon=https://www.logos.uk/num/tieba.baidu.com-100.png
+  );
+
+  fb(
+    label=%locale.fb.name;
+    placeholder_text=%locale.fb.default;
+    icon=https://www.logos.uk/num/facebook.com-100.png;
+    validate(
+      method=href;
+      prefix="https://www.facebook.com/"
+    )
+  );
+
+  fk(
+    placeholder_text=%locale.fk.default;
+    validate(
+      method=href;
+      prefix="https://www.flickr.com/"
+    );
+    icon=https://www.logos.uk/num/flickr.com-100.png
+  );
+
+  fs(
+    placeholder_text=%locale.fs.default;
+    validate(
+      method=href;
+      prefix="https://www.foursquare.com/"
+    );
+    icon=https://www.logos.uk/num/foursquare.com-100.png
+  );
+
+  ft(
+    placeholder_text=%locale.ft.default;
+    validate(
+      method=href;
+      prefix="facetime://"
+    );
+    icon=https://www.logos.uk/num/facetime@apple.com-100.png
+  );
+
+  gp(
+    placeholder_text=%locale.gp.default;
+    validate(
+      method=href;
+      prefix="https://plus.google.com/";
+      value_validate_prefix="+"
+    );
+    icon=https://www.logos.uk/num/plus.google.com-100.png
+  );
+
+  im(
+    placeholder_text=%locale.im.default;
+    validate(
+      method=href;
+      prefix="imessage://"
+    );
+    icon=https://www.logos.uk/num/imessage@apple.com-100.png
+  );
+
+  in(
+    placeholder_text=%locale.in.default;
+    validate(
+      method=href;
+      prefix="https://www.instagram.com/"
+    );
+    icon=https://www.logos.uk/num/instagram.com-100.png
+  );
+
+  kk(
+    placeholder_text=%locale.kk.default;
+    validate(
+      method=href;
+      prefix="https://www.kik.com/u/"
+    );
+    icon=https://www.logos.uk/num/kik.com-100.png
+  );
+
+  li(
+    placeholder_text=%locale.li.default;
+    validate(
+      method=href;
+      prefix="https://www.linkedin.com/"
+    );
+    icon=https://www.logos.uk/num/linkedin.com-100.png
+  );
+
+  ln(
+    placeholder_text=%locale.ln.default;
+    validate(
+      method=href;
+      prefix="line://"
+    );
+    icon=https://www.logos.uk/num/line.me-100.png
+  );
+
+  md(
+    placeholder_text=%locale.md.default;
+    validate(
+      method=href;
+      prefix="https://www.medium.com/"
+    );
+    icon=https://www.logos.uk/num/medium.com-100.png
+  );
+
+  pr(
+    placeholder_text=%locale.pr.default;
+    validate(
+      method=href;
+      prefix="https://www.periscope.tv/"
+    );
+    icon=https://www.logos.uk/num/periscope.tv-100.png
+  );
+
+  pi(
+    placeholder_text=%locale.pi.default;
+    validate(
+      method=href;
+      prefix="https://www.pinterest.com/"
+    );
+    icon=https://www.logos.uk/num/pinterest.com-100.png
+  );
+
+  qq(
+    placeholder_text=%locale.qq.default;
+    validate(
+      method=href;
+      prefix="https://www.qq.com/"
+    );
+    icon=https://www.logos.uk/num/qq.com-100.png
+  );
+
+  qz(
+    placeholder_text=%locale.qz.default;
+    validate(
+      method=href;
+      prefix="https://www.qzone.com/"
+    );
+    icon=https://www.logos.uk/num/qzone.com-100.png
+  );
+
+  rd(
+    placeholder_text=%locale.rd.default;
+    validate(
+      method=href;
+      prefix="https://www.reddit.com/r/"
+    );
+    icon=https://www.logos.uk/num/reddit.com-100.png
+  );
+
+  rn(
+    placeholder_text=%locale.rn.default;
+    validate(
+      method=href;
+      prefix="https://www.renren.com/"
+    );
+    icon=https://www.logos.uk/num/renren.com-100.png
+  );
+
+  sc(
+    placeholder_text=%locale.sc.default;
+    validate(
+      method=href;
+      prefix="https://www.soundcloud.com/"
+    );
+    icon=https://www.logos.uk/num/soundcloud.com-100.png
+  );
+
+  sk(
+    placeholder_text=%locale.sk.default;
+    validate(
+      method=href;
+      prefix="skype://"
+    );
+    icon=https://www.logos.uk/num/skype.com-100.png
+  );
+
+  sr(
+    placeholder_text=%locale.sr.default;
+    validate(
+      method=href;
+      prefix="https://www.swarmapp.com/"
+    );
+    icon=https://www.logos.uk/num/swarmapp.com-100.png
+  );
+
+  sn(
+    placeholder_text=%locale.sn.default;
+    validate(
+      method=href;
+      prefix="snapchat://add/"
+    );
+    icon=https://www.logos.uk/num/snapchat.com-100.png
+  );
+
+  sw(
+    placeholder_text=%locale.sw.default;
+    validate(
+      method=href;
+      prefix="https://www.weibo.com/"
+    );
+    icon=https://www.logos.uk/num/weibo.com-100.png
+  );
+
+  tb(
+    placeholder_text=%locale.tb.default;
+    validate(
+      method=href;
+      prefix="https://<val>.tumblr.com/"
+    );
+    icon=https://www.logos.uk/num/tumblr.com-100.png
+  );
+
+  tl(
+    placeholder_text=%locale.tl.default;
+    validate(
+      method=href;
+      prefix="https://www.telegram.me/"
+    );
+    icon=https://www.logos.uk/num/telegram.com-100.png
+  );
+
+  tw(
+    placeholder_text=%locale.tw.default;
+    validate(
+      method=href;
+      prefix="https://www.twitter.com/";
+      value_validate_prefix=@
+    );
+    icon=https://www.logos.uk/num/twitter.com-100.png
+  );
+
+  to(
+    placeholder_text=%locale.to.default;
+    validate(
+      method=href;
+      prefix="https://www.twoo.com/"
+    );
+    icon=https://www.logos.uk/num/twoo.com-100.png
+  );
+
+  vb(
+    placeholder_text=%locale.vb.default;
+    validate(
+      method=href;
+      prefix="https://www.viber.com/"
+    );
+    icon=https://www.logos.uk/num/viber.com-100.png
+  );
+
+  vk(
+    placeholder_text=%locale.vk.default;
+    validate(
+      method=href;
+      prefix="https://www.vk.com/"
+    );
+    icon=https://www.logos.uk/num/vk.com-100.png
+  );
+
+  vm(
+    placeholder_text=%locale.vm.default;
+    validate(
+      method=href;
+      prefix="https://www.vimeo.com/"
+    );
+    icon=https://www.logos.uk/num/vimeo.com-100.png
+  );
+
+  wa(
+    placeholder_text=%locale.wa.default;
+    validate(
+      method=href;
+      prefix="whatsapp://"
+    );
+    icon=https://www.logos.uk/num/whatsapp.com-100.png
+  );
+
+  wc(
+    placeholder_text=%locale.wc.default;
+    validate(
+      method=href;
+      prefix="https://www.wechat.com/"
+    );
+    icon=https://www.logos.uk/num/wechat.com-100.png
+  );
+
+  xi(
+    placeholder_text=%locale.xi.default;
+    validate(
+      method=href;
+      prefix="https://www.xing.com/"
+    );
+    icon=https://www.logos.uk/num/xing.com-100.png
+  );
+
+  yt(
+    placeholder_text=%locale.yt.default;
+    validate(
+      method=href;
+      prefix="https://www.youtube.com/"
+    );
+    icon=https://www.logos.uk/num/youtube.com-100.png
+  );
+
+  yy(
+    placeholder_text=%locale.yy.default;
+    validate(
+      method=href;
+      prefix="https://www.yy.com/"
+    );
+    icon=https://www.logos.uk/num/yy.com-100.png
+  )
+);

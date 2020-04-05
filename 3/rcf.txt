@@ -1,0 +1,60 @@
+*class(
+  *id=root;
+  *name=root;
+  *superclass=map
+);
+*class(
+  *id=i;
+  *name=images;
+  *superclass=arr
+);
+*class(
+  *id=n;
+  *name=name;
+  *superclass=str
+);
+*class(
+  *id=t;
+  *name=type;
+  *superclass=str
+);
+*class(
+  *id=u;
+  *name=url;
+  *superclass=str
+);
+*class(
+  *id=m;
+  *name=mime;
+  *superclass=str
+);
+*class(
+  *id=w;
+  *name=width;
+  *superclass=num
+);
+*class(
+  *id=h;
+  *name=height;
+  *superclass=num
+);
+*class(
+  *id=v;
+  *name=variants;
+  *assign=[[variant*]];
+  *superclass=arr
+);
+*class(
+  *id=variant;
+  *name=variant;
+  *assign=[[u;m;w;h]];
+  *superclass=map
+);
+_U(
+  ## Logo hosting URLs
+  l="https://www.logos.uk/num/"
+);
+_M(
+  ## MIME types
+  p="image/png"
+);

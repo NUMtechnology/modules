@@ -1,0 +1,33 @@
+*class(
+  *id=root;
+  *name=root;
+  *superclass=map
+);
+*class(
+  *id=h;
+  *name=hash;
+  *superclass=str
+);
+*class(
+  *id=p;
+  *name=permissions;
+  *superclass=arr
+);
+*class(
+  *id=custodian;
+  *assign=[
+    [h;p]
+  ];
+  *superclass=map
+);
+*class(
+  *id=c;
+  *name=custodians;
+  *assign=[[custodian*]];
+  *superclass=arr
+);
+*class(
+  *id=b;
+  *name=branches;
+  *superclass=str
+);

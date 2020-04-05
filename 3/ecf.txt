@@ -1,0 +1,35 @@
+config(
+  root(
+    expect=[i];
+    required=[i]
+  );
+  i(
+    expect[n;t;v];
+    required[n;t;v]
+  );
+  v(
+    expect[variant]
+  );
+  variant(
+    expect=[u;m;w;h];
+    required=[u;m;w;h]
+  );
+  n(
+    label=Enter image name
+  );
+  t(
+    label=Enter the type of image
+  );
+  u(
+    label=Enter URL of the image
+  );
+  w(
+    label=Enter the image pixel width
+  );
+  h(
+    label=Enter image pixel height
+  );
+  m(
+    label=Enter image mime type
+  )
+)

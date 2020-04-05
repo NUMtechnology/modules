@@ -1,0 +1,22 @@
+config(
+  root(
+    expect=[c;b];
+    required=[c;b]
+  );
+  b(
+    label=Enter the branch
+  );
+  c(
+    expect=[custodian]
+  );
+  custodian(
+    expect=[h;p];
+    required=[h;p]
+  );
+  h(
+    label=Enter the hash
+  );
+  p(
+    expect=[str]
+  )
+)
