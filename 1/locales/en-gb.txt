@@ -23,9 +23,9 @@ _locale(
     name=Location;
     default=View Location
   );
-  f(
-    name=Folder;
-    default=View Folder
+  gp(
+    name=Group;
+    default=View Group
   );  
   t(
     name=Telephone;
@@ -75,10 +75,6 @@ _locale(
     name=Facebook;
     default=View Facebook profile
   );
-  fk(
-    name=Flickr;
-    default=View Flickr profile
-  );
   fs(
     name=FourSquare;
     default=View FourSquare page
@@ -87,9 +83,9 @@ _locale(
     name=FaceTime;
     default=Call with Facetime
   );
-  gp(
-    name=Google Plus;
-    default=View Google Plus profile
+  gh(
+    name=Github;
+    default=View Github profile
   );
   im(
     name=iMessage;

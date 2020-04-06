@@ -136,6 +136,26 @@ _locale_file = "%L%-%C";
 );
 
 *class(
+  ## GROUP: A group of things (media, entities or both)
+  *id=gp;
+  *name=group;
+  *superclass=entity;
+  object_type=entity;
+  object_display_name=%locale.gp.name;
+  description_default=%locale.gp.default
+);
+
+*class(
+  ## GROUP LINK: A group of things (media, entities or both)
+  *id=gpl;
+  *name=group_link;
+  *superclass=entity_link;
+  object_type=entity_link;
+  object_display_name=%locale.gp.name;
+  description_default=%locale.gp.default
+);
+
+*class(
   ## ORGANISATION: An organisation to make contact with
   *id=o;
   *name=organisation;
@@ -247,26 +267,6 @@ _locale_file = "%L%-%C";
   object_type=entity_link;
   object_display_name=%locale.l.name;
   description_default=%locale.l.default
-);
-
-*class(
-  ## FOLDER: A folder containing more contact information
-  *id=f;
-  *superclass=entity;
-  *name=folder;
-  object_type=entity;
-  object_display_name=%locale.f.name;
-  description_default=%locale.f.default
-);
-
-*class(
-  ## FOLDER: A folder containing more contact information
-  *id=fl;
-  *superclass=entity_link;
-  *name=folder_link;
-  object_type=entity_link;
-  object_display_name=%locale.f.name;
-  description_default=%locale.f.default
 );
 
 ## These keys are used for all root entities
@@ -483,19 +483,6 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## FLICKR
-  *id=fk;
-  *name=flickr;
-  *superclass=media;
-  object_type=media;
-  object_display_name=%locale.fk.name;
-  description_default=%locale.fk.default;
-  prefix="https://www.flickr.com/";
-  media_type=3p;
-  controller=flickr.com
-);
-
-*class(
   ## FOURSQUARE
   *id=fs;
   *name=foursquare;
@@ -522,17 +509,16 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## GOOGLE PLUS
-  *id=gp;
-  *name=google-plus;
+  ## GITHUB
+  *id=gh;
+  *name=github;
   *superclass=media;
   object_type=media;
-  object_display_name=%locale.gp.name;
-  description_default=%locale.gp.default;
-  prefix="https://plus.google.com/";
+  object_display_name=%locale.gh.name;
+  description_default=%locale.gh.default;
+  prefix="https://www.github.com/";
   media_type=3p;
-  value_prefix="+";
-  controller=plus.google.com
+  controller=github.com
 );
 
 *class(

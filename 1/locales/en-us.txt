@@ -6,10 +6,10 @@ _locale(
   gr(
     name=Group;
     default=View Group
-  );  
+  );
   o(
-    name=Organization;
-    default=View Organization
+    name=organization;
+    default=View organization
   );
   dp(
     name=Department;
@@ -23,9 +23,9 @@ _locale(
     name=Location;
     default=View Location
   );
-  f(
-    name=Folder;
-    default=View Folder
+  gp(
+    name=Group;
+    default=View Group
   );  
   t(
     name=Telephone;
@@ -75,10 +75,6 @@ _locale(
     name=Facebook;
     default=View Facebook profile
   );
-  fk(
-    name=Flickr;
-    default=View Flickr profile
-  );
   fs(
     name=FourSquare;
     default=View FourSquare page
@@ -87,9 +83,9 @@ _locale(
     name=FaceTime;
     default=Call with Facetime
   );
-  gp(
-    name=Google Plus;
-    default=View Google Plus profile
+  gh(
+    name=Github;
+    default=View Github profile
   );
   im(
     name=iMessage;
@@ -187,10 +183,6 @@ _locale(
     name=Vimeo;
     default=View Vimeo profile
   );  
-  vm(
-    name=Vimeo;
-    default=View Vimeo profile
-  );  
   wa(
     name=Whatsapp;
     default=Message on Whatsapp
@@ -214,5 +206,5 @@ _locale(
 );
 
 ## These are predefined objects any record can use
-_AC="Accounts";
-_CS="Customer Service";
+_AC=Accounts;
+_CS=Customer Service;
