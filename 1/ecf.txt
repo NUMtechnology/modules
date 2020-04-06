@@ -113,13 +113,13 @@ config(
     placeholder_text=%locale.l.default
   );
 
-  f(
+  gp(
     expect=[d];
-    placeholder_text=%locale.f.default
+    placeholder_text=%locale.gp.default
   );
 
-  fl(
-    placeholder_text=%locale.f.default
+  gpl(
+    placeholder_text=%locale.gp.default
   );
 
   n(
@@ -253,15 +253,6 @@ config(
     )
   );
 
-  fk(
-    placeholder_text=%locale.fk.default;
-    validate(
-      method=href;
-      prefix="https://www.flickr.com/"
-    );
-    icon=https://www.logos.uk/num/flickr.com-100.png
-  );
-
   fs(
     placeholder_text=%locale.fs.default;
     validate(
@@ -280,12 +271,11 @@ config(
     icon=https://www.logos.uk/num/facetime@apple.com-100.png
   );
 
-  gp(
-    placeholder_text=%locale.gp.default;
+  gh(
+    placeholder_text=%locale.gh.default;
     validate(
       method=href;
-      prefix="https://plus.google.com/";
-      value_validate_prefix="+"
+      prefix="https://www.github.com/"
     );
     icon=https://www.logos.uk/num/plus.google.com-100.png
   );
