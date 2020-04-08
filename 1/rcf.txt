@@ -130,7 +130,7 @@ _locale_file = "%L%-%C";
   *id=pl;
   *name=person_link;
   *superclass=entity_link;
-  object_type=entity_link;
+  object_type=entity;
   object_display_name=%locale.p.name;
   description_default=%locale.p.default
 );
@@ -150,7 +150,7 @@ _locale_file = "%L%-%C";
   *id=gpl;
   *name=group_link;
   *superclass=entity_link;
-  object_type=entity_link;
+  object_type=entity;
   object_display_name=%locale.gp.name;
   description_default=%locale.gp.default
 );
@@ -188,7 +188,7 @@ _locale_file = "%L%-%C";
     ## name and slogan
     [n;s];
   ];
-  object_type=entity_link;
+  object_type=entity;
   object_display_name=%locale.o.name;
   description_default=%locale.o.default
 );
@@ -208,7 +208,7 @@ _locale_file = "%L%-%C";
   *id=dpl;
   *superclass=entity_link;
   *name=department_link;
-  object_type=entity_link;
+  object_type=entity;
   object_display_name=%locale.dp.name;
   description_default=%locale.dp.default
 );
@@ -244,7 +244,7 @@ _locale_file = "%L%-%C";
     ## name and role, e.g. John Smith:Managing Director
     [n;r]
   ];
-  object_type=entity_link;
+  object_type=entity;
   object_display_name=%locale.e.name;
   description_default=%locale.e.default
 );
@@ -264,7 +264,7 @@ _locale_file = "%L%-%C";
   *id=ll;
   *superclass=entity_link;
   *name=location_link;
-  object_type=entity_link;
+  object_type=entity;
   object_display_name=%locale.l.name;
   description_default=%locale.l.default
 );

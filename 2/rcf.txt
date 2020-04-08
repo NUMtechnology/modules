@@ -1,22 +1,27 @@
 *class(
   *id=n;
-  *name=name
+  *name=name;
+  *superclass=str
 );
 *class(
   *id=a;
-  *name=address
+  *name=address;
+  *superclass=str
 );
 *class(
   *id=p;
-  *name=postcode_zip
+  *name=postcode_zip;
+  *superclass=str
 );
 *class(
   *id=c;
-  *name=country
+  *name=country;
+  *superclass=str
 );
 *class(
   *id=t;
-  *name=type
+  *name=type;
+  *superclass=num
 );
 *class(
   *id=i;
