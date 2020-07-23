@@ -19,7 +19,7 @@ _locale(
     name=Employee;
     default=View Employee
   );
-  l(
+  lc(
     name=Location;
     default=View Location
   );
@@ -36,11 +36,11 @@ _locale(
     default=Text
   );
   u(
-    name=URL;
+    name="Web URL";
     default=Click
   );
   uu(
-    name=URL;
+    name="Web URL (http - unsecure)";
     default=Click
   );
   g(

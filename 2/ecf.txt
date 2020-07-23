@@ -1,27 +1,49 @@
 config(
   root(
-    expect=[n;t;i;a;p;c;tl];
-    required=[n;t]
+    fields=(entity_type(label=Select individual or organisation;required=true))
   );
-  n(
-    label="Enter the owner's name (company or individual)."
-  );
-  t(
-    label="Enter the type of entity (1 = individual, 2 = organisation, 3 = government / state)."
+  entity_type(
+    label=Is the owner an individual or an organisation?
   );
   i(
-    label="Enter an identifier for the entity (e.g. company registration number for an organisation)."
+    fields(n(label=Enter the individual's name);a();p();co();t();e();c())
+  );
+  o(
+    fields(n(label=Enter the organisation's name);id();a();p();co();t();e();c())
+  );
+  n(
+    label=Enter the name;
+    required=true
+  );
+  id(
+    label="Enter an identifier for the organisation (e.g. company registration number)."
   );
   a(
-    label="Enter the address of the owner, not including the postcode / zip or country. Split new lines using the caret (^) character."
+    label=Enter the address, not including the postcode / zip or country.;
+    type=textarea;
+    required=true    
   );
   p(
-    label="Enter the postcode / zip of the owner."
+    label=Enter the postcode / zip.;
+    required=true    
+  );
+  co(
+    label=Enter the country.;
+    required=true    
+  );
+  t(
+    label=Enter a contact telephone number.
   );
   c(
-    label="Enter the country of the owner."
+    fields=(contact(required=true));
+    label=Add an admin, tech or security contact
   );
-  tl(
-    label="Enter a telephone number for the owner."
-  )  
-);
+  e(
+    label=Enter an email address
+  );
+  contact(
+    required=true;
+    placeholder=Add a contact method or a record link?;
+    fields(n(label=Enter the name of the contact);a();p();co();t();e())
+  )
+)

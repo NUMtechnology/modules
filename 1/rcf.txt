@@ -1,3 +1,6 @@
+## TODO: update this to [test.]modules.numprotocol.com
+_MODULES_LOCATION = modules.num.uk;
+
 {
   !L?
      _L=en
@@ -9,10 +12,10 @@
 
 _locale_file = "%L%-%C";
 {
-  locale_file=en-gb/en-us/es-es?
-    _locale_file_uri = "https://modules.num.uk/1/locales/%locale_file%.txt"
+  locale_file=en-gb/en-us?
+    _locale_file_uri = "https://%MODULES_LOCATION%/1/locales/%locale_file%.txt!"
   /?
-    _locale_file_uri = "https://modules.num.uk/1/locales/en-us.txt"
+    _locale_file_uri = "https://%MODULES_LOCATION%/1/locales/en-us.txt!"
 };
 
 *LOAD=%locale_file_uri;
@@ -35,30 +38,32 @@ _locale_file = "%L%-%C";
   ]
 );
 
+## CONTACT: Contacts records are a list of contact objects (e.g. telephone, links to people, departments)
 *class(
-  *id=link;
-  *name=link;
+  *id=contact;
+  *name=contact;
   *superclass=map
 );
 
-## ENTITY LINK: A link to someone or something to make contact with
+## LINK: A link to someone or something to make contact with
 *class(
-  *id=entity_link;
-  *name=entity_link;
-  object_display_name=Entity;
-  *superclass=link;
+  *id=l;
+  *name=link;
+  object_display_name=Link;
+  *superclass=contact;
   *assign=[
-    [n]
+    [@L];
+    [n;@L];
+    [n;d;@L]
   ]
 );
 
-## MEDIUM: A way to make contact with an entity
-
+## METHOD: A contact method
 *class(
-  *id=media;
-  *name=media;
-  object_display_name=Media;
-  *superclass=link;
+  *id=method;
+  *name=method;
+  object_display_name=Contact Method;
+  *superclass=contact;
   *assign=[
     ## value, e.g. '441270123456'
     [v];
@@ -78,43 +83,27 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## HOURS: The hours that an entity or medium is available
+  ## HOURS: The hours that an entity or method is available
   *id=h;
   *name=hours;
+  *superclass=map
+);
+
+*class(
+  ## TIME_ZONE_LOCATION: The default time zone city for an object
+  *id=tz;
+  *name=time_zone_location;
+  *superclass=str
+);
+
+*class(
+  ## AVAILABLE: The hour availability for an entity or method
+  *id=av;
+  *name=available;
   *superclass=arr
 );
 
-*class(
-  ## TIME_ZONE_CITY: The default time zone city for an object
-  *id=tz;
-  *name=time_zone_city;
-  *superclass=str
-);
-
-## All link level entities (inside contacts array) can be described with these keys:
-*class(
-  ## QUERY: Instructs the NUM client to make another query
-  *id=q;
-  *name=query;
-  *superclass=str
-);
-
-*class(
-  ## LOOKUP REDIRECT: The client should be redirected using a branch record lookup
-  *id=l_;
-  *name=l_;
-  *superclass=str
-);
-
-*class(
-  ## QUERY REDIRECT: The client should be redirected using a branch record query
-  *id=q_;
-  *name=q_;
-  *superclass=str
-);
-
-
-## Entities and entity link classes
+## ENTITIES
 *class(
   ## PERSON: A person to contact
   *id=p;
@@ -126,30 +115,10 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## PERSON LINK: A person to contact
-  *id=pl;
-  *name=person_link;
-  *superclass=entity_link;
-  object_type=entity;
-  object_display_name=%locale.p.name;
-  description_default=%locale.p.default
-);
-
-*class(
-  ## GROUP: A group of things (media, entities or both)
+  ## GROUP: A group of things (methods, entities or both)
   *id=gp;
   *name=group;
   *superclass=entity;
-  object_type=entity;
-  object_display_name=%locale.gp.name;
-  description_default=%locale.gp.default
-);
-
-*class(
-  ## GROUP LINK: A group of things (media, entities or both)
-  *id=gpl;
-  *name=group_link;
-  *superclass=entity_link;
   object_type=entity;
   object_display_name=%locale.gp.name;
   description_default=%locale.gp.default
@@ -169,24 +138,8 @@ _locale_file = "%L%-%C";
     [n;s;c];
     ## object index, name, slogan and contacts 'tesco:%1.s:Every Little Helps:[t=44800 50 5555;fb=%1]'
     [?;n;s;c];
-    ## ojbect index, name, slogan, available hours and contacts 'tesco:%1.s:Every Little Helps:d@6-24:[t=44800 50 5555;fb=%1]'
+    ## object index, name, slogan, available hours and contacts 'tesco:%1.s:Every Little Helps:d@6-24:[t=44800 50 5555;fb=%1]'
     [?;n;s;h;c]
-  ];
-  object_type=entity;
-  object_display_name=%locale.o.name;
-  description_default=%locale.o.default
-);
-
-*class(
-  ## ORGANISATION LINK: A link to an organisation to make contact with
-  *id=ol;
-  *name=organisation_link;
-  *superclass=entity_link;
-  *assign=[
-    ## name, 'Tesco'
-    [n];
-    ## name and slogan
-    [n;s];
   ];
   object_type=entity;
   object_display_name=%locale.o.name;
@@ -198,16 +151,6 @@ _locale_file = "%L%-%C";
   *id=dp;
   *superclass=entity;
   *name=department;
-  object_type=entity;
-  object_display_name=%locale.dp.name;
-  description_default=%locale.dp.default
-);
-
-*class(
-  ## DEPARTMENT LINK: A link to a department within an organisation
-  *id=dpl;
-  *superclass=entity_link;
-  *name=department_link;
   object_type=entity;
   object_display_name=%locale.dp.name;
   description_default=%locale.dp.default
@@ -234,39 +177,13 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## EMPLOYEE LINK: A link to an employee of an organisation to contact
-  *id=el;
-  *superclass=entity_link;
-  *name=employee_link;
-  *assign=[
-    ## name, e.g. John Smith
-    [n];
-    ## name and role, e.g. John Smith:Managing Director
-    [n;r]
-  ];
-  object_type=entity;
-  object_display_name=%locale.e.name;
-  description_default=%locale.e.default
-);
-
-*class(
   ## LOCATION: e.g. a company store
-  *id=l;
+  *id=lc;
   *superclass=entity;
   *name=location;
   object_type=entity;
-  object_display_name=%locale.l.name;
-  description_default=%locale.l.default
-);
-
-*class(
-  ## LOCATION LINK: e.g. a company store
-  *id=ll;
-  *superclass=entity_link;
-  *name=location_link;
-  object_type=entity;
-  object_display_name=%locale.l.name;
-  description_default=%locale.l.default
+  object_display_name=%locale.lc.name;
+  description_default=%locale.lc.default
 );
 
 ## These keys are used for all root entities
@@ -281,8 +198,7 @@ _locale_file = "%L%-%C";
   ## Contacts: A list of contacts
   *id=c;
   *name=contacts;
-  *superclass=arr;
-  *name=contacts
+  *superclass=arr
 );
 
 ## Biography is just for person
@@ -301,9 +217,9 @@ _locale_file = "%L%-%C";
   *superclass=str
 );
 
-## Description is for departments, locations and folders
+## Description
 *class(
-  ## DESCRIPTION: A description of a medium, e.g 'Customer Service'
+  ## DESCRIPTION: A description of a method, e.g 'Customer Service'
   *id=d;
   *name=description;
   *superclass=str
@@ -317,16 +233,16 @@ _locale_file = "%L%-%C";
   *superclass=str
 );
 
-## These are just for media
+## These are just for methods
 *class(
-  ## VALUE: A medium value, e.g. a telephone number
+  ## VALUE: A method value, e.g. a telephone number
   *id=v;
   *name=value;
   *superclass=str
 );
 
 *class(
-  ## ACCESSIBILITY: Provides accessibility information for media
+  ## ACCESSIBILITY: Provides accessibility information for methods
   *id=ac;
   *name=access;
   *superclass=arr
@@ -336,48 +252,48 @@ _locale_file = "%L%-%C";
   ## TELEPHONE: A telephone number in E.164 (https://en.wikipedia.org/wiki/E.164) format
   *id=t;
   *name=telephone;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.t.name;
   description_default=%locale.t.default;
   prefix="tel://";
-  media_type=core
+  method_type=core
 );
 
 *class(
   ## SMS: An SMS number for enquiries in E.164 (https://en.wikipedia.org/wiki/E.164) format
   *id=sm;
   *name=sms;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.sm.name;
   description_default=%locale.sm.default;
   prefix="sms://";
-  media_type=core
+  method_type=core
 );
 
 *class(
   ## URL: The organisation's webpage or a webpage about a particular topic or product.
   *id=u;
   *name=url;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.u.name;
   description_default=%locale.u.default;
   prefix="https://";
-  media_type=core
+  method_type=core
 );
 
 *class(
   ## UNSECURE_URL: The organisation's webpage or a webpage about a particular topic or product.
   *id=uu;
   *name=unsecure_url;
-  *superclass=media;
-  object_type=media;
-  object_display_name=%locale.u.name;
-  description_default=%locale.u.default;
+  *superclass=method;
+  object_type=method;
+  object_display_name=%locale.uu.name;
+  description_default=%locale.uu.default;
   prefix="http://";
-  media_type=core
+  method_type=core
 );
 
 *class(
@@ -386,60 +302,60 @@ _locale_file = "%L%-%C";
   ## can be accessed (e.g. on foot / bicycle / wheelchair / car), for more information see accessibility
   *id=g;
   *name=gps;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.g.name;
   description_default=%locale.g.default;
   prefix=null;
-  media_type=core
+  method_type=core
 );
 
 *class(
   ## ADDRESS: A land / postal address.
   *id=a;
   *name=address;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.a.name;
   description_default=%locale.a.default;
-  prefix=Based on user preferences set in client.;
-  media_type=core
+  prefix="";
+  method_type=core
 );
 
 *class(
   ## FAX: A number for fax transmission in E.164 (https://en.wikipedia.org/wiki/E.164) format
   *id=fx;
   *name=fax;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.fx.name;
   description_default=%locale.fx.default;
-  prefix=Based on user preferences set in client.;
-  media_type=core
+  prefix="fax://";
+  method_type=core
 );
 
 *class(
   ## EMAIL: An email address for enquiries. We do not recommend listing an email in the DNS.
   *id=em;
   *name=email;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.em.name;
   description_default=%locale.em.default;
   prefix="mailto://";
-  media_type=core
+  method_type=core
 );
 
 *class(
   ## ANDROID APP: A download link for an app on the Google Play store.
   *id=aa;
   *name=android-app;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.aa.name;
   description_default=%locale.aa.default;
   prefix="https://play.google.com/store/apps/details?id=";
-  media_type=3p;
+  method_type=3p;
   controller=play.google.com
 );
 
@@ -447,12 +363,12 @@ _locale_file = "%L%-%C";
   ## IOS APP: A download link for an app on the Apple App Store.
   *id=as;
   *name=ios-app;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.as.name;
   description_default=%locale.as.default;
   prefix="https://itunes.apple.com/app/";
-  media_type=3p;
+  method_type=3p;
   controller=apps.apple.com
 );
 
@@ -460,12 +376,12 @@ _locale_file = "%L%-%C";
   ## BAIDU TIEBA
   *id=bt;
   *name=baidu_tieba;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.bt.name;
   description_default=%locale.bt.default;
   prefix="https://tieba.baidu.com/";
-  media_type=3p;
+  method_type=3p;
   controller=tieba.baidu.com
 );
 
@@ -473,12 +389,12 @@ _locale_file = "%L%-%C";
   ## FACEBOOK
   *id=fb;
   *name=facebook;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.fb.name;
   description_default=%locale.fb.default;
   prefix="https://www.facebook.com/";
-  media_type=3p;
+  method_type=3p;
   controller=facebook.com
 );
 
@@ -486,12 +402,12 @@ _locale_file = "%L%-%C";
   ## FOURSQUARE
   *id=fs;
   *name=foursquare;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.fs.name;
   description_default=%locale.fs.default;
   prefix="https://www.foursquare.com/";
-  media_type=3p;
+  method_type=3p;
   controller=foursquare.com
 );
 
@@ -499,12 +415,12 @@ _locale_file = "%L%-%C";
   ## FACETIME
   *id=ft;
   *name=facetime;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.ft.name;
   description_default=%locale.ft.default;
   prefix="facetime://";
-  media_type=3p;
+  method_type=3p;
   controller=facetime@apple.com
 );
 
@@ -512,12 +428,12 @@ _locale_file = "%L%-%C";
   ## GITHUB
   *id=gh;
   *name=github;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.gh.name;
   description_default=%locale.gh.default;
   prefix="https://www.github.com/";
-  media_type=3p;
+  method_type=3p;
   controller=github.com
 );
 
@@ -525,12 +441,12 @@ _locale_file = "%L%-%C";
   ## IMESSAGE
   *id=im;
   *name=imessage;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.im.name;
   description_default=%locale.im.default;
   prefix="imessage://";
-  media_type=3p;
+  method_type=3p;
   controller=imessage@apple.com
 );
 
@@ -538,12 +454,12 @@ _locale_file = "%L%-%C";
   ## INSTAGRAM
   *id=in;
   *name=instagram;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.in.name;
   description_default=%locale.in.default;
   prefix="https://www.instagram.com/";
-  media_type=3p;
+  method_type=3p;
   controller=instagram.com
 );
 
@@ -551,12 +467,12 @@ _locale_file = "%L%-%C";
   ## KIK
   *id=kk;
   *name=kik;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.kk.name;
   description_default=%locale.kk.default;
   prefix="https://www.kik.com/u/";
-  media_type=3p;
+  method_type=3p;
   controller=kik.com
 );
 
@@ -564,12 +480,12 @@ _locale_file = "%L%-%C";
   ## LINKEDIN
   *id=li;
   *name=linkedin;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.li.name;
   description_default=%locale.li.default;
   prefix="https://www.linkedin.com/";
-  media_type=3p;
+  method_type=3p;
   controller=linkedin.com
 );
 
@@ -577,12 +493,12 @@ _locale_file = "%L%-%C";
   ## LINE
   *id=ln;
   *name=line;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.ln.name;
   description_default=%locale.ln.default;
   prefix="line://";
-  media_type=3p;
+  method_type=3p;
   controller=line.me
 );
 
@@ -590,12 +506,12 @@ _locale_file = "%L%-%C";
   ## MEDIUM
   *id=md;
   *name=medium;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.md.name;
   description_default=%locale.md.default;
   prefix="https://www.medium.com/";
-  media_type=3p;
+  method_type=3p;
   controller=medium.com
 );
 
@@ -603,12 +519,12 @@ _locale_file = "%L%-%C";
   ## PERISCOPE
   *id=pr;
   *name=periscope;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.pr.name;
   description_default=%locale.pr.default;
   prefix="https://www.periscope.tv/";
-  media_type=3p;
+  method_type=3p;
   controller=periscope.tv
 );
 
@@ -616,12 +532,12 @@ _locale_file = "%L%-%C";
   ## PINTEREST
   *id=pi;
   *name=pinterest;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.pi.name;
   description_default=%locale.pi.default;
   prefix="https://www.pinterest.com/";
-  media_type=3p;
+  method_type=3p;
   controller=pinterest.com
 );
 
@@ -629,12 +545,12 @@ _locale_file = "%L%-%C";
   ## QQ
   *id=qq;
   *name=qq;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.qq.name;
   description_default=%locale.qq.default;
   prefix="https://www.qq.com/";
-  media_type=3p;
+  method_type=3p;
   controller=qq.com
 );
 
@@ -642,12 +558,12 @@ _locale_file = "%L%-%C";
   ## QZONE
   *id=qz;
   *name=qzone;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.qz.name;
   description_default=%locale.qz.default;
   prefix="https://www.qzone.com/";
-  media_type=3p;
+  method_type=3p;
   controller=qzone.com
 );
 
@@ -655,12 +571,12 @@ _locale_file = "%L%-%C";
   ## REDDIT
   *id=rd;
   *name=reddit;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.rd.name;
   description_default=%locale.rd.default;
   prefix="https://www.reddit.com/r/";
-  media_type=3p;
+  method_type=3p;
   controller=reddit.com
 );
 
@@ -668,12 +584,12 @@ _locale_file = "%L%-%C";
   ## RENREN
   *id=rn;
   *name=renren;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.rn.name;
   description_default=%locale.rn.default;
   prefix="https://www.renren.com/";
-  media_type=3p;
+  method_type=3p;
   controller=renren.com
 );
 
@@ -681,12 +597,12 @@ _locale_file = "%L%-%C";
   ## SOUNDCLOUD
   *id=sc;
   *name=soundcloud;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.sc.name;
   description_default=%locale.sc.default;
   prefix="https://www.soundcloud.com/";
-  media_type=3p;
+  method_type=3p;
   controller=soundcloud.com
 );
 
@@ -694,12 +610,12 @@ _locale_file = "%L%-%C";
   ## SKYPE
   *id=sk;
   *name=skype;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.sk.name;
   description_default=%locale.sk.default;
   prefix="skype://";
-  media_type=3p;
+  method_type=3p;
   controller=skype.com
 );
 
@@ -707,12 +623,12 @@ _locale_file = "%L%-%C";
   ## SWARM
   *id=sr;
   *name=swarm;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.sr.name;
   description_default=%locale.sr.default;
   prefix="https://www.swarmapp.com/";
-  media_type=3p;
+  method_type=3p;
   controller=swarmapp.com
 );
 
@@ -720,12 +636,12 @@ _locale_file = "%L%-%C";
   ## SNAPCHAT
   *id=sn;
   *name=snapchat;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.sn.name;
   description_default=%locale.sn.default;
   prefix="snapchat://add/";
-  media_type=3p;
+  method_type=3p;
   controller=snapchat.com
 );
 
@@ -733,12 +649,12 @@ _locale_file = "%L%-%C";
   ## SINA WEIBO
   *id=sw;
   *name=sina-weibo;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.sw.name;
   description_default=%locale.sw.default;
   prefix="https://www.weibo.com/";
-  media_type=3p;
+  method_type=3p;
   controller=weibo.com
 );
 
@@ -746,12 +662,12 @@ _locale_file = "%L%-%C";
   ## TUMBLR
   *id=tb;
   *name=tumblr;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.tb.name;
   description_default=%locale.tb.default;
   prefix="https://<val>.tumblr.com/";
-  media_type=3p;
+  method_type=3p;
   controller=tumblr.com
 );
 
@@ -759,12 +675,12 @@ _locale_file = "%L%-%C";
   ## TELEGRAM
   *id=tl;
   *name=telegram;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.tl.name;
   description_default=%locale.tl.default;
   prefix="https://www.telegram.me/";
-  media_type=3p;
+  method_type=3p;
   controller=telegram.com
 );
 
@@ -772,12 +688,12 @@ _locale_file = "%L%-%C";
   ## TWITTER
   *id=tw;
   *name=twitter;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.tw.name;
   description_default=%locale.tw.default;
   prefix="https://www.twitter.com/";
-  media_type=3p;
+  method_type=3p;
   value_prefix=@;
   controller=twitter.com
 );
@@ -786,12 +702,12 @@ _locale_file = "%L%-%C";
   ## TWOO
   *id=to;
   *name=twoo;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.to.name;
   description_default=%locale.to.default;
   prefix="https://www.twoo.com/";
-  media_type=3p;
+  method_type=3p;
   controller=twoo.com
 );
 
@@ -799,12 +715,12 @@ _locale_file = "%L%-%C";
   ## VIBER
   *id=vb;
   *name=viber;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.vb.name;
   description_default=%locale.vb.default;
   prefix="https://www.viber.com/";
-  media_type=3p;
+  method_type=3p;
   controller=viber.com
 );
 
@@ -812,12 +728,12 @@ _locale_file = "%L%-%C";
   ## VKONTAKTE
   *id=vk;
   *name=vkontakte;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.vk.name;
   description_default=%locale.vk.default;
   prefix="https://www.vk.com/";
-  media_type=3p;
+  method_type=3p;
   controller=vk.com
 );
 
@@ -825,12 +741,12 @@ _locale_file = "%L%-%C";
   ## VIMEO
   *id=vm;
   *name=vimeo;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.vm.name;
   description_default=%locale.vm.default;
   prefix="https://www.vimeo.com/";
-  media_type=3p;
+  method_type=3p;
   controller=vimeo.com
 );
 
@@ -838,12 +754,12 @@ _locale_file = "%L%-%C";
   ## WHATSAPP
   *id=wa;
   *name=whatsapp;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.wa.name;
   description_default=%locale.wa.default;
   prefix="whatsapp://";
-  media_type=3p;
+  method_type=3p;
   controller=whatsapp.com
 );
 
@@ -851,12 +767,12 @@ _locale_file = "%L%-%C";
   ## WECHAT
   *id=wc;
   *name=wechat;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.wc.name;
   description_default=%locale.wc.default;
   prefix="https://www.wechat.com/";
-  media_type=3p;
+  method_type=3p;
   controller=wechat.com
 );
 
@@ -864,12 +780,12 @@ _locale_file = "%L%-%C";
   ## XING
   *id=xi;
   *name=xing;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.xi.name;
   description_default=%locale.xi.default;
   prefix="https://www.xing.com/";
-  media_type=3p;
+  method_type=3p;
   controller=xing.com
 );
 
@@ -877,12 +793,12 @@ _locale_file = "%L%-%C";
   ## YOUTUBE
   *id=yt;
   *name=youtube;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.yt.name;
   description_default=%locale.yt.default;
   prefix="https://www.youtube.com/";
-  media_type=3p;
+  method_type=3p;
   controller=youtube.com
 );
 
@@ -890,16 +806,16 @@ _locale_file = "%L%-%C";
   ## YY
   *id=yy;
   *name=yy;
-  *superclass=media;
-  object_type=media;
+  *superclass=method;
+  object_type=method;
   object_display_name=%locale.yy.name;
   description_default=%locale.yy.default;
   prefix="https://www.yy.com/";
-  media_type=3p;
+  method_type=3p;
   controller=yy.com
 );
 
-## DEFINE METHODS
+## DEFINE TRANSFORMATION METHODS
 
 *method(
   *id=rs;
@@ -955,12 +871,5 @@ _locale_file = "%L%-%C";
   *transform=replace<_,->
 );
 
-_T(
-  ## Claim domain text
-  c=Claim this NUM record
-);
-
-_U(
-  ## claim domain URL
-  c="www.numserver.com/claim/"
-);
+_CLAIM_TEXT = Claim this NUM record;
+_CLAIM_LINK = www.numserver.com/claim/;

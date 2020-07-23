@@ -1,4 +1,26 @@
 *class(
+  *id=root;
+  *name=root;
+  *superclass=map
+);
+*class(
+  *id=entity_type;
+  *name=entity;
+  *superclass=map
+);
+*class(
+  *id=i;
+  *name=individual;
+  *superclass=entity_type;
+  object_display_name=Individual
+);
+*class(
+  *id=o;
+  *name=organisation;
+  *superclass=entity_type;
+  object_display_name=Organisation
+);
+*class(
   *id=n;
   *name=name;
   *superclass=str
@@ -14,22 +36,51 @@
   *superclass=str
 );
 *class(
-  *id=c;
+  *id=co;
   *name=country;
   *superclass=str
 );
 *class(
-  *id=t;
-  *name=type;
-  *superclass=num
-);
-*class(
-  *id=i;
+  *id=id;
   *name=identifier;
   *superclass=str
 );
 *class(
-  *id=tl;
+  *id=t;
   *name=telephone;
   *superclass=str
+);
+*class(
+  *id=e;
+  *name=email;
+  *superclass=str
+);
+*class(
+  *id=c;
+  *name=contacts;
+  *superclass=arr;
+  object_display_name=Contacts
+);
+*class(
+  *id=contact;
+  *name=contact;
+  *superclass=map
+);
+*class(
+  *id=AD;
+  *name=admin;
+  *superclass=contact;
+  object_display_name=Admin Contact
+);
+*class(
+  *id=TC;
+  *name=technical;
+  *superclass=contact;
+  object_display_name=Technical Contact
+);
+*class(
+  *id=SC;
+  *name=Security;
+  *superclass=contact;
+  object_display_name=Security Contact
 );

@@ -1,48 +1,28 @@
-_L=en;
-_C=gb;
-
-{
-  !L?
-     _L=en
-};
-{
-  !C?
-     _C=gb
-};
-
-_locale_file = "%L%-%C";
-{
-  locale_file=en-gb/en-us/es-es?
-    _locale_file_uri = "https://modules.num.uk/1/locales/%locale_file%.txt"
-  /?
-    _locale_file_uri = "https://modules.num.uk/1/locales/en-us.txt"
-};
-
-*LOAD=%locale_file_uri;
-
 config(
   root(
-    expect=[entity];
-    required=[entity]
+    fields=(entity(required=true))
   );
 
   entity(
-    expect=[n;c;h];
-    priority=(n=30);
-    hidden=[h];
-    required=[n;c]
+    fields=(n(priority=30;required=true);c(required=true);h());
+    label=What does this NUM Record describe?
   );
 
-  link();
-
-  entity_link(
-    expect=[n;q];
-    priority=(n=30);
-    required=[n;q]
+  contact(
+    placeholder=Add a contact method or a record link?
   );
 
-  media(
-    expect=[v;d]
+  l(
+    label=A name and description helps to show what type of record the link leads to;
+    fields=(n(label=Enter a name for the link;placeholder=e.g. John Smith or Sales Department;priority=20);d(label=Enter a description for the link;placeholder=e.g. CTO;priority=10);@L(required=true;placeholder=`num://numexample.com/record`))
+  );
+
+  @L(
+    label=Select record or enter a custom NUM URI
+  );
+
+  method(
+    fields=(v(prefix=<parent>.prefix);d(placeholder=<parent>.description_default))
   );
 
   i(
@@ -50,76 +30,40 @@ config(
   );
 
   h(
-    label=Opening hours;
-    expect=[str]
+    fields(tz();av());
+    label=Opening hours
   );
 
   tz(
-    label=Enter the time zone city
+    label=Select the time zone location
   );
 
-  q(
-    label=NUM query
+  av(
+    component=hours
   );
-
-  l_();
-
-  q_();
 
   p(
-    expect=[b];
-    priority=(b=20);
-    placeholder_text=%locale.p.default
-  );
-
-  pl(
-    placeholder_text=%locale.p.default
+    fields=(n(label=Enter the person's name);b(priority=20))
   );
 
   o(
-    expect=[s];
-    placeholder_text=%locale.o.default
-  );
-
-  ol(
-    placeholder_text=%locale.o.default
+    fields=(n(label=Enter the name of the organisation);s())
   );
 
   dp(
-    expect=[d];
-    placeholder_text=%locale.dp.default
-  );
-
-  dpl(
-    placeholder_text=%locale.dp.default
+    fields=(n(label=Enter the name of the department, e.g. Customer Service))
   );
 
   e(
-    expect=[r];
-    placeholder_text=%locale.e.default
+    fields=(n(label=Enter the employee's name);r(label=Enter the employee's role, e.g. CTO))
   );
 
-  el(
-    expect[r];
-    placeholder_text=%locale.e.default
-  );
-
-  l(
-    expect=[d];
-    placeholder_text=%locale.l.default
-  );
-
-  ll(
-    placeholder_text=%locale.l.default
+  lc(
+    fields=(d(label=Enter a description for the location, e.g. London Bridge Office))
   );
 
   gp(
-    expect=[d];
-    placeholder_text=%locale.gp.default
-  );
-
-  gpl(
-    placeholder_text=%locale.gp.default
+    fields=(d(label=Enter a description for the group))
   );
 
   n(
@@ -127,8 +71,8 @@ config(
   );
 
   c(
-    expect=[link];
-    required=[link]
+    fields=(contact(required=true));
+    label=Add contact methods or link to other NUM records
   );
 
   b(
@@ -137,7 +81,7 @@ config(
   );
 
   s(
-    label=Enter the company slogan or strapline
+    label=Enter the organisation's slogan or strapline
   );
 
   d(
@@ -153,391 +97,313 @@ config(
   );
 
   ac(
-    expect=[str]
+    fields=(str())
   );
 
   t(
-    expect=[h];
-    hidden=[h];
-    placeholder_text=%locale.t.default;
-    priority=(h=-10);
+    fields(
+      d(label=Enter an optional desciption for the number, e.g. 'Customer Service');
+      v(label=Enter the telephone number in E.164 format, e.g. +441234567890;priority=20)
+    );
     validate(
-      method=schema;
-      prefix="tel://"
+      method=schema
     )
   );
 
   sm(
-    expect=[h];
-    hidden=[h];
-    placeholder_text=%locale.sm.default;
+    fields(v(label=Enter the telephone number in E.164 format, e.g. +441234567890));
     validate(
-      method=schema;
-      prefix="sms://"
+      method=schema
     )
   );
 
   u(
-    placeholder_text=%locale.u.default;
+    fields(v(label=Enter the web URL without https, e.g. example.com/page));
     validate(
-      method=schema;
-      prefix="https://"
+      method=schema
     )
   );
 
   uu(
-    placeholder_text=%locale.u.default;
+    fields(v(label=Enter the web URL without http, e.g. example.com/page));
     validate(
-      method=schema;
-      prefix="http://"
+      method=schema
     )
   );
 
   g(
-    placeholder_text=%locale.g.default;
+    fields(v(label=Enter the GPS coordinates in the WGs84 format, e.g. 53.473997,-2.237334));
     validate(
-      method=schema;
-      prefix="gps://"
+      method=schema
     )
   );
 
   a(
-    placeholder_text=%locale.a.default
+    fields(v(label=Enter the address))
+    ## TODO this needs to be multiline input with ^ symbolising carriage returns
   );
 
-  fx(
-    expect=[h];
-    hidden=[h]
-  );
+  fx(fields(v(label=Enter the fax number in E.164 format, e.g. +441234567890)));
 
   em(
+    fields(v(label=Enter the email address));
     validate(
       method=email
     )
   );
 
   aa(
-    placeholder_text=%locale.aa.default;
+    fields(v(label=Enter the Google Play Store URL));
     validate(
-      method=href;
-      prefix="https://play.google.com/store/apps/details?id="
+      method=href
     );
     icon=https://www.logos.uk/num/play.google.com-100.png
   );
 
   as(
-    placeholder_text=%locale.as.default;
+    fields(v(label=Enter the Apple App Store URL));
     validate(
-      method=href;
-      prefix="https://itunes.apple.com/app/"
+      method=href
     );
     icon=https://www.logos.uk/num/apps.apple.com-100.png
   );
 
   bt(
-    placeholder_text=%locale.bt.default;
     validate(
-      method=href;
-      prefix="https://tieba.baidu.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/tieba.baidu.com-100.png
   );
 
   fb(
-    label=%locale.fb.name;
-    placeholder_text=%locale.fb.default;
-    icon=https://www.logos.uk/num/facebook.com-100.png;
-    validate(
-      method=href;
-      prefix="https://www.facebook.com/"
-    )
+    fields(v(label=Enter the Facebook page name));
+    icon=https://www.logos.uk/num/facebook.com-100.png
   );
 
   fs(
-    placeholder_text=%locale.fs.default;
     validate(
-      method=href;
-      prefix="https://www.foursquare.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/foursquare.com-100.png
   );
 
   ft(
-    placeholder_text=%locale.ft.default;
     validate(
-      method=href;
-      prefix="facetime://"
+      method=href
     );
     icon=https://www.logos.uk/num/facetime@apple.com-100.png
   );
 
   gh(
-    placeholder_text=%locale.gh.default;
     validate(
-      method=href;
-      prefix="https://www.github.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/plus.google.com-100.png
   );
 
   im(
-    placeholder_text=%locale.im.default;
     validate(
-      method=href;
-      prefix="imessage://"
+      method=href
     );
     icon=https://www.logos.uk/num/imessage@apple.com-100.png
   );
 
   in(
-    placeholder_text=%locale.in.default;
+    fields(v(label=Enter the Instagram profile name));
     validate(
-      method=href;
-      prefix="https://www.instagram.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/instagram.com-100.png
   );
 
   kk(
-    placeholder_text=%locale.kk.default;
     validate(
-      method=href;
-      prefix="https://www.kik.com/u/"
+      method=href
     );
     icon=https://www.logos.uk/num/kik.com-100.png
   );
 
   li(
-    placeholder_text=%locale.li.default;
+    fields(v(label=Enter the LinkedIn page));
     validate(
-      method=href;
-      prefix="https://www.linkedin.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/linkedin.com-100.png
   );
 
   ln(
-    placeholder_text=%locale.ln.default;
     validate(
-      method=href;
-      prefix="line://"
+      method=href
     );
     icon=https://www.logos.uk/num/line.me-100.png
   );
 
   md(
-    placeholder_text=%locale.md.default;
     validate(
-      method=href;
-      prefix="https://www.medium.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/medium.com-100.png
   );
 
   pr(
-    placeholder_text=%locale.pr.default;
     validate(
-      method=href;
-      prefix="https://www.periscope.tv/"
+      method=href
     );
     icon=https://www.logos.uk/num/periscope.tv-100.png
   );
 
   pi(
-    placeholder_text=%locale.pi.default;
     validate(
-      method=href;
-      prefix="https://www.pinterest.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/pinterest.com-100.png
   );
 
   qq(
-    placeholder_text=%locale.qq.default;
     validate(
-      method=href;
-      prefix="https://www.qq.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/qq.com-100.png
   );
 
   qz(
-    placeholder_text=%locale.qz.default;
     validate(
-      method=href;
-      prefix="https://www.qzone.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/qzone.com-100.png
   );
 
   rd(
-    placeholder_text=%locale.rd.default;
     validate(
-      method=href;
-      prefix="https://www.reddit.com/r/"
+      method=href
     );
     icon=https://www.logos.uk/num/reddit.com-100.png
   );
 
   rn(
-    placeholder_text=%locale.rn.default;
     validate(
-      method=href;
-      prefix="https://www.renren.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/renren.com-100.png
   );
 
   sc(
-    placeholder_text=%locale.sc.default;
     validate(
-      method=href;
-      prefix="https://www.soundcloud.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/soundcloud.com-100.png
   );
 
   sk(
-    placeholder_text=%locale.sk.default;
     validate(
-      method=href;
-      prefix="skype://"
+      method=href
     );
     icon=https://www.logos.uk/num/skype.com-100.png
   );
 
   sr(
-    placeholder_text=%locale.sr.default;
     validate(
-      method=href;
-      prefix="https://www.swarmapp.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/swarmapp.com-100.png
   );
 
   sn(
-    placeholder_text=%locale.sn.default;
     validate(
-      method=href;
-      prefix="snapchat://add/"
+      method=href
     );
     icon=https://www.logos.uk/num/snapchat.com-100.png
   );
 
   sw(
-    placeholder_text=%locale.sw.default;
     validate(
-      method=href;
-      prefix="https://www.weibo.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/weibo.com-100.png
   );
 
   tb(
-    placeholder_text=%locale.tb.default;
     validate(
-      method=href;
-      prefix="https://<val>.tumblr.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/tumblr.com-100.png
   );
 
   tl(
-    placeholder_text=%locale.tl.default;
     validate(
-      method=href;
-      prefix="https://www.telegram.me/"
+      method=href
     );
     icon=https://www.logos.uk/num/telegram.com-100.png
   );
 
   tw(
-    placeholder_text=%locale.tw.default;
+    fields(v(label=Enter the Twitter handle));
     validate(
       method=href;
-      prefix="https://www.twitter.com/";
       value_validate_prefix=@
     );
     icon=https://www.logos.uk/num/twitter.com-100.png
   );
 
   to(
-    placeholder_text=%locale.to.default;
     validate(
-      method=href;
-      prefix="https://www.twoo.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/twoo.com-100.png
   );
 
   vb(
-    placeholder_text=%locale.vb.default;
     validate(
-      method=href;
-      prefix="https://www.viber.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/viber.com-100.png
   );
 
   vk(
-    placeholder_text=%locale.vk.default;
     validate(
-      method=href;
-      prefix="https://www.vk.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/vk.com-100.png
   );
 
   vm(
-    placeholder_text=%locale.vm.default;
     validate(
-      method=href;
-      prefix="https://www.vimeo.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/vimeo.com-100.png
   );
 
   wa(
-    placeholder_text=%locale.wa.default;
     validate(
-      method=href;
-      prefix="whatsapp://"
+      method=href
     );
     icon=https://www.logos.uk/num/whatsapp.com-100.png
   );
 
   wc(
-    placeholder_text=%locale.wc.default;
     validate(
-      method=href;
-      prefix="https://www.wechat.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/wechat.com-100.png
   );
 
   xi(
-    placeholder_text=%locale.xi.default;
     validate(
-      method=href;
-      prefix="https://www.xing.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/xing.com-100.png
   );
 
   yt(
-    placeholder_text=%locale.yt.default;
     validate(
-      method=href;
-      prefix="https://www.youtube.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/youtube.com-100.png
   );
 
   yy(
-    placeholder_text=%locale.yy.default;
     validate(
-      method=href;
-      prefix="https://www.yy.com/"
+      method=href
     );
     icon=https://www.logos.uk/num/yy.com-100.png
   )
