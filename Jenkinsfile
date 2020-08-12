@@ -5,12 +5,12 @@ podTemplate(
     imagePullSecrets: ['dockerhub-imagepull'],
     containers: [
         containerTemplate(
-            name: 'docker',
-            image: 'docker:latest',
+            name: 'build-tools',
+            image: 'docker.io/numtechnology/build-tools:gradle-5.1.1-jdk8-docker',
             ttyEnabled: true,
             command: 'cat',
-            resourceRequestCpu: '20m',
-            resourceLimitCpu: '20m',
+            resourceRequestCpu: '50m',
+            resourceLimitCpu: '50m',
             resourceRequestMemory: '256Mi',
             resourceLimitMemory: '256Mi'),
         ],
@@ -25,14 +25,21 @@ podTemplate(
         SHORT_COMMIT = "${SCM_REPO.GIT_COMMIT[0..6]}"
 
         try {
+
+            stage('Test MODL') {
+                container('build-tools') {
+                    sh "./run-tests.sh"
+                }
+            }
+
             stage('Build Container API') {
-                container('docker') {
+                container('build-tools') {
                     sh "docker build --network=host -t modules-files-${SHORT_COMMIT} ."
                 }
             }
 
             stage('Tag Latest API') {
-                container('docker') {
+                container('build-tools') {
                    sh "docker tag modules-files-${SHORT_COMMIT} numtechnology/modules-files:${env.BRANCH_NAME}-${SHORT_COMMIT}"
                    if(env.BRANCH_NAME == 'master') {
                        sh "docker tag modules-files-${SHORT_COMMIT} numtechnology/modules-files:latest"
@@ -41,7 +48,7 @@ podTemplate(
             }
 
             stage('Push Container API') {
-                container('docker') {
+                container('build-tools') {
                     script {
                         withDockerRegistry([credentialsId: "docker", url: ""]) {
                             sh "docker push numtechnology/modules-files:${env.BRANCH_NAME}-${SHORT_COMMIT}"
