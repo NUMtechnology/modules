@@ -1,7 +1,7 @@
 #!/bin/sh
 #script that downloads an interpreter and checks all the MODL files
 
-VERSION="0.1.11"
+VERSION="0.1.12"
 
 #download interpreter
 curl https://repo1.maven.org/maven2/uk/modl/java-interpreter/${VERSION}/java-interpreter-${VERSION}-exe.jar > interpreter.jar

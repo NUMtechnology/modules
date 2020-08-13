@@ -1,5 +1,5 @@
 ## TODO: update this to [test.]modules.numprotocol.com
-_MODULES_LOCATION = modules.num.uk;
+_MODULES_LOCATION = test.modules.num.uk;
 
 {
   !L?
