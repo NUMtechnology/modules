@@ -1,0 +1,10 @@
+creation_rules:
+    - path_regex: \.test\.yaml$
+      kms: 'arn:aws:kms:eu-west-1:061734376051:key/27d134e7-c328-4610-a61c-de10dc54000d'
+    - path_regex: \.staging\.yaml$
+      kms: 'arn:aws:kms:eu-west-1:061734376051:key/56357ce1-4510-468d-9770-ec57aa5aacad'
+    - path_regex: \.prod\.yaml$
+      key_groups:
+      - kms:
+        - arn: 'arn:aws:kms:eu-west-1:732328896604:key/cccf83d3-7429-4a0a-ba25-b3fe57bc5348'
+        - arn: 'arn:aws:kms:eu-west-2:732328896604:key/e0a76653-b21c-45e2-af58-6cd806393cfb'

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: modules-files-map
+  namespace: test
+data:
+  MODULE_S3_BUCKET: test.modules.numprotocol.com
+  AWS_ACCESS_KEY_ID: AKIAQ4X5H2JZ73TZZ6WS
