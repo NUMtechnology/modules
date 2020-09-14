@@ -1,24 +1,24 @@
 config(
   root(
-    expect=[i];
-    required=[i]
+    name=root;
+    superclass=map;
+    fields=(i())
   );
   i(
-    expect[n;t;v];
-    required[n;t;v]
+    fields(n(required=true);t(required=true);v(required=true))
   );
   v(
-    expect[variant]
+    fields(variant())
   );
   variant(
-    expect=[u;m;w;h];
-    required=[u;m;w;h]
+    fields(u(required=true);m(required=true);w(required=true);h(required=true))
   );
   n(
     label=Enter image name
   );
   t(
-    label=Enter the type of image
+    label=Enter the type of image;
+    options[logo;headshot]
   );
   u(
     label=Enter URL of the image
@@ -30,6 +30,7 @@ config(
     label=Enter image pixel height
   );
   m(
-    label=Enter image mime type
+    label=Enter image mime type;
+    options[image/gif;image/jpg;image/svg+xml]
   )
 )

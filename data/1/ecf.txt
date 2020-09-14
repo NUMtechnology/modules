@@ -1,10 +1,12 @@
 config(
   root(
+    name=root;
+    superclass=map;
     fields=(entity(required=true))
   );
 
   entity(
-    fields=(n(priority=30;required=true);c(required=true);h());
+    fields=(n(priority=30;required=true);c(required=true));
     label=What does this NUM Record describe?
   );
 
@@ -35,11 +37,13 @@ config(
   );
 
   tz(
+    component=timezone;
     label=Select the time zone location
   );
 
   av(
-    component=hours
+    component=hours;
+    label=Specify the available hours for each day or group of days
   );
 
   p(
@@ -96,14 +100,19 @@ config(
     label=Enter the value
   );
 
+  al(
+    fields=(str())
+  );
+
   ac(
     fields=(str())
   );
 
   t(
     fields(
-      d(label=Enter an optional desciption for the number, e.g. 'Customer Service');
-      v(label=Enter the telephone number in E.164 format, e.g. +441234567890;priority=20)
+      v(label=Enter the telephone number in E.164 format with optional spacing, e.g. +441234 567 890;priority=30);
+      d(label=Enter an optional desciption for the number, e.g. 'Customer Service';priority=20);
+      h(label=Opening hours;priority=10)
     );
     validate(
       method=schema
@@ -139,7 +148,7 @@ config(
   );
 
   a(
-    fields(v(label=Enter the address))
+    fields(al(label=Enter the lines of the address))
     ## TODO this needs to be multiline input with ^ symbolising carriage returns
   );
 
