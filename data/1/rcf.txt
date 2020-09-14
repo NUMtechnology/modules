@@ -1,6 +1,3 @@
-## TODO: update this to [test.]modules.numprotocol.com
-_MODULES_LOCATION = modules.num.uk;
-
 {
   !L?
      _L=en
@@ -13,20 +10,12 @@ _MODULES_LOCATION = modules.num.uk;
 _locale_file = "%L%-%C";
 {
   locale_file=en-gb/en-us?
-    _locale_file_uri = "https://%MODULES_LOCATION%/1/locales/%locale_file%.txt!"
+    _locale_file_uri = "locales/%locale_file%.txt!"
   /?
-    _locale_file_uri = "https://%MODULES_LOCATION%/1/locales/en-us.txt!"
+    _locale_file_uri = "locales/en-us.txt!"
 };
 
 *LOAD=%locale_file_uri;
-
-## Only an entity or an array of entities can be at the root
-## of a NUM MODL object.
-*class(
-  *id=root;
-  *name=root;
-  *superclass=map
-);
 
 ## ENTITY: Someone or something to make contact with
 *class(
