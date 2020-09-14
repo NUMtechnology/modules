@@ -1,9 +1,4 @@
 *class(
-  *id=root;
-  *name=root;
-  *superclass=map
-);
-*class(
   *id=i;
   *name=images;
   *superclass=arr

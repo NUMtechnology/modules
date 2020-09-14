@@ -1,5 +1,7 @@
 config(
   root(
+    name=root;
+    superclass=map;
     fields=(entity_type(label=Select individual or organisation;required=true))
   );
   entity_type(
@@ -16,23 +18,24 @@ config(
     required=true
   );
   id(
-    label="Enter an identifier for the organisation (e.g. company registration number)."
+    label="Enter an identifier for the organisation (e.g. company registration number)"
   );
   a(
-    label=Enter the address, not including the postcode / zip or country.;
+    label=Enter the address, not including the postcode / zip or country;
     type=textarea;
-    required=true    
+    required=true
   );
   p(
-    label=Enter the postcode / zip.;
-    required=true    
+    label=Enter the postcode / zip;
+    required=true
   );
   co(
-    label=Enter the country.;
-    required=true    
+    component=country;
+    label=Enter the country;
+    required=true
   );
   t(
-    label=Enter a contact telephone number.
+    label=Enter the telephone number in E.164 format with optional spacing, e.g. +441234 567 890
   );
   c(
     fields=(contact(required=true));
@@ -43,7 +46,7 @@ config(
   );
   contact(
     required=true;
-    placeholder=Add a contact method or a record link?;
+    placeholder=Add a contact;
     fields(n(label=Enter the name of the contact);a();p();co();t();e())
   )
 )
