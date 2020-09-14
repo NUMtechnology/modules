@@ -14,7 +14,7 @@ fi
 
 
 
-echo "Uploading new files version '$IMG_NAME'"
+echo "Uploading modules files with version '$IMG_NAME'"
 aws s3 cp /upload/ s3://$MODULE_S3_BUCKET/ --recursive
 exit_code=$?
 

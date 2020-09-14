@@ -32,13 +32,13 @@ podTemplate(
                 }
             }
 
-            stage('Build Container API') {
+            stage('Build Container') {
                 container('build-tools') {
-                    sh "docker build --network=host -t modules-files-${SHORT_COMMIT} ."
+                    sh "docker build --network=host --build-arg IMG_NAME=${env.BRANCH_NAME}-${SHORT_COMMIT} -t modules-files-${SHORT_COMMIT} ."
                 }
             }
 
-            stage('Tag Latest API') {
+            stage('Tag Latest') {
                 container('build-tools') {
                    sh "docker tag modules-files-${SHORT_COMMIT} numtechnology/modules-files:${env.BRANCH_NAME}-${SHORT_COMMIT}"
                    if(env.BRANCH_NAME == 'master') {
@@ -47,7 +47,7 @@ podTemplate(
                 }
             }
 
-            stage('Push Container API') {
+            stage('Push Container') {
                 container('build-tools') {
                     script {
                         withDockerRegistry([credentialsId: "docker", url: ""]) {
