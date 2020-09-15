@@ -231,6 +231,13 @@ _locale_file = "%L%-%C";
 );
 
 *class(
+  ## ADDRESS LINES: A method array value, e.g. the lines of an address
+  *id=al;
+  *name=lines;
+  *superclass=arr
+);
+
+*class(
   ## ACCESSIBILITY: Provides accessibility information for methods
   *id=ac;
   *name=access;
@@ -304,6 +311,14 @@ _locale_file = "%L%-%C";
   *id=a;
   *name=address;
   *superclass=method;
+  *assign=[
+    ## value, e.g. '441270123456'
+    [al];
+    ## description and address lines, e.g. 'Sales:441270123456'
+    [d;al];
+    ## description, address lines and available hours, e.g. 'Sales:441270123456:wd@9-17'
+    [d;al;h]
+  ];
   object_type=method;
   object_display_name=%locale.a.name;
   description_default=%locale.a.default;

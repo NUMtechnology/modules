@@ -1,22 +1,24 @@
 config(
   root(
-    expect=[c;b];
+    name=root;
+    superclass=map;
+    fields=(c();b());
     required=[c;b]
   );
   b(
     label=Enter the branch
   );
   c(
-    expect=[custodian]
+    fields=(custodian())
   );
   custodian(
-    expect=[h;p];
+    fields=(h();p());
     required=[h;p]
   );
   h(
     label=Enter the hash
   );
   p(
-    expect=[str]
+    fields=(str())
   )
 )
