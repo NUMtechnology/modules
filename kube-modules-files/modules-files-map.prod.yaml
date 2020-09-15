@@ -5,4 +5,4 @@ metadata:
   namespace: prod
 data:
   MODULE_S3_BUCKET: modules.numprotocol.com
-  AWS_ACCESS_KEY_ID: TODO
+  AWS_ACCESS_KEY_ID: AKIAQ4X5H2JZTZVGRUEP

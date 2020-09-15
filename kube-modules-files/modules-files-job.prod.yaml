@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: modules-files
-          image: '${trigger[''artifacts''][0][''reference'']}'
+          image: '${#stage(''Find Image from Staging'')[''outputs''][''manifest''][''data''][''modules-files.build.version'']}'
           envFrom:
             - configMapRef:
                 name: modules-files-map # bound by spinnaker
