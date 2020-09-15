@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: modules-files
+  namespace: prod
+spec:
+  ttlSecondsAfterFinished: 0
+  backoffLimit: 0
+  template:
+    spec:
+      containers:
+        - name: modules-files
+          image: '${trigger[''artifacts''][0][''reference'']}'
+          envFrom:
+            - configMapRef:
+                name: modules-files-map # bound by spinnaker
+            - secretRef:
+                name: modules-files-sec
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128M
+            requests:
+              cpu: 100m
+              memory: 128M
+          imagePullPolicy: Always
+      restartPolicy: Never
+      imagePullSecrets:
+        - name: dockerhub-imagepull
