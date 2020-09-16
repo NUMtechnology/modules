@@ -6,3 +6,4 @@ metadata:
 data:
   MODULE_S3_BUCKET: modules.numprotocol.com
   AWS_ACCESS_KEY_ID: AKIAQ4X5H2JZTZVGRUEP
+  AWS_ROLE: arn:aws:iam::564306981095:role/ProductionModuleS3Write
