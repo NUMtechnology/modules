@@ -3,3 +3,6 @@
 # Ignore intelliJ files
 .idea
 *.iml
+
+# ignore fred's test module
+data/999
