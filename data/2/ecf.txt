@@ -21,8 +21,9 @@ config(
     label="Enter an identifier for the organisation (e.g. company registration number)"
   );
   a(
+    component=textarea;
     label=Enter the address, not including the postcode / zip or country;
-    type=textarea;
+    fields(al());
     required=true
   );
   p(

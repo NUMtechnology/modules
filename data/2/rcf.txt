@@ -21,9 +21,15 @@
   *superclass=str
 );
 *class(
+  *id=al;
+  *name=addressline;
+  *superclass=str
+);
+*class(
   *id=a;
   *name=address;
-  *superclass=str
+  *assign=[[al*]];
+  *superclass=arr
 );
 *class(
   *id=p;
