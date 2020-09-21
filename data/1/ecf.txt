@@ -101,6 +101,7 @@ config(
   );
 
   al(
+    component=textarea;
     fields=(str())
   );
 
@@ -148,8 +149,8 @@ config(
   );
 
   a(
-    fields(al(label=Enter the lines of the address))
-    ## TODO this needs to be multiline input with ^ symbolising carriage returns
+    fields(al(label=Enter the lines of the address));
+    ignore=[v]
   );
 
   fx(fields(v(label=Enter the fax number in E.164 format, e.g. +441234567890)));
