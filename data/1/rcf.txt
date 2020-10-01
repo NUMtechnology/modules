@@ -347,7 +347,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.em.name;
   description_default=%locale.em.default;
-  prefix="mailto://";
+  prefix="mailto:";
   method_type=core
 );
 
