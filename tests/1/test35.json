@@ -1,0 +1,34 @@
+{
+    "@n": 1,
+    "department": {
+        "name": "Recruitment team",
+        "contacts": [
+            {
+                "telephone": {
+                    "value": "+441234567890",
+                    "description": "Call us for the best jobs",
+                    "object_type": "method",
+                    "object_display_name": "Telephone",
+                    "description_default": "Call",
+                    "prefix": "tel://",
+                    "method_type": "core"
+                }
+            },
+            {
+                "twitter": {
+                    "value": "aldatesjobs",
+                    "object_type": "method",
+                    "object_display_name": "Twitter",
+                    "description_default": "View Twitter profile",
+                    "prefix": "https://www.twitter.com/",
+                    "method_type": "3p",
+                    "value_prefix": "@",
+                    "controller": "twitter.com"
+                }
+            }
+        ],
+        "object_type": "entity",
+        "object_display_name": "Department",
+        "description_default": "View Department"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "@n": 1,
+    "organisation": {
+        "name": "Marketing News Team",
+        "slogan": "We market the news",
+        "contacts": [
+            {
+                "telephone": {
+                    "value": "123123123",
+                    "object_type": "method",
+                    "object_display_name": "Telephone",
+                    "description_default": "Call",
+                    "prefix": "tel://",
+                    "method_type": "core"
+                }
+            }
+        ],
+        "object_type": "entity",
+        "object_display_name": "Organisation",
+        "description_default": "View Organisation"
+    }
+}

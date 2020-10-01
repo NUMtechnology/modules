@@ -1,0 +1,23 @@
+{
+    "@n": 1,
+    "person": {
+        "name": "Tadas",
+        "bio": "Data Scientist",
+        "contacts": [
+            {
+                "linkedin": {
+                    "value": "tadas",
+                    "object_type": "method",
+                    "object_display_name": "LinkedIn",
+                    "description_default": "View LinkedIn page",
+                    "prefix": "https://www.linkedin.com/",
+                    "method_type": "3p",
+                    "controller": "linkedin.com"
+                }
+            }
+        ],
+        "object_type": "entity",
+        "object_display_name": "Person",
+        "description_default": "View Person"
+    }
+}

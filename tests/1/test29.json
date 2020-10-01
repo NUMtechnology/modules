@@ -1,0 +1,25 @@
+{
+    "@n": 1,
+    "organisation": {
+        "contacts": [
+            {
+                "address": {
+                    "lines": [
+                        "Line 1",
+                        "Line 2",
+                        "Line 3"
+                    ],
+                    "object_type": "method",
+                    "object_display_name": "Address",
+                    "description_default": "View Address",
+                    "prefix": "",
+                    "method_type": "core"
+                }
+            }
+        ],
+        "name": "Test",
+        "object_type": "entity",
+        "object_display_name": "Organisation",
+        "description_default": "View Organisation"
+    }
+}

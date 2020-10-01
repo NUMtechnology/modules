@@ -1,0 +1,23 @@
+{
+    "@n": 1,
+    "person": {
+        "name": "test emojis",
+        "bio": "test emojis",
+        "contacts": [
+            {
+                "email": {
+                    "value": "test@emoji-test.co.uk",
+                    "description": "a test email address",
+                    "object_type": "method",
+                    "object_display_name": "Email",
+                    "description_default": "Send an email",
+                    "prefix": "mailto://",
+                    "method_type": "core"
+                }
+            }
+        ],
+        "object_type": "entity",
+        "object_display_name": "Person",
+        "description_default": "View Person"
+    }
+}

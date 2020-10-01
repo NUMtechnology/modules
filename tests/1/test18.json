@@ -1,0 +1,81 @@
+{
+    "@n": 1,
+    "organisation": {
+        "name": "Direct Line",
+        "slogan": "We're On It",
+        "contacts": [
+            {
+                "link": {
+                    "name": "Car Insurance",
+                    "@L": "car-cover",
+                    "object_display_name": "Link"
+                }
+            },
+            {
+                "link": {
+                    "name": "Home Insurance",
+                    "@L": "home-cover",
+                    "object_display_name": "Link"
+                }
+            },
+            {
+                "twitter": {
+                    "value": "DirectLine",
+                    "object_type": "method",
+                    "object_display_name": "Twitter",
+                    "description_default": "View Twitter profile",
+                    "prefix": "https://www.twitter.com/",
+                    "method_type": "3p",
+                    "value_prefix": "@",
+                    "controller": "twitter.com"
+                }
+            },
+            {
+                "facebook": {
+                    "value": "DirectLineUK",
+                    "object_type": "method",
+                    "object_display_name": "Facebook",
+                    "description_default": "View Facebook profile",
+                    "prefix": "https://www.facebook.com/",
+                    "method_type": "3p",
+                    "controller": "facebook.com"
+                }
+            },
+            {
+                "youtube": {
+                    "value": "user/DirectLineTV",
+                    "object_type": "method",
+                    "object_display_name": "YouTube",
+                    "description_default": "View YouTube channel",
+                    "prefix": "https://www.youtube.com/",
+                    "method_type": "3p",
+                    "controller": "youtube.com"
+                }
+            },
+            {
+                "instagram": {
+                    "value": "DirectLineUK",
+                    "object_type": "method",
+                    "object_display_name": "Instagram",
+                    "description_default": "View Instagram profile",
+                    "prefix": "https://www.instagram.com/",
+                    "method_type": "3p",
+                    "controller": "instagram.com"
+                }
+            },
+            {
+                "url": {
+                    "value": "directline.com",
+                    "object_type": "method",
+                    "object_display_name": "Web URL",
+                    "description_default": "Click",
+                    "prefix": "https://",
+                    "method_type": "core"
+                }
+            }
+        ],
+        "object_type": "entity",
+        "object_display_name": "Organisation",
+        "description_default": "View Organisation"
+    }
+}

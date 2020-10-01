@@ -1,0 +1,37 @@
+{
+    "@n": 1,
+    "person": {
+        "name": "Peter Piper",
+        "bio": "Freelance Pickled Pepper Picker",
+        "contacts": [
+            {
+                "email": {
+                    "value": "peter.piper@pepperpickers.com",
+                    "description": "Peppers need picking?",
+                    "object_type": "method",
+                    "object_display_name": "Email",
+                    "description_default": "Send an email",
+                    "prefix": "mailto://",
+                    "method_type": "core"
+                }
+            },
+            {
+                "address": {
+                    "lines": [
+                        "42 West Wallaby Way",
+                        "Sydney",
+                        "Australia"
+                    ],
+                    "object_type": "method",
+                    "object_display_name": "Address",
+                    "description_default": "View Address",
+                    "prefix": "",
+                    "method_type": "core"
+                }
+            }
+        ],
+        "object_type": "entity",
+        "object_display_name": "Person",
+        "description_default": "View Person"
+    }
+}

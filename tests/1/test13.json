@@ -1,0 +1,21 @@
+{
+    "@n": 1,
+    "person": {
+        "name": "Testing another record",
+        "contacts": [
+            {
+                "telephone": {
+                    "value": "123123123123",
+                    "object_type": "method",
+                    "object_display_name": "Telephone",
+                    "description_default": "Call",
+                    "prefix": "tel://",
+                    "method_type": "core"
+                }
+            }
+        ],
+        "object_type": "entity",
+        "object_display_name": "Person",
+        "description_default": "View Person"
+    }
+}
