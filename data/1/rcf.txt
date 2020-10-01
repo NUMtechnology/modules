@@ -303,7 +303,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.g.name;
   description_default=%locale.g.default;
-  prefix=null;
+  prefix="";
   method_type=core
 );
 
