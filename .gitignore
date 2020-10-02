@@ -6,3 +6,6 @@
 
 # ignore fred's test module
 data/999
+
+# ignore VSCode local configs
+.vscode

@@ -8,564 +8,190 @@
 			"$id": "#root/@n",
 			"title": "@n",
 			"type": "integer",
-			"default": 0
-		},
-		"@p": {
-			"$id": "#root/@p",
-			"title": "@p",
-			"type": "string",
-			"default": ""
-		},
-		"object_type": {
-			"$id": "#root/object_type",
-			"title": "Object_type",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"description_default": {
-			"$id": "#root/description_default",
-			"title": "Description_default",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"object_display_name": {
-			"$id": "#root/object_display_name",
-			"title": "Object_display_name",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"@L": {
-			"$id": "#root/@L",
-			"title": "@l",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"name": {
-			"$id": "#root/name",
-			"title": "Name",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"bio": {
-			"$id": "#root/bio",
-			"title": "Bio",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"value": {
-			"$id": "#root/value",
-			"title": "Value",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"time_zone_location": {
-			"$id": "#root/time_zone_location",
-			"title": "Timezone Location",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"prefix": {
-			"$id": "#root/prefix",
-			"title": "Prefix",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"value_prefix": {
-			"$id": "#root/value_prefix",
-			"title": "Value Prefix",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"controller": {
-			"$id": "#root/controller",
-			"title": "Controller",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
+			"default": 1
 		},
 		"link": {
 			"$id": "#root/link",
-			"title": "Link",
+			"title": "link",
 			"type": "object",
-			"required": [],
+			"default": {},
 			"properties": {
-				"name": {
-					"$ref": "#root/name"
-				},
 				"@L": {
-					"$ref": "#root/@L"
+					"type": "string"
 				},
-				"object_display_name": {
-					"$ref": "#root/name"
+				"name": {
+					"type": "string"
 				},
 				"description": {
-					"$ref": "#root/description"
-				}
-			},
-			"additionalProperties": false
-		},
-		"hours": {
-			"$id": "#root/hours",
-			"title": "Hours",
-			"type": "object",
-			"required": [],
-			"properties": {
-				"available": {
-					"$ref": "#root/available"
+					"type": "string"
 				},
-				"time_zone_location": {
-					"$ref": "#root/time_zone_location"
+				"object_display_name": {
+					"type": "string"
 				}
 			},
+			"required": [
+				"@L"
+			],
 			"additionalProperties": false
 		},
-		"telephone": {
-			"$id": "#root/telephone",
-			"title": "Telephone",
+		"method": {
+			"$id": "#root/method",
+			"title": "method",
 			"type": "object",
-			"required": [],
+			"default": {},
 			"properties": {
-				"name": {
-					"$ref": "#root/name"
+				"object_display_name": {
+					"type": "string"
 				},
 				"value": {
-					"$ref": "#root/value"
-				},
-				"@L": {
-					"$ref": "#root/@L"
-				},
-				"object_display_name": {
-					"$ref": "#root/name"
+					"type": "string"
 				},
 				"description": {
-					"$ref": "#root/description"
+					"type": "string"
 				},
 				"hours": {
-					"$ref": "#root/hours"
+					"type": "object",
+					"properties": {
+						"available": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"time_zone_location": {
+							"type": "string"
+						}
+					}
 				},
 				"object_type": {
-					"$ref": "#root/object_type"
+					"type": "string"
 				},
 				"description_default": {
-					"$ref": "#root/description_default"
+					"type": "string"
 				},
 				"prefix": {
-					"$ref": "#root/prefix"
+					"type": "string"
 				},
 				"method_type": {
-					"$ref": "#root/method_type"
+					"type": "string"
 				}
 			},
+			"required": [
+				"object_display_name"
+			],
 			"additionalProperties": false
 		},
-		"twitter": {
-			"$id": "#root/twitter",
-			"title": "Twitter",
+		"contact": {
+			"$id": "#root/contact",
+			"title": "contact",
 			"type": "object",
-			"required": [],
-			"properties": {
-				"value": {
-					"$ref": "#root/value"
-				},
-				"object_display_name": {
-					"$ref": "#root/name"
-				},
-				"object_type": {
-					"$ref": "#root/object_type"
-				},
-				"description_default": {
-					"$ref": "#root/description_default"
-				},
-				"prefix": {
-					"$ref": "#root/prefix"
-				},
-				"value_prefix": {
-					"$ref": "#root/value_prefix"
-				},
-				"controller": {
-					"$ref": "#root/controller"
-				},
-				"method_type": {
-					"$ref": "#root/method_type"
-				},
-				"description": {
-					"$ref": "#root/description"
-				}
-			},
-			"additionalProperties": false
-		},
-		"youtube": {
-			"$id": "#root/youtube",
-			"title": "YouTube",
-			"type": "object",
-			"required": [],
-			"properties": {
-				"value": {
-					"$ref": "#root/value"
-				},
-				"object_display_name": {
-					"$ref": "#root/name"
-				},
-				"object_type": {
-					"$ref": "#root/object_type"
-				},
-				"description_default": {
-					"$ref": "#root/description_default"
-				},
-				"prefix": {
-					"$ref": "#root/prefix"
-				},
-				"controller": {
-					"$ref": "#root/controller"
-				},
-				"method_type": {
-					"$ref": "#root/method_type"
-				}
-			},
-			"additionalProperties": false
-		},
-		"facebook": {
-			"$id": "#root/facebook",
-			"title": "Facebook",
-			"type": "object",
-			"required": [],
-			"properties": {
-				"value": {
-					"$ref": "#root/value"
-				},
-				"object_display_name": {
-					"$ref": "#root/name"
-				},
-				"object_type": {
-					"$ref": "#root/object_type"
-				},
-				"description_default": {
-					"$ref": "#root/description_default"
-				},
-				"prefix": {
-					"$ref": "#root/prefix"
-				},
-				"value_prefix": {
-					"$ref": "#root/value_prefix"
-				},
-				"controller": {
-					"$ref": "#root/controller"
-				},
-				"method_type": {
-					"$ref": "#root/method_type"
-				}
-			},
-			"additionalProperties": false
-		},
-		"url": {
-			"$id": "#root/url",
-			"title": "URL",
-			"type": "object",
-			"required": [],
-			"properties": {
-				"value": {
-					"$ref": "#root/value"
-				},
-				"object_display_name": {
-					"$ref": "#root/name"
-				},
-				"object_type": {
-					"$ref": "#root/object_type"
-				},
-				"description_default": {
-					"$ref": "#root/description_default"
-				},
-				"prefix": {
-					"$ref": "#root/prefix"
-				},
-				"method_type": {
-					"$ref": "#root/method_type"
-				}
-			},
-			"additionalProperties": false
-		},
-		"instagram": {
-			"$id": "#root/instagram",
-			"title": "Instagram",
-			"type": "object",
-			"required": [],
-			"properties": {
-				"value": {
-					"$ref": "#root/value"
-				},
-				"object_display_name": {
-					"$ref": "#root/name"
-				},
-				"object_type": {
-					"$ref": "#root/object_type"
-				},
-				"description_default": {
-					"$ref": "#root/description_default"
-				},
-				"prefix": {
-					"$ref": "#root/prefix"
-				},
-				"method_type": {
-					"$ref": "#root/method_type"
-				},
-				"controller": {
-					"$ref": "#root/controller"
-				}
-			},
-			"additionalProperties": false
-		},
-		"email": {
-			"$id": "#root/email",
-			"title": "Email",
-			"type": "object",
-			"required": [],
-			"properties": {
-				"value": {
-					"$ref": "#root/value"
-				},
-				"object_display_name": {
-					"$ref": "#root/name"
-				},
-				"object_type": {
-					"$ref": "#root/object_type"
-				},
-				"description_default": {
-					"$ref": "#root/description_default"
-				},
-				"prefix": {
-					"$ref": "#root/prefix"
-				},
-				"method_type": {
-					"$ref": "#root/method_type"
-				},
-				"description": {
-					"$ref": "#root/description"
-				}
-			},
-			"additionalProperties": false
-		},
-		"address": {
-			"$id": "#root/address",
-			"title": "Address",
-			"type": "object",
-			"required": [],
-			"properties": {
-				"value": {
-					"$ref": "#root/value"
-				},
-				"object_display_name": {
-					"$ref": "#root/name"
-				},
-				"object_type": {
-					"$ref": "#root/object_type"
-				},
-				"description_default": {
-					"$ref": "#root/description_default"
-				},
-				"prefix": {
-					"$ref": "#root/prefix"
-				},
-				"method_type": {
-					"$ref": "#root/method_type"
-				},
-				"lines": {
-					"$ref": "#root/lines"
-				}
-			},
-			"additionalProperties": false
-		},
-		"items": {
-			"$id": "#root/items",
-			"title": "Items",
-			"type": "object",
+			"default": {},
 			"properties": {
 				"link": {
 					"$ref": "#root/link"
 				},
 				"telephone": {
-					"$ref": "#root/telephone"
-				},
-				"twitter": {
-					"$ref": "#root/twitter"
-				},
-				"facebook": {
-					"$ref": "#root/facebook"
-				},
-				"url": {
-					"$ref": "#root/url"
-				},
-				"email": {
-					"$ref": "#root/email"
-				},
-				"address": {
-					"$ref": "#root/address"
-				},
-				"instagram": {
-					"$ref": "#root/instagram"
-				},
-				"youtube": {
-					"$ref": "#root/youtube"
+					"$ref": "#root/method"
 				}
 			},
-			"additionalProperties": false
-		},
-		"description": {
-			"$id": "#root/description",
-			"title": "Description",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
+			"minItems": 1
 		},
 		"contacts": {
 			"$id": "#root/contacts",
-			"title": "Contacts",
+			"title": "contacts",
 			"type": "array",
-			"default": [],
-			"required": [],
+			"default": {},
 			"items": {
-				"$ref": "#root/items"
-			}
-		},
-		"available": {
-			"$id": "#root/available",
-			"title": "Available",
-			"type": "array",
-			"default": []
-		},
-		"lines": {
-			"$id": "#root/lines",
-			"title": "Address lines",
-			"type": "array",
-			"default": []
-		},
-		"slogan": {
-			"$id": "#root/slogan",
-			"title": "Slogan",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"method_type": {
-			"$id": "#root/method_type",
-			"title": "Method Type",
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"department": {
-			"$id": "#root/department",
-			"title": "Department",
-			"type": "object",
-			"required": [],
-			"properties": {
-				"name": {
-					"$ref": "#root/name"
-				},
-				"description": {
-					"$ref": "#root/description"
-				},
-				"contacts": {
-					"$ref": "#root/contacts"
-				},
-				"object_type": {
-					"$ref": "#root/object_type"
-				},
-				"object_display_name": {
-					"$ref": "#root/object_display_name"
-				},
-				"description_default": {
-					"$ref": "#root/description_default"
-				}
+				"$ref": "#root/contact"
 			},
-			"additionalProperties": false
+			"minItems": 1
 		},
-		"organisation": {
-			"$id": "#root/organisation",
-			"title": "Organisation",
+		"entity": {
+			"$id": "#root/entity",
+			"title": "entity",
 			"type": "object",
-			"required": [],
+			"default": {},
+			"required": [
+				"name",
+				"contacts"
+			],
 			"properties": {
 				"name": {
-					"$ref": "#root/name"
-				},
-				"slogan": {
-					"$ref": "#root/slogan"
+					"type": "string"
 				},
 				"contacts": {
 					"$ref": "#root/contacts"
 				},
 				"object_type": {
-					"$ref": "#root/object_type"
+					"type": "string"
 				},
 				"object_display_name": {
-					"$ref": "#root/object_display_name"
+					"type": "string"
 				},
 				"description_default": {
-					"$ref": "#root/description_default"
+					"type": "string"
 				}
 			},
 			"additionalProperties": false
 		},
 		"person": {
 			"$id": "#root/person",
-			"title": "Person",
+			"title": "person",
 			"type": "object",
-			"required": [],
+			"default": {},
+			"required": [
+				"name",
+				"contacts"
+			],
 			"properties": {
 				"name": {
-					"$ref": "#root/name"
-				},
-				"bio": {
-					"$ref": "#root/bio"
+					"type": "string"
 				},
 				"contacts": {
 					"$ref": "#root/contacts"
 				},
 				"object_type": {
-					"$ref": "#root/object_type"
+					"type": "string"
 				},
 				"object_display_name": {
-					"$ref": "#root/object_display_name"
+					"type": "string"
 				},
 				"description_default": {
-					"$ref": "#root/description_default"
+					"type": "string"
+				},
+				"bio": {
+					"type": "string"
 				}
 			},
 			"additionalProperties": false
 		},
-		"group": {
-			"$id": "#root/group",
-			"title": "Group",
+		"organisation": {
+			"$id": "#root/organisation",
+			"title": "organisation",
 			"type": "object",
-			"required": [],
+			"default": {},
+			"required": [
+				"name",
+				"contacts"
+			],
 			"properties": {
 				"name": {
-					"$ref": "#root/name"
-				},
-				"description": {
-					"$ref": "#root/description"
+					"type": "string"
 				},
 				"contacts": {
 					"$ref": "#root/contacts"
 				},
 				"object_type": {
-					"$ref": "#root/object_type"
+					"type": "string"
 				},
 				"object_display_name": {
-					"$ref": "#root/object_display_name"
+					"type": "string"
 				},
 				"description_default": {
-					"$ref": "#root/description_default"
+					"type": "string"
+				},
+				"slogan": {
+					"type": "string"
 				}
 			},
 			"additionalProperties": false
@@ -579,19 +205,19 @@
 			"$ref": "#root/@n"
 		},
 		"@p": {
-			"$ref": "#root/@p"
-		},
-		"department": {
-			"$ref": "#root/department"
+			"type": "string"
 		},
 		"organisation": {
 			"$ref": "#root/organisation"
 		},
-		"person": {
-			"$ref": "#root/person"
+		"department": {
+			"$ref": "#root/entity"
 		},
 		"group": {
-			"$ref": "#root/group"
+			"$ref": "#root/entity"
+		},
+		"person": {
+			"$ref": "#root/person"
 		}
 	},
 	"additionalProperties": false
