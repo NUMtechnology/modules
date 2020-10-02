@@ -264,7 +264,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.sm.name;
   description_default=%locale.sm.default;
-  prefix="sms://";
+  prefix="sms:";
   method_type=core
 );
 
@@ -334,7 +334,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.fx.name;
   description_default=%locale.fx.default;
-  prefix="fax://";
+  prefix="tel:";
   method_type=core
 );
 
@@ -618,7 +618,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.sk.name;
   description_default=%locale.sk.default;
-  prefix="skype://";
+  prefix="skype:";
   method_type=third_party;
   controller=skype.com
 );
