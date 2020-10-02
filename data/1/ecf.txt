@@ -16,7 +16,7 @@ config(
 
   l(
     label=A name and description helps to show what type of record the link leads to;
-    fields=(n(label=Enter a name for the link;placeholder=e.g. John Smith or Sales Department;priority=20);d(label=Enter a description for the link;placeholder=e.g. CTO;priority=10);@L(required=true;placeholder=`num://numexample.com/record`))
+    fields=(d(label=Enter a description for the link;placeholder=e.g. John Smith or Sales Department;priority=20);@L(required=true;placeholder=`num://numexample.com/record`))
   );
 
   @L(
