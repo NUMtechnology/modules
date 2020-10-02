@@ -42,8 +42,7 @@ _locale_file = "%L%-%C";
   *superclass=contact;
   *assign=[
     [@L];
-    [n;@L];
-    [n;d;@L]
+    [d;@L];
   ]
 );
 
