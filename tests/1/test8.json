@@ -10,7 +10,7 @@
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
-                    "method_type": "3p",
+                    "method_type": "third_party",
                     "controller": "facebook.com"
                 }
             },

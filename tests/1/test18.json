@@ -25,7 +25,7 @@
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
-                    "method_type": "3p",
+                    "method_type": "third_party",
                     "value_prefix": "@",
                     "controller": "twitter.com"
                 }
@@ -37,7 +37,7 @@
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
-                    "method_type": "3p",
+                    "method_type": "third_party",
                     "controller": "facebook.com"
                 }
             },
@@ -48,7 +48,7 @@
                     "object_display_name": "YouTube",
                     "description_default": "View YouTube channel",
                     "prefix": "https://www.youtube.com/",
-                    "method_type": "3p",
+                    "method_type": "third_party",
                     "controller": "youtube.com"
                 }
             },
@@ -59,7 +59,7 @@
                     "object_display_name": "Instagram",
                     "description_default": "View Instagram profile",
                     "prefix": "https://www.instagram.com/",
-                    "method_type": "3p",
+                    "method_type": "third_party",
                     "controller": "instagram.com"
                 }
             },

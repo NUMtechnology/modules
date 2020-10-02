@@ -19,7 +19,7 @@
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
-                    "method_type": "3p",
+                    "method_type": "third_party",
                     "value_prefix": "@",
                     "controller": "twitter.com"
                 }
