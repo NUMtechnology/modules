@@ -252,7 +252,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.t.name;
   description_default=%locale.t.default;
-  prefix="tel://";
+  prefix="tel:";
   method_type=core
 );
 
