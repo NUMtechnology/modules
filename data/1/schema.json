@@ -10,6 +10,12 @@
 			"type": "integer",
 			"default": 1
 		},
+		"notNullString": {
+			"$id": "#root/notNullString",
+			"title": "notNullString",
+			"type": "string",
+			"nullable": false
+		},
 		"link": {
 			"$id": "#root/link",
 			"title": "link",
@@ -17,16 +23,16 @@
 			"default": {},
 			"properties": {
 				"@L": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"description": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"object_display_name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				}
 			},
 			"required": [
@@ -41,13 +47,13 @@
 			"default": {},
 			"properties": {
 				"object_display_name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"value": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"description": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"hours": {
 					"type": "object",
@@ -55,25 +61,25 @@
 						"available": {
 							"type": "array",
 							"items": {
-								"type": "string"
+								"$ref": "#root/notNullString"
 							}
 						},
 						"time_zone_location": {
-							"type": "string"
+							"$ref": "#root/notNullString"
 						}
 					}
 				},
 				"object_type": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"description_default": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"prefix": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"method_type": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				}
 			},
 			"required": [
@@ -117,19 +123,19 @@
 			],
 			"properties": {
 				"name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"contacts": {
 					"$ref": "#root/contacts"
 				},
 				"object_type": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"object_display_name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"description_default": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				}
 			},
 			"additionalProperties": false
@@ -145,22 +151,22 @@
 			],
 			"properties": {
 				"name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"contacts": {
 					"$ref": "#root/contacts"
 				},
 				"object_type": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"object_display_name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"description_default": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"bio": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				}
 			},
 			"additionalProperties": false
@@ -176,22 +182,22 @@
 			],
 			"properties": {
 				"name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"contacts": {
 					"$ref": "#root/contacts"
 				},
 				"object_type": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"object_display_name": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"description_default": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				},
 				"slogan": {
-					"type": "string"
+					"$ref": "#root/notNullString"
 				}
 			},
 			"additionalProperties": false
