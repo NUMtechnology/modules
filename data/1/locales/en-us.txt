@@ -45,7 +45,7 @@ _locale(
   );
   g(
     name=GPS;
-    default=View Address
+    default=View Location
   );
   a(
     name=Address;
