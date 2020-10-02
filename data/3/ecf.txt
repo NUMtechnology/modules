@@ -31,6 +31,6 @@ config(
   );
   m(
     label=Enter image mime type;
-    options[image/gif;image/jpg;image/svg+xml]
+    options[image/gif;image/jpg;image/png;image/svg+xml]
   )
 )
