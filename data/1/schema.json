@@ -16,6 +16,13 @@
 			"type": "string",
 			"nullable": false
 		},
+		"notEmptyString": {
+			"$id": "#root/notEmptyString",
+			"title": "notEmptyString",
+			"type": "string",
+			"minLength": 1,
+			"nullable": false
+		},
 		"link": {
 			"$id": "#root/link",
 			"title": "link",
@@ -23,7 +30,7 @@
 			"default": {},
 			"properties": {
 				"@L": {
-					"$ref": "#root/notNullString"
+					"$ref": "#root/notEmptyString"
 				},
 				"name": {
 					"$ref": "#root/notNullString"
@@ -47,7 +54,7 @@
 			"default": {},
 			"properties": {
 				"object_display_name": {
-					"$ref": "#root/notNullString"
+					"$ref": "#root/notEmptyString"
 				},
 				"value": {
 					"$ref": "#root/notNullString"
@@ -80,6 +87,62 @@
 				},
 				"method_type": {
 					"$ref": "#root/notNullString"
+				},
+				"controller": {
+					"$ref": "#root/notNullString"
+				},
+				"value_prefix": {
+					"$ref": "#root/notNullString"
+				}
+			},
+			"required": [
+				"object_display_name"
+			],
+			"additionalProperties": false
+		},
+		"address": {
+			"$id": "#root/address",
+			"title": "address",
+			"type": "object",
+			"default": {},
+			"properties": {
+				"object_display_name": {
+					"$ref": "#root/notEmptyString"
+				},
+				"description": {
+					"$ref": "#root/notNullString"
+				},
+				"hours": {
+					"type": "object",
+					"properties": {
+						"available": {
+							"type": "array",
+							"items": {
+								"$ref": "#root/notEmptyString"
+							}
+						},
+						"time_zone_location": {
+							"$ref": "#root/notEmptyString"
+						}
+					}
+				},
+				"object_type": {
+					"$ref": "#root/notNullString"
+				},
+				"description_default": {
+					"$ref": "#root/notNullString"
+				},
+				"prefix": {
+					"$ref": "#root/notNullString"
+				},
+				"method_type": {
+					"$ref": "#root/notNullString"
+				},
+				"lines": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
 				}
 			},
 			"required": [
@@ -98,9 +161,138 @@
 				},
 				"telephone": {
 					"$ref": "#root/method"
+				},
+				"twitter": {
+					"$ref": "#root/method"
+				},
+				"facebook": {
+					"$ref": "#root/method"
+				},
+				"youtube": {
+					"$ref": "#root/method"
+				},
+				"url": {
+					"$ref": "#root/method"
+				},
+				"address": {
+					"$ref": "#root/address"
+				},
+				"sms": {
+					"$ref": "#root/method"
+				},
+				"unsecure_url": {
+					"$ref": "#root/method"
+				},
+				"gps": {
+					"$ref": "#root/method"
+				},
+				"fax": {
+					"$ref": "#root/method"
+				},
+				"email": {
+					"$ref": "#root/method"
+				},
+				"androidapp": {
+					"$ref": "#root/method"
+				},
+				"iosapp": {
+					"$ref": "#root/method"
+				},
+				"addbaidu_tiebaress": {
+					"$ref": "#root/method"
+				},
+				"foursquare": {
+					"$ref": "#root/method"
+				},
+				"facetime": {
+					"$ref": "#root/method"
+				},
+				"github": {
+					"$ref": "#root/method"
+				},
+				"imessage": {
+					"$ref": "#root/method"
+				},
+				"instagram": {
+					"$ref": "#root/method"
+				},
+				"kik": {
+					"$ref": "#root/method"
+				},
+				"linkedin": {
+					"$ref": "#root/method"
+				},
+				"line": {
+					"$ref": "#root/method"
+				},
+				"medium": {
+					"$ref": "#root/method"
+				},
+				"periscope": {
+					"$ref": "#root/method"
+				},
+				"pinterest": {
+					"$ref": "#root/method"
+				},
+				"qq": {
+					"$ref": "#root/method"
+				},
+				"qzone": {
+					"$ref": "#root/method"
+				},
+				"reddit": {
+					"$ref": "#root/method"
+				},
+				"renren": {
+					"$ref": "#root/method"
+				},
+				"soundcloud": {
+					"$ref": "#root/method"
+				},
+				"skype": {
+					"$ref": "#root/method"
+				},
+				"swarm": {
+					"$ref": "#root/method"
+				},
+				"snapchat": {
+					"$ref": "#root/method"
+				},
+				"sinaweibo": {
+					"$ref": "#root/method"
+				},
+				"tumblr": {
+					"$ref": "#root/method"
+				},
+				"telegram": {
+					"$ref": "#root/method"
+				},
+				"twoo": {
+					"$ref": "#root/method"
+				},
+				"viber": {
+					"$ref": "#root/method"
+				},
+				"vkontakte": {
+					"$ref": "#root/method"
+				},
+				"vimeo": {
+					"$ref": "#root/method"
+				},
+				"whatsapp": {
+					"$ref": "#root/method"
+				},
+				"wechat": {
+					"$ref": "#root/method"
+				},
+				"xing": {
+					"$ref": "#root/method"
+				},
+				"yy": {
+					"$ref": "#root/method"
 				}
 			},
-			"minItems": 1
+			"additionalProperties": false
 		},
 		"contacts": {
 			"$id": "#root/contacts",
@@ -118,15 +310,38 @@
 			"type": "object",
 			"default": {},
 			"required": [
-				"name",
-				"contacts"
+				"name"
 			],
 			"properties": {
 				"name": {
+					"$ref": "#root/notEmptyString"
+				},
+				"object_type": {
 					"$ref": "#root/notNullString"
 				},
-				"contacts": {
-					"$ref": "#root/contacts"
+				"object_display_name": {
+					"$ref": "#root/notNullString"
+				},
+				"description_default": {
+					"$ref": "#root/notNullString"
+				}
+			},
+			"additionalProperties": false
+		},
+		"employee": {
+			"$id": "#root/employee",
+			"title": "employee",
+			"type": "object",
+			"default": {},
+			"required": [
+				"name"
+			],
+			"properties": {
+				"name": {
+					"$ref": "#root/notEmptyString"
+				},
+				"role": {
+					"$ref": "#root/notNullString"
 				},
 				"object_type": {
 					"$ref": "#root/notNullString"
@@ -146,15 +361,11 @@
 			"type": "object",
 			"default": {},
 			"required": [
-				"name",
-				"contacts"
+				"name"
 			],
 			"properties": {
 				"name": {
-					"$ref": "#root/notNullString"
-				},
-				"contacts": {
-					"$ref": "#root/contacts"
+					"$ref": "#root/notEmptyString"
 				},
 				"object_type": {
 					"$ref": "#root/notNullString"
@@ -182,7 +393,7 @@
 			],
 			"properties": {
 				"name": {
-					"$ref": "#root/notNullString"
+					"$ref": "#root/notEmptyString"
 				},
 				"contacts": {
 					"$ref": "#root/contacts"
@@ -211,7 +422,7 @@
 			"$ref": "#root/@n"
 		},
 		"@p": {
-			"type": "string"
+			"type": "boolean"
 		},
 		"organisation": {
 			"$ref": "#root/organisation"
@@ -222,8 +433,14 @@
 		"group": {
 			"$ref": "#root/entity"
 		},
+		"location": {
+			"$ref": "#root/entity"
+		},
 		"person": {
 			"$ref": "#root/person"
+		},
+		"employee": {
+			"$ref": "#root/employee"
 		}
 	},
 	"additionalProperties": false
