@@ -1,0 +1,40 @@
+{
+    "@n": 1,
+    "@p": true,
+    "images": [
+        {
+            "name": "test",
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.cakesbymary.co.uk/wp-content/uploads/2018/01/cropped-favicon-180x180.jpg",
+                    "mime": "image/jpeg",
+                    "width": 180,
+                    "height": 180
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.cakesbymary.co.uk/wp-content/uploads/2018/01/cropped-favicon-192x192.jpg",
+                    "mime": "image/jpeg",
+                    "width": 192,
+                    "height": 192
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.cakesbymary.co.uk/wp-content/uploads/2018/01/cropped-favicon-270x270.jpg",
+                    "mime": "image/jpeg",
+                    "width": 270,
+                    "height": 270
+                }
+            ]
+        }
+    ]
+}

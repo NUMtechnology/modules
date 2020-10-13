@@ -83,7 +83,8 @@
 					"$ref": "#root/hours"
 				},
 				"object_type": {
-					"const":"method"
+					"const": "method",
+					"type": "string"
 				},
 				"description_default": {
 					"$ref": "#root/notNullString"
@@ -92,7 +93,10 @@
 					"$ref": "#root/notNullString"
 				},
 				"method_type": {
-					"enum": ["core","third_party"]
+					"enum": [
+						"core",
+						"third_party"
+					]
 				},
 				"controller": {
 					"$ref": "#root/notNullString"
@@ -137,7 +141,8 @@
 					}
 				},
 				"object_type": {
-					"const":"method"
+					"const": "method",
+					"type": "string"
 				},
 				"description_default": {
 					"$ref": "#root/notNullString"
@@ -146,7 +151,10 @@
 					"$ref": "#root/notNullString"
 				},
 				"method_type": {
-					"enum": ["core","third_party"]
+					"enum": [
+						"core",
+						"third_party"
+					]
 				},
 				"lines": {
 					"type": "array",
@@ -330,7 +338,8 @@
 					"$ref": "#root/notEmptyString"
 				},
 				"object_type": {
-					"const":"entity"
+					"const": "entity",
+					"type": "string"
 				},
 				"object_display_name": {
 					"$ref": "#root/notNullString"
@@ -360,7 +369,8 @@
 					"$ref": "#root/notNullString"
 				},
 				"object_type": {
-					"const":"entity"
+					"const": "entity",
+					"type": "string"
 				},
 				"object_display_name": {
 					"$ref": "#root/notNullString"
@@ -387,7 +397,8 @@
 					"$ref": "#root/notEmptyString"
 				},
 				"object_type": {
-					"const":"entity"
+					"const": "entity",
+					"type": "string"
 				},
 				"object_display_name": {
 					"$ref": "#root/notNullString"
@@ -418,7 +429,8 @@
 					"$ref": "#root/contacts"
 				},
 				"object_type": {
-					"const":"entity"
+					"const": "entity",
+					"type": "string"
 				},
 				"object_display_name": {
 					"$ref": "#root/notNullString"

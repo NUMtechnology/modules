@@ -1,0 +1,138 @@
+{
+    "@n": 1,
+    "@p": true,
+    "images": [
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-57x57.png",
+                    "mime": "image/png",
+                    "width": 57,
+                    "height": 57
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-60x60.png",
+                    "mime": "image/png",
+                    "width": 60,
+                    "height": 60
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-72x72.png",
+                    "mime": "image/png",
+                    "width": 72,
+                    "height": 72
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-76x76.png",
+                    "mime": "image/png",
+                    "width": 76,
+                    "height": 76
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-114x114.png",
+                    "mime": "image/png",
+                    "width": 114,
+                    "height": 114
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-120x120.png",
+                    "mime": "image/png",
+                    "width": 120,
+                    "height": 120
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-144x144.png",
+                    "mime": "image/png",
+                    "width": 144,
+                    "height": 144
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-152x152.png",
+                    "mime": "image/png",
+                    "width": 152,
+                    "height": 152
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/apple-icon-180x180.png",
+                    "mime": "image/png",
+                    "width": 180,
+                    "height": 180
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/android-icon-192x192.png",
+                    "mime": "image/png",
+                    "width": 192,
+                    "height": 192
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/favicon-96x96.png",
+                    "mime": "image/png",
+                    "width": 96,
+                    "height": 96
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://www.thelocalplumbers.co.uk/site/templates/fav/ms-icon-144x144.png",
+                    "mime": "image/png",
+                    "width": 144,
+                    "height": 144
+                }
+            ]
+        }
+    ]
+}

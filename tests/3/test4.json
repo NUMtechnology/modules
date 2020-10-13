@@ -1,0 +1,17 @@
+{
+    "@n": 1,
+    "@p": true,
+    "images": [
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://carpetcleaningcambridgeuk.com/img/favicon_hires.png",
+                    "mime": "image/png",
+                    "width": 192,
+                    "height": 192
+                }
+            ]
+        }
+    ]
+}

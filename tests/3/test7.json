@@ -1,0 +1,204 @@
+{
+    "@n": 1,
+    "@p": true,
+    "images": [
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon.png",
+                    "mime": "image/png",
+                    "width": 192,
+                    "height": 192
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-57x57.png",
+                    "mime": "image/png",
+                    "width": 57,
+                    "height": 57
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-60x60.png",
+                    "mime": "image/png",
+                    "width": 60,
+                    "height": 60
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-72x72.png",
+                    "mime": "image/png",
+                    "width": 72,
+                    "height": 72
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-76x76.png",
+                    "mime": "image/png",
+                    "width": 76,
+                    "height": 76
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-114x114.png",
+                    "mime": "image/png",
+                    "width": 114,
+                    "height": 114
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-120x120.png",
+                    "mime": "image/png",
+                    "width": 120,
+                    "height": 120
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-144x144.png",
+                    "mime": "image/png",
+                    "width": 144,
+                    "height": 144
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-152x152.png",
+                    "mime": "image/png",
+                    "width": 152,
+                    "height": 152
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/apple-icon-180x180.png",
+                    "mime": "image/png",
+                    "width": 180,
+                    "height": 180
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/favicon-96x96.png",
+                    "mime": "image/png",
+                    "width": 96,
+                    "height": 96
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/android-icon-72x72.png",
+                    "mime": "image/png",
+                    "width": 72,
+                    "height": 72
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/android-icon-96x96.png",
+                    "mime": "image/png",
+                    "width": 96,
+                    "height": 96
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/android-icon-144x144.png",
+                    "mime": "image/png",
+                    "width": 144,
+                    "height": 144
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/android-icon-192x192.png",
+                    "mime": "image/png",
+                    "width": 192,
+                    "height": 192
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://nodeassets.nbcnews.com/cdnassets/projects/ramen/favicon/msnbc/all-other-sizes-PNG.ico/ms-icon-144x144.png",
+                    "mime": "image/png",
+                    "width": 144,
+                    "height": 144
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://media1.s-nbcnews.com/j/newscms/2018_21/2442291/msnbc-og-image_c986de7e1bb6ad2281723b692aa61990.nbcnews-fp-1200-630.png",
+                    "mime": "image/png",
+                    "width": 1200,
+                    "height": 630
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "https://media1.s-nbcnews.com/j/newscms/2018_21/2442291/msnbc-og-image_c986de7e1bb6ad2281723b692aa61990.nbcnews-fp-1024-512.png",
+                    "mime": "image/png",
+                    "width": 1024,
+                    "height": 512
+                }
+            ]
+        }
+    ]
+}

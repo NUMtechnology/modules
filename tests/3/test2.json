@@ -1,0 +1,28 @@
+{
+    "@n": 1,
+    "@p": true,
+    "images": [
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "http://www.brightonbierhaus.pub/uploads/8/8/0/4/88042554/editor/bierhaus-1_2.png",
+                    "mime": "image/png",
+                    "width": 361,
+                    "height": 361
+                }
+            ]
+        },
+        {
+            "type": "logo",
+            "variants": [
+                {
+                    "url": "http://www.brightonbierhaus.pub/uploads/1/0/5/3/105381423/bierhaus.png",
+                    "mime": "image/png",
+                    "width": 89,
+                    "height": 100
+                }
+            ]
+        }
+    ]
+}

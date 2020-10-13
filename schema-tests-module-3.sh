@@ -2,18 +2,16 @@
 # This script depends on `nodejs`, `npm`, and `ajv` which should be installed using `npm install -g ajv-cli`
 #
 
-# Tests for module 1 - the Contacts module
+# Tests for module 3 - the Images module
 success=true
-for f in $(find ./tests/1 -name '*.json'); do
+for f in $(find ./tests/3 -name '*.json'); do
   echo "checking $f..."
-  out=$(ajv validate -s data/1/schema.json -d $f)
+  out=$(ajv validate -s data/3/schema.json -d $f)
   if ! [ $? = 0 ]; then
     echo "error on file $f"
     success=false
   fi
 done
-
-# Tests for module 2 - etc. TO-DO
 
 #set relevant exit code
 if [ "$success" = true ]; then
