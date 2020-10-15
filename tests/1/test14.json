@@ -6,7 +6,6 @@
             {
                 "twitter": {
                     "value": "mikeaag",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -18,7 +17,6 @@
             {
                 "twitter": {
                     "value": "fredrivett",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -30,7 +28,6 @@
             {
                 "twitter": {
                     "value": "wecontrast",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -42,7 +39,6 @@
             {
                 "twitter": {
                     "value": "usercompass",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -54,7 +50,6 @@
             {
                 "twitter": {
                     "value": "MyYearCo",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -66,7 +61,6 @@
             {
                 "twitter": {
                     "value": "twlco",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -78,7 +72,6 @@
             {
                 "twitter": {
                     "value": "dylanfeltus",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -90,7 +83,6 @@
             {
                 "twitter": {
                     "value": "founderskit_",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -102,7 +94,6 @@
             {
                 "twitter": {
                     "value": "rNSAwatchingme",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -114,7 +105,6 @@
             {
                 "url": {
                     "value": "wearecontrast.com",
-                    "object_type": "method",
                     "object_display_name": "Web URL",
                     "description_default": "Click",
                     "prefix": "https://",
@@ -122,8 +112,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

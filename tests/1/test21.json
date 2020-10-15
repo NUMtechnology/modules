@@ -14,7 +14,6 @@
                             "d@0-23.59"
                         ]
                     },
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -22,8 +21,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Person",
-        "description_default": "View Person"
+        "object_display_name": "Person"
     }
 }

@@ -7,17 +7,14 @@
             {
                 "linkedin": {
                     "value": "tadas",
-                    "object_type": "method",
                     "object_display_name": "LinkedIn",
                     "description_default": "View LinkedIn page",
                     "prefix": "https://www.linkedin.com/",
-                    "method_type": "3p",
+                    "method_type": "third_party",
                     "controller": "linkedin.com"
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Person",
-        "description_default": "View Person"
+        "object_display_name": "Person"
     }
 }

@@ -6,10 +6,8 @@
         "contacts": [
             {
                 "link": {
-                    "name": "Sales",
                     "description": "Sales Info",
-                    "@L": "sales",
-                    "object_display_name": "Link"
+                    "@L": "sales"
                 }
             },
             {
@@ -22,7 +20,6 @@
                         ]
                     },
                     "value": "+441234 567 890",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -39,7 +36,6 @@
                         ]
                     },
                     "value": "+441234 567 890",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -50,7 +46,6 @@
                 "telephone": {
                     "description": "Complaints",
                     "value": "+441234 567 890",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -58,8 +53,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

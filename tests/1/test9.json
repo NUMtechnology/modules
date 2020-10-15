@@ -6,7 +6,6 @@
             {
                 "url": {
                     "value": "dada.c",
-                    "object_type": "method",
                     "object_display_name": "Web URL",
                     "description_default": "Click",
                     "prefix": "https://",
@@ -14,8 +13,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Person",
-        "description_default": "View Person"
+        "object_display_name": "Person"
     }
 }

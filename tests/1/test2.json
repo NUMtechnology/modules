@@ -8,7 +8,6 @@
                 "email": {
                     "value": "test@emoji-test.co.uk",
                     "description": "a test email address",
-                    "object_type": "method",
                     "object_display_name": "Email",
                     "description_default": "Send an email",
                     "prefix": "mailto://",
@@ -16,8 +15,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Person",
-        "description_default": "View Person"
+        "object_display_name": "Person"
     }
 }

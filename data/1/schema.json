@@ -48,19 +48,12 @@
 				"@L": {
 					"$ref": "#root/notEmptyString"
 				},
-				"name": {
-					"$ref": "#root/notNullString"
-				},
 				"description": {
-					"$ref": "#root/notNullString"
-				},
-				"object_display_name": {
 					"$ref": "#root/notNullString"
 				}
 			},
 			"required": [
-				"@L",
-				"object_display_name"
+				"@L"
 			],
 			"additionalProperties": false
 		},
@@ -70,9 +63,6 @@
 			"type": "object",
 			"default": {},
 			"properties": {
-				"object_display_name": {
-					"$ref": "#root/notEmptyString"
-				},
 				"value": {
 					"$ref": "#root/notNullString"
 				},
@@ -82,35 +72,24 @@
 				"hours": {
 					"$ref": "#root/hours"
 				},
-				"object_type": {
-					"const": "method",
-					"type": "string"
+				"prefix": {
+					"$ref": "#root/notNullString"
 				},
 				"description_default": {
 					"$ref": "#root/notNullString"
 				},
-				"prefix": {
-					"$ref": "#root/notNullString"
+				"object_display_name": {
+					"$ref": "#root/notEmptyString"
 				},
 				"method_type": {
 					"enum": [
 						"core",
 						"third_party"
 					]
-				},
-				"controller": {
-					"$ref": "#root/notNullString"
-				},
-				"value_prefix": {
-					"$ref": "#root/notNullString"
 				}
 			},
 			"required": [
-				"object_display_name",
-				"object_type",
-				"description_default",
-				"prefix",
-				"method_type"
+				"value"
 			],
 			"additionalProperties": false
 		},
@@ -120,35 +99,23 @@
 			"type": "object",
 			"default": {},
 			"properties": {
-				"object_display_name": {
-					"$ref": "#root/notEmptyString"
+				"value": {
+					"$ref": "#root/notNullString"
 				},
 				"description": {
 					"$ref": "#root/notNullString"
 				},
 				"hours": {
-					"type": "object",
-					"properties": {
-						"available": {
-							"type": "array",
-							"items": {
-								"$ref": "#root/notEmptyString"
-							}
-						},
-						"time_zone_location": {
-							"$ref": "#root/notEmptyString"
-						}
-					}
+					"$ref": "#root/hours"
 				},
-				"object_type": {
-					"const": "method",
-					"type": "string"
+				"prefix": {
+					"$ref": "#root/notNullString"
 				},
 				"description_default": {
 					"$ref": "#root/notNullString"
 				},
-				"prefix": {
-					"$ref": "#root/notNullString"
+				"object_display_name": {
+					"$ref": "#root/notEmptyString"
 				},
 				"method_type": {
 					"enum": [
@@ -164,7 +131,7 @@
 				}
 			},
 			"required": [
-				"object_display_name"
+				"value"
 			],
 			"additionalProperties": false
 		},
@@ -322,34 +289,6 @@
 			},
 			"minItems": 1
 		},
-		"entity": {
-			"$id": "#root/entity",
-			"title": "entity",
-			"type": "object",
-			"default": {},
-			"required": [
-				"name",
-				"object_type",
-				"object_display_name",
-				"description_default"
-			],
-			"properties": {
-				"name": {
-					"$ref": "#root/notEmptyString"
-				},
-				"object_type": {
-					"const": "entity",
-					"type": "string"
-				},
-				"object_display_name": {
-					"$ref": "#root/notNullString"
-				},
-				"description_default": {
-					"$ref": "#root/notNullString"
-				}
-			},
-			"additionalProperties": false
-		},
 		"employee": {
 			"$id": "#root/employee",
 			"title": "employee",
@@ -357,26 +296,23 @@
 			"default": {},
 			"required": [
 				"name",
-				"object_type",
-				"object_display_name",
-				"description_default"
+				"contacts"
 			],
 			"properties": {
 				"name": {
 					"$ref": "#root/notEmptyString"
 				},
 				"role": {
-					"$ref": "#root/notNullString"
+					"$ref": "#root/notEmptyString"
 				},
-				"object_type": {
-					"const": "entity",
-					"type": "string"
+				"contacts": {
+					"$ref": "#root/contacts"
+				},
+				"hours": {
+					"$ref": "#root/hours"
 				},
 				"object_display_name": {
-					"$ref": "#root/notNullString"
-				},
-				"description_default": {
-					"$ref": "#root/notNullString"
+					"$ref": "#root/notEmptyString"
 				}
 			},
 			"additionalProperties": false
@@ -388,23 +324,23 @@
 			"default": {},
 			"required": [
 				"name",
-				"object_type",
-				"object_display_name",
-				"description_default"
+				"contacts"
 			],
 			"properties": {
 				"name": {
 					"$ref": "#root/notEmptyString"
 				},
-				"object_type": {
-					"const": "entity",
-					"type": "string"
+				"bio": {
+					"$ref": "#root/notEmptyString"
+				},
+				"contacts": {
+					"$ref": "#root/contacts"
+				},
+				"hours": {
+					"$ref": "#root/hours"
 				},
 				"object_display_name": {
-					"$ref": "#root/notNullString"
-				},
-				"description_default": {
-					"$ref": "#root/notNullString"
+					"$ref": "#root/notEmptyString"
 				}
 			},
 			"additionalProperties": false
@@ -416,30 +352,107 @@
 			"default": {},
 			"required": [
 				"name",
-				"contacts",
-				"object_type",
-				"object_display_name",
-				"description_default"
+				"contacts"
 			],
 			"properties": {
 				"name": {
 					"$ref": "#root/notEmptyString"
 				},
+				"slogan": {
+					"$ref": "#root/notEmptyString"
+				},
 				"contacts": {
 					"$ref": "#root/contacts"
 				},
-				"object_type": {
-					"const": "entity",
-					"type": "string"
+				"hours": {
+					"$ref": "#root/hours"
 				},
 				"object_display_name": {
-					"$ref": "#root/notNullString"
+					"$ref": "#root/notEmptyString"
+				}
+			},
+			"additionalProperties": false
+		},
+		"group": {
+			"$id": "#root/group",
+			"title": "group",
+			"type": "object",
+			"default": {},
+			"required": [
+				"name",
+				"contacts"
+			],
+			"properties": {
+				"name": {
+					"$ref": "#root/notEmptyString"
 				},
-				"description_default": {
-					"$ref": "#root/notNullString"
+				"description": {
+					"$ref": "#root/notEmptyString"
 				},
-				"slogan": {
-					"$ref": "#root/notNullString"
+				"contacts": {
+					"$ref": "#root/contacts"
+				},
+				"hours": {
+					"$ref": "#root/hours"
+				},
+				"object_display_name": {
+					"$ref": "#root/notEmptyString"
+				}
+			},
+			"additionalProperties": false
+		},
+		"location": {
+			"$id": "#root/location",
+			"title": "location",
+			"type": "object",
+			"default": {},
+			"required": [
+				"name",
+				"contacts"
+			],
+			"properties": {
+				"name": {
+					"$ref": "#root/notEmptyString"
+				},
+				"description": {
+					"$ref": "#root/notEmptyString"
+				},
+				"contacts": {
+					"$ref": "#root/contacts"
+				},
+				"hours": {
+					"$ref": "#root/hours"
+				},
+				"object_display_name": {
+					"$ref": "#root/notEmptyString"
+				}
+			},
+			"additionalProperties": false
+		},
+		"department": {
+			"$id": "#root/department",
+			"title": "department",
+			"type": "object",
+			"default": {},
+			"required": [
+				"name",
+				"contacts"
+			],
+			"properties": {
+				"name": {
+					"$ref": "#root/notEmptyString"
+				},
+				"description": {
+					"$ref": "#root/notEmptyString"
+				},
+				"contacts": {
+					"$ref": "#root/contacts"
+				},
+				"hours": {
+					"$ref": "#root/hours"
+				},
+				"object_display_name": {
+					"$ref": "#root/notEmptyString"
 				}
 			},
 			"additionalProperties": false
@@ -459,13 +472,13 @@
 			"$ref": "#root/organisation"
 		},
 		"department": {
-			"$ref": "#root/entity"
+			"$ref": "#root/department"
 		},
 		"group": {
-			"$ref": "#root/entity"
+			"$ref": "#root/group"
 		},
 		"location": {
-			"$ref": "#root/entity"
+			"$ref": "#root/location"
 		},
 		"person": {
 			"$ref": "#root/person"

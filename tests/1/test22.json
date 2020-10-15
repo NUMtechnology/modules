@@ -7,7 +7,6 @@
                 "telephone": {
                     "value": "0123456789",
                     "description": "Ring us",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -16,14 +15,10 @@
             },
             {
                 "link": {
-                    "name": "Marketing News Department",
-                    "@L": "news",
-                    "object_display_name": "Link"
+                    "@L": "news"
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Department",
-        "description_default": "View Department"
+        "object_display_name": "Department"
     }
 }

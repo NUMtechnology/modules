@@ -7,7 +7,6 @@
             {
                 "telephone": {
                     "value": "+441234567890",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -15,8 +14,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

@@ -6,7 +6,6 @@
             {
                 "facebook": {
                     "value": "regencycakes",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -17,7 +16,6 @@
             {
                 "facebook": {
                     "value": "213040648757220",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -28,7 +26,6 @@
             {
                 "facebook": {
                     "value": "1260798464014417",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -39,7 +36,6 @@
             {
                 "facebook": {
                     "value": "885403768188944",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -50,7 +46,6 @@
             {
                 "facebook": {
                     "value": "172631932889718",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -61,7 +56,6 @@
             {
                 "facebook": {
                     "value": "intent",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -72,7 +66,6 @@
             {
                 "facebook": {
                     "value": "shareArticle",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -83,7 +76,6 @@
             {
                 "facebook": {
                     "value": "362185360557443",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -94,7 +86,6 @@
             {
                 "facebook": {
                     "value": "363046033815108",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -105,7 +96,6 @@
             {
                 "twitter": {
                     "value": "regencycakes",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -117,7 +107,6 @@
             {
                 "instagram": {
                     "value": "regency_cakes",
-                    "object_type": "method",
                     "object_display_name": "Instagram",
                     "description_default": "View Instagram profile",
                     "prefix": "https://www.instagram.com/",
@@ -128,7 +117,6 @@
             {
                 "pinterest": {
                     "value": "regencycakes",
-                    "object_type": "method",
                     "object_display_name": "Pinterest",
                     "description_default": "View Pinterest board",
                     "prefix": "https://www.pinterest.com/",
@@ -139,7 +127,6 @@
             {
                 "linkedin": {
                     "value": "shareArticle",
-                    "object_type": "method",
                     "object_display_name": "LinkedIn",
                     "description_default": "View LinkedIn page",
                     "prefix": "https://www.linkedin.com/",
@@ -150,7 +137,6 @@
             {
                 "telephone": {
                     "value": "+441638578975",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -162,7 +148,6 @@
                     "lines": [
                         "Haggis Gap:Fulbourn:CB21 5HD"
                     ],
-                    "object_type": "method",
                     "object_display_name": "Address",
                     "description_default": "View Address",
                     "prefix": "",
@@ -172,7 +157,6 @@
             {
                 "url": {
                     "value": "regencycakes.com",
-                    "object_type": "method",
                     "object_display_name": "Web URL",
                     "description_default": "Click",
                     "prefix": "https://",
@@ -180,8 +164,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

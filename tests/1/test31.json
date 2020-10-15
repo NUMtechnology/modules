@@ -7,7 +7,6 @@
             {
                 "email": {
                     "value": "someone@example.com",
-                    "object_type": "method",
                     "object_display_name": "Email",
                     "description_default": "Send an email",
                     "prefix": "mailto://",
@@ -20,7 +19,6 @@
                         "42 West Wallaby Way",
                         "Sydney"
                     ],
-                    "object_type": "method",
                     "object_display_name": "Address",
                     "description_default": "View Address",
                     "prefix": "",
@@ -28,8 +26,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Person",
-        "description_default": "View Person"
+        "object_display_name": "Person"
     }
 }

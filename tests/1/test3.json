@@ -7,7 +7,6 @@
             {
                 "facebook": {
                     "value": "The-Mucky-Duck-199245310119866",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -18,7 +17,6 @@
             {
                 "twitter": {
                     "value": "muckulousduck",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -30,7 +28,6 @@
             {
                 "twitter": {
                     "value": "infinite_bridge",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -42,7 +39,6 @@
             {
                 "instagram": {
                     "value": "themuckyduckbrighton",
-                    "object_type": "method",
                     "object_display_name": "Instagram",
                     "description_default": "View Instagram profile",
                     "prefix": "https://www.instagram.com/",
@@ -54,7 +50,6 @@
                 "telephone": {
                     "description": "Opening Hours",
                     "value": "+441273601450",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -64,7 +59,6 @@
             {
                 "telephone": {
                     "value": "+441273202020",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -74,7 +68,6 @@
             {
                 "url": {
                     "value": "themuckyduck.org",
-                    "object_type": "method",
                     "object_display_name": "Web URL",
                     "description_default": "Click",
                     "prefix": "https://",
@@ -82,8 +75,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

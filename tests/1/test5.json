@@ -14,7 +14,6 @@
                             "6@9-14"
                         ]
                     },
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -31,7 +30,6 @@
                             "d@0-23.59"
                         ]
                     },
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -50,7 +48,6 @@
                             "7@10-17"
                         ]
                     },
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -68,7 +65,6 @@
                             "6@9-17"
                         ]
                     },
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -86,7 +82,6 @@
                             "6@9-17"
                         ]
                     },
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -94,8 +89,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Department",
-        "description_default": "View Department"
+        "object_display_name": "Department"
     }
 }

@@ -8,7 +8,6 @@
                 "email": {
                     "value": "peter.piper@pepperpickers.com",
                     "description": "Peppers need picking?",
-                    "object_type": "method",
                     "object_display_name": "Email",
                     "description_default": "Send an email",
                     "prefix": "mailto://",
@@ -22,7 +21,6 @@
                         "Sydney",
                         "Australia"
                     ],
-                    "object_type": "method",
                     "object_display_name": "Address",
                     "description_default": "View Address",
                     "prefix": "",
@@ -30,8 +28,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Person",
-        "description_default": "View Person"
+        "object_display_name": "Person"
     }
 }

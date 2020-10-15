@@ -6,7 +6,6 @@
             {
                 "facebook": {
                     "value": "JEMidland",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -17,7 +16,6 @@
             {
                 "telephone": {
                     "value": "+441612369333",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -27,7 +25,6 @@
             {
                 "url": {
                     "value": "josephelliott.co.uk",
-                    "object_type": "method",
                     "object_display_name": "Web URL",
                     "description_default": "Click",
                     "prefix": "https://",
@@ -35,8 +32,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

@@ -9,7 +9,6 @@
                         "Line 2",
                         "Line 3"
                     ],
-                    "object_type": "method",
                     "object_display_name": "Address",
                     "description_default": "View Address",
                     "prefix": "",
@@ -18,8 +17,6 @@
             }
         ],
         "name": "Test",
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

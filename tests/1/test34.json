@@ -7,7 +7,6 @@
             {
                 "facebook": {
                     "value": "dalzielltd",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -18,7 +17,6 @@
             {
                 "twitter": {
                     "value": "DalzielLtd",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -30,7 +28,6 @@
             {
                 "youtube": {
                     "value": "channel/UC384AIXjSVw06xP5sETz7hw",
-                    "object_type": "method",
                     "object_display_name": "YouTube",
                     "description_default": "View YouTube channel",
                     "prefix": "https://www.youtube.com/",
@@ -42,7 +39,6 @@
                 "telephone": {
                     "description": "Bellshill Depot",
                     "value": "+441698749595",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -53,7 +49,6 @@
                 "telephone": {
                     "description": "Aberdeen Depot",
                     "value": "+441224723550",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -64,7 +59,6 @@
                 "telephone": {
                     "description": "ADDRESS",
                     "value": "+441233612220",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -74,7 +68,6 @@
             {
                 "telephone": {
                     "value": "+441257226000",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -85,7 +78,6 @@
                 "telephone": {
                     "description": "Haverhill Depot",
                     "value": "+441440710060",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -96,7 +88,6 @@
                 "telephone": {
                     "description": "Leeds Depot",
                     "value": "+441977605590",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -106,7 +97,6 @@
             {
                 "telephone": {
                     "value": "+441635265160",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -116,7 +106,6 @@
             {
                 "telephone": {
                     "value": "+441914962680",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -126,7 +115,6 @@
             {
                 "telephone": {
                     "value": "+441633898150",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -137,7 +125,6 @@
                 "telephone": {
                     "description": "Nottingham Depot (D F Dickens)",
                     "value": "+441159504084",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -147,7 +134,6 @@
             {
                 "telephone": {
                     "value": "+441614067272",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -158,7 +144,6 @@
                 "telephone": {
                     "description": "West Midlands Depot",
                     "value": "+441384230012",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -168,7 +153,6 @@
             {
                 "telephone": {
                     "value": "+448000121700",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -178,7 +162,6 @@
             {
                 "url": {
                     "value": "dalziel.co.uk",
-                    "object_type": "method",
                     "object_display_name": "Web URL",
                     "description_default": "Click",
                     "prefix": "https://",
@@ -186,8 +169,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

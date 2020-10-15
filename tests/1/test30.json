@@ -7,7 +7,6 @@
             {
                 "twitter": {
                     "value": "DirectLine",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -19,7 +18,6 @@
             {
                 "facebook": {
                     "value": "DirectLineUK",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -30,7 +28,6 @@
             {
                 "youtube": {
                     "value": "user/DirectLineTV",
-                    "object_type": "method",
                     "object_display_name": "YouTube",
                     "description_default": "View YouTube channel",
                     "prefix": "https://www.youtube.com/",
@@ -41,7 +38,6 @@
             {
                 "instagram": {
                     "value": "DirectLineUK",
-                    "object_type": "method",
                     "object_display_name": "Instagram",
                     "description_default": "View Instagram profile",
                     "prefix": "https://www.instagram.com/",
@@ -52,7 +48,6 @@
             {
                 "url": {
                     "value": "directline.co.uk",
-                    "object_type": "method",
                     "object_display_name": "Web URL",
                     "description_default": "Click",
                     "prefix": "https://",
@@ -60,8 +55,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }

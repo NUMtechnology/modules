@@ -7,7 +7,6 @@
             {
                 "facebook": {
                     "value": "Long-Barn-Bakery-Cakes-by-Mary-353214444755120",
-                    "object_type": "method",
                     "object_display_name": "Facebook",
                     "description_default": "View Facebook profile",
                     "prefix": "https://www.facebook.com/",
@@ -18,7 +17,6 @@
             {
                 "twitter": {
                     "value": "longbarnbakery",
-                    "object_type": "method",
                     "object_display_name": "Twitter",
                     "description_default": "View Twitter profile",
                     "prefix": "https://www.twitter.com/",
@@ -36,7 +34,6 @@
                             "wd@9-17"
                         ]
                     },
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -46,7 +43,6 @@
             {
                 "telephone": {
                     "value": "+441763261893",
-                    "object_type": "method",
                     "object_display_name": "Telephone",
                     "description_default": "Call",
                     "prefix": "tel://",
@@ -56,7 +52,6 @@
             {
                 "url": {
                     "value": "cakesbymary.co.uk",
-                    "object_type": "method",
                     "object_display_name": "Web URL",
                     "description_default": "Click",
                     "prefix": "https://",
@@ -64,8 +59,6 @@
                 }
             }
         ],
-        "object_type": "entity",
-        "object_display_name": "Organisation",
-        "description_default": "View Organisation"
+        "object_display_name": "Organisation"
     }
 }
