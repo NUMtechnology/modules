@@ -42,8 +42,7 @@ _locale_file = "%L%-%C";
   *superclass=contact;
   *assign=[
     [@L];
-    [n;@L];
-    [n;d;@L]
+    [d;@L];
   ]
 );
 
@@ -253,7 +252,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.t.name;
   description_default=%locale.t.default;
-  prefix="tel://";
+  prefix="tel:";
   method_type=core
 );
 
@@ -265,7 +264,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.sm.name;
   description_default=%locale.sm.default;
-  prefix="sms://";
+  prefix="sms:";
   method_type=core
 );
 
@@ -303,7 +302,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.g.name;
   description_default=%locale.g.default;
-  prefix=null;
+  prefix="";
   method_type=core
 );
 
@@ -335,7 +334,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.fx.name;
   description_default=%locale.fx.default;
-  prefix="fax://";
+  prefix="tel:";
   method_type=core
 );
 
@@ -347,7 +346,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.em.name;
   description_default=%locale.em.default;
-  prefix="mailto://";
+  prefix="mailto:";
   method_type=core
 );
 
@@ -619,7 +618,7 @@ _locale_file = "%L%-%C";
   object_type=method;
   object_display_name=%locale.sk.name;
   description_default=%locale.sk.default;
-  prefix="skype://";
+  prefix="skype:";
   method_type=third_party;
   controller=skype.com
 );
