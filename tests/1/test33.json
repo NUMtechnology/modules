@@ -50,9 +50,7 @@
             },
             {
                 "link": {
-                    "name": "Recruitment",
-                    "@L": "jobs",
-                    "object_display_name": "Link"
+                    "@L": "jobs"
                 }
             }
         ],
