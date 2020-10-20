@@ -1,31 +1,24 @@
 _locale(
   p(
-    name=Person;
-    default=View Person
+    name=Person
   );
   gr(
-    name=Group;
-    default=View Group
+    name=Group
   );
   o(
-    name=Organization;
-    default=View Organization
+    name=Organization
   );
   dp(
-    name=Department;
-    default=View Department
+    name=Department
   );
   e(
-    name=Employee;
-    default=View Employee
+    name=Employee
   );
   lc(
-    name=Location;
-    default=View Location
+    name=Location
   );
   gp(
-    name=Group;
-    default=View Group
+    name=Group
   );
   t(
     name=Telephone;

@@ -97,8 +97,7 @@ _locale_file = "%L%-%C";
   *id=p;
   *name=person;
   *superclass=entity;
-  object_display_name=%locale.p.name;
-  description_default=%locale.p.default
+  object_display_name=%locale.p.name
 );
 
 *class(
@@ -106,8 +105,7 @@ _locale_file = "%L%-%C";
   *id=gp;
   *name=group;
   *superclass=entity;
-  object_display_name=%locale.gp.name;
-  description_default=%locale.gp.default
+  object_display_name=%locale.gp.name
 );
 
 *class(
@@ -127,8 +125,7 @@ _locale_file = "%L%-%C";
     ## object index, name, slogan, available hours and contacts 'tesco:%1.s:Every Little Helps:d@6-24:[t=44800 50 5555;fb=%1]'
     [?;n;s;h;c]
   ];
-  object_display_name=%locale.o.name;
-  description_default=%locale.o.default
+  object_display_name=%locale.o.name
 );
 
 *class(
@@ -136,8 +133,7 @@ _locale_file = "%L%-%C";
   *id=dp;
   *superclass=entity;
   *name=department;
-  object_display_name=%locale.dp.name;
-  description_default=%locale.dp.default
+  object_display_name=%locale.dp.name
 );
 
 *class(
@@ -155,8 +151,7 @@ _locale_file = "%L%-%C";
     ## name and role, e.g. John Smith:Managing Director
     [n;r]
   ];
-  object_display_name=%locale.e.name;
-  description_default=%locale.e.default
+  object_display_name=%locale.e.name
 );
 
 *class(
@@ -164,8 +159,7 @@ _locale_file = "%L%-%C";
   *id=lc;
   *superclass=entity;
   *name=location;
-  object_display_name=%locale.lc.name;
-  description_default=%locale.lc.default
+  object_display_name=%locale.lc.name
 );
 
 ## These keys are used for all root entities
