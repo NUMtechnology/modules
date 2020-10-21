@@ -81,6 +81,12 @@
 				"object_display_name": {
 					"$ref": "#root/notEmptyString"
 				},
+				"controller": {
+					"$ref": "#root/notEmptyString"
+				},
+				"value_prefix": {
+					"$ref": "#root/notEmptyString"
+				},
 				"method_type": {
 					"enum": [
 						"core",
@@ -131,7 +137,7 @@
 				}
 			},
 			"required": [
-				"value"
+				"lines"
 			],
 			"additionalProperties": false
 		},
