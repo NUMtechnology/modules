@@ -37,7 +37,8 @@
 				"time_zone_location": {
 					"$ref": "#root/notNullString"
 				}
-			}
+			},
+			"additionalProperties": false
 		},
 		"link": {
 			"$id": "#root/link",
@@ -149,11 +150,138 @@
 				},
 				"address": {
 					"$ref": "#root/address"
+				},
+				"telephone": {
+					"$ref": "#root/method"
+				},
+				"sms": {
+					"$ref": "#root/method"
+				},
+				"url": {
+					"$ref": "#root/method"
+				},
+				"unsecure_url": {
+					"$ref": "#root/method"
+				},
+				"gps": {
+					"$ref": "#root/method"
+				},
+				"fax": {
+					"$ref": "#root/method"
+				},
+				"email": {
+					"$ref": "#root/method"
+				},
+				"android-app": {
+					"$ref": "#root/method"
+				},
+				"ios-app": {
+					"$ref": "#root/method"
+				},
+				"baidu_tieba": {
+					"$ref": "#root/method"
+				},
+				"facebook": {
+					"$ref": "#root/method"
+				},
+				"foursquare": {
+					"$ref": "#root/method"
+				},
+				"facetime": {
+					"$ref": "#root/method"
+				},
+				"github": {
+					"$ref": "#root/method"
+				},
+				"imessage": {
+					"$ref": "#root/method"
+				},
+				"instagram": {
+					"$ref": "#root/method"
+				},
+				"kik": {
+					"$ref": "#root/method"
+				},
+				"linkedin": {
+					"$ref": "#root/method"
+				},
+				"line": {
+					"$ref": "#root/method"
+				},
+				"medium": {
+					"$ref": "#root/method"
+				},
+				"periscope": {
+					"$ref": "#root/method"
+				},
+				"pinterest": {
+					"$ref": "#root/method"
+				},
+				"qq": {
+					"$ref": "#root/method"
+				},
+				"qzone": {
+					"$ref": "#root/method"
+				},
+				"reddit": {
+					"$ref": "#root/method"
+				},
+				"renren": {
+					"$ref": "#root/method"
+				},
+				"soundcloud": {
+					"$ref": "#root/method"
+				},
+				"skype": {
+					"$ref": "#root/method"
+				},
+				"swarm": {
+					"$ref": "#root/method"
+				},
+				"snapchat": {
+					"$ref": "#root/method"
+				},
+				"sina-weibo": {
+					"$ref": "#root/method"
+				},
+				"tumblr": {
+					"$ref": "#root/method"
+				},
+				"telegram": {
+					"$ref": "#root/method"
+				},
+				"twitter": {
+					"$ref": "#root/method"
+				},
+				"twoo": {
+					"$ref": "#root/method"
+				},
+				"viber": {
+					"$ref": "#root/method"
+				},
+				"vkontakte": {
+					"$ref": "#root/method"
+				},
+				"vimeo": {
+					"$ref": "#root/method"
+				},
+				"whatsapp": {
+					"$ref": "#root/method"
+				},
+				"wechat": {
+					"$ref": "#root/method"
+				},
+				"xing": {
+					"$ref": "#root/method"
+				},
+				"youtube": {
+					"$ref": "#root/method"
+				},
+				"yy": {
+					"$ref": "#root/method"
 				}
 			},
-			"additionalProperties": {
-				"$ref": "#root/method"
-			}
+			"additionalProperties": false
 		},
 		"contacts": {
 			"$id": "#root/contacts",
