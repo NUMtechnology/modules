@@ -12,7 +12,7 @@ fi
 # Generate test files from MODL files
 success=true
 for f in $(find ./tests/3 -name '*.modl'); do
-  echo "checking $f..."
+  echo "Generating JSON from MODL $f..."
   out=$(java -jar interpreter.jar $f >$f.json);
   if ! [ $? = 0 ]; then
     echo "error on file $f"
