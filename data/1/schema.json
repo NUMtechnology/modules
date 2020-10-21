@@ -105,9 +105,6 @@
 			"type": "object",
 			"default": {},
 			"properties": {
-				"value": {
-					"$ref": "#root/notNullString"
-				},
 				"description": {
 					"$ref": "#root/notNullString"
 				},
