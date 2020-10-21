@@ -6,3 +6,5 @@
 
 # ignore fred's test module
 data/999
+
+.vscode
