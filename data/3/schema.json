@@ -1,0 +1,104 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://modules.numprotocol.com/3/schema.json",
+	"title": "Root",
+	"type": "object",
+	"definitions": {
+		"@n": {
+			"$id": "#root/@n",
+			"title": "@n",
+			"type": "integer",
+			"default": 1
+		},
+		"notNullString": {
+			"$id": "#root/notNullString",
+			"title": "notNullString",
+			"type": "string",
+			"nullable": false
+		},
+		"notEmptyString": {
+			"$id": "#root/notEmptyString",
+			"title": "notEmptyString",
+			"type": "string",
+			"minLength": 1,
+			"nullable": false
+		},
+		"images": {
+			"$id": "#root/images",
+			"title": "images",
+			"type": "array",
+			"items": {
+				"$ref": "#root/image"
+			}
+		},
+		"image": {
+			"$id": "#root/image",
+			"title": "image",
+			"type": "object",
+			"required": [
+				"type",
+				"variants"
+			],
+			"properties": {
+				"name": {
+					"$ref": "#root/notEmptyString"
+				},
+				"type": {
+					"$ref": "#root/notEmptyString"
+				},
+				"variants": {
+					"$ref": "#root/variants"
+				}
+			}
+		},
+		"variants": {
+			"$id": "#root/variants",
+			"title": "variants",
+			"type": "array",
+			"items": {
+				"$ref": "#root/variant"
+			}
+		},
+		"variant": {
+			"$id": "#root/variant",
+			"title": "variant",
+			"type": "object",
+			"required": [
+				"url",
+				"mime",
+				"width",
+				"height"
+			],
+			"properties": {
+				"url": {
+					"$ref": "#root/notEmptyString"
+				},
+				"mime": {
+					"$ref": "#root/notEmptyString"
+				},
+				"width": {
+					"type": "integer"
+				},
+				"height": {
+					"type": "integer"
+				}
+			}
+		}
+	},
+	"required": [
+		"@n",
+		"images"
+	],
+	"properties": {
+		"@n": {
+			"$ref": "#root/@n"
+		},
+		"@p": {
+			"type": "boolean"
+		},
+		"images": {
+			"$ref": "#root/images"
+		}
+	},
+	"additionalProperties": false
+}
