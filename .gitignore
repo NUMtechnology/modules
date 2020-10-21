@@ -7,5 +7,9 @@
 # ignore fred's test module
 data/999
 
+# Ignore generated test files
+**/*.modl.json
+interpreter.jar
+
 # ignore VSCode local configs
 .vscode

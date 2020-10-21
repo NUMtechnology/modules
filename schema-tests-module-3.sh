@@ -1,3 +1,4 @@
+#!/bin/sh
 #
 # This script depends on `nodejs`, `npm`, and `ajv` which should be installed using `npm install -g ajv-cli`
 #
