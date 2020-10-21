@@ -24,7 +24,7 @@ config(
   );
 
   method(
-    fields=(v(prefix=<parent>.prefix);d(placeholder=<parent>.description_default))
+    fields=(v(prefix=<parent>.prefix;required=true);d(placeholder=<parent>.description_default))
   );
 
   i(
