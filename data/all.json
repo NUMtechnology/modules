@@ -13,15 +13,15 @@
 		"populate": true
 	},
 	"2": {
-		"name": "WhoHas",
+		"name": "Registrant",
 		"status": 5,
-		"description": ["The WhoHas module can be used to store ownership data for a domain name, email address or any asset represented by a domain name. It's focus is on the legal entity name, type and address.", "It does not include any other contact information. Contact information should be provided in the <a href='https://www.num.uk/modules/1'>contacts module</a>."],
+		"description": ["The Registrant module can be used to store ownership data for a domain name, email address or any asset represented by a domain name. It's focus is on the legal entity name, type and address.", "It does not include any other contact information. Contact information should be provided in the Contacts module."],
 		"description_brief": 1,
 		"author": ["Alex Dalitz", "Elliott Brown"],
 		"author_link": ["https://www.github.com/AlexDalitz", "https://www.github.com/ElliottInvent"],
 		"spec": true,
 		"spec_type": "mini",
-		"example": "@n=1;n=NUM Technology Ltd;t=2;id=10097965;a=[39th Floor;One Canada Square;Canary Wharf;London];p=E14 5AB;co=GB",
+		"example": "@n=1;o(n=NUM Technology Ltd;id=10097965;a[39th Floor;One Canada Square;Canary Wharf;London];p=E14 5AB;co=GB;t=+441270123456;e=domains@num.uk;c[(AD(n=Mr Admin Contact;a[Admin Department;39th Floor;One Canada Square;Canary Wharf;London];p=E14 5AB;co=GB;e=domains-admin@num.uk;t=+441270654321));(TC(n=Ms Tech Contact;a[Tech Team;39th Floor;One Canada Square;Canary Wharf;London];p=E14 5AB;t=+441270111111;e=domains-tech@num.uk;co=GB));(SC(n=Ms Security Contact;a[Tech Team;39th Floor;One Canada Square;Canary Wharf;London];p=E14 5AB;co=GB;t=+441270222222;e=domains-security@num.uk))])",
 		"explainer": null,
 		"populate": false
 	},
