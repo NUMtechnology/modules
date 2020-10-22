@@ -21,7 +21,7 @@
 		"author_link": ["https://www.github.com/AlexDalitz", "https://www.github.com/ElliottInvent"],
 		"spec": true,
 		"spec_type": "mini",
-		"example": "@n=1;n=NUM Technology Ltd;t=2;i=10097965;a=39th Floor^One Canada Square^Canary Wharf^London;p=E14 5AB;co=GB",
+		"example": "@n=1;n=NUM Technology Ltd;t=2;id=10097965;a=[39th Floor;One Canada Square;Canary Wharf;London];p=E14 5AB;co=GB",
 		"explainer": null,
 		"populate": false
 	},
