@@ -68,20 +68,20 @@
   *superclass=map
 );
 *class(
-  *id=AD;
+  *id=ad;
   *name=admin;
   *superclass=contact;
   object_display_name=Admin Contact
 );
 *class(
-  *id=TC;
+  *id=tc;
   *name=technical;
   *superclass=contact;
   object_display_name=Technical Contact
 );
 *class(
-  *id=SC;
-  *name=Security;
+  *id=sc;
+  *name=security;
   *superclass=contact;
   object_display_name=Security Contact
 );
