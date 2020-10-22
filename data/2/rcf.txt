@@ -59,8 +59,7 @@
 *class(
   *id=c;
   *name=contacts;
-  *superclass=arr;
-  object_display_name=Contacts
+  *superclass=arr
 );
 *class(
   *id=contact;
