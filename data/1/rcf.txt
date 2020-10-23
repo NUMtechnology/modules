@@ -53,21 +53,13 @@ _locale_file = "%L%-%C";
   object_display_name=Contact Method;
   *superclass=contact;
   *assign=[
-    ## value, e.g. '441270123456'
+    ## value, e.g. '+441270123456'
     [v];
-    ## description and value, e.g. 'Sales:441270123456'
+    ## description and value, e.g. 'Sales:+441270123456'
     [d;v];
-    ## description, value and available hours, e.g. 'Sales:441270123456:wd@9-17'
+    ## description, value and available hours, e.g. 'Sales:+441270123456:wd@9-17'
     [d;v;h]
   ]
-);
-
-## All root level entities can be described with these keys
-*class(
-  ## INTRODUCTION: Introductory text for a NUM record
-  *id=i;
-  *name=introduction;
-  *superclass=str
 );
 
 *class(
@@ -101,7 +93,7 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## GROUP: A group of things (methods, entities or both)
+  ## GROUP: A group, can be used for entities that don't fit into other categories
   *id=gp;
   *name=group;
   *superclass=entity;
@@ -114,15 +106,15 @@ _locale_file = "%L%-%C";
   *name=organisation;
   *superclass=entity;
   *assign=[
-    ## name, 'Tesco'
+    ## name, 'Exampleco'
     [n];
-    ## name and contacts 'Tesco:[t=44800 50 5555]'
+    ## name and contacts 'Exampleco:[t=+44800 50 5555]'
     [n;c];
-    ## name, slogan and contacts 'Tesco:Every Little Helps:[t=44800 50 5555]'
+    ## name, slogan and contacts 'Exampleco:Our products are the best:[t=+44800 123 456]'
     [n;s;c];
-    ## object index, name, slogan and contacts 'tesco:%1.s:Every Little Helps:[t=44800 50 5555;fb=%1]'
+    ## object index, name, slogan and contacts 'exampleco:%1.s:Our products are the best:[t=+44800 123 456;fb=%1]'
     [?;n;s;c];
-    ## object index, name, slogan, available hours and contacts 'tesco:%1.s:Every Little Helps:d@6-24:[t=44800 50 5555;fb=%1]'
+    ## object index, name, slogan, available hours and contacts 'exampleco:%1.s:Our products are the best:d@6-24:[t=+44800 123 456;fb=%1]'
     [?;n;s;h;c]
   ];
   object_display_name=%locale.o.name
@@ -141,10 +133,6 @@ _locale_file = "%L%-%C";
   *id=e;
   *superclass=entity;
   *name=employee;
-  ## An employee object can be instantiated with keyless
-  ## pairs by submitting values in this order:
-  ## Name:Role, e.g:
-  ## John Smith:Managing Director
   *assign=[
     ## name, e.g. John Smith
     [n];
@@ -164,7 +152,7 @@ _locale_file = "%L%-%C";
 
 ## These keys are used for all root entities
 *class(
-  ## ENTITY NAME: e.g. 'Tesco' or 'John Smith'
+  ## ENTITY NAME: e.g. 'Example Company' or 'John Smith'
   *id=n;
   *name=name;
   *superclass=str
@@ -187,7 +175,7 @@ _locale_file = "%L%-%C";
 
 ## Slogan is just for organisations
 *class(
-  ## SLOGAN: The organisation slogan, e.g. 'Every Little Helps'
+  ## SLOGAN: The organisation slogan, e.g. 'Our products are the best'
   *id=s;
   *name=slogan;
   *superclass=str
@@ -195,7 +183,7 @@ _locale_file = "%L%-%C";
 
 ## Description
 *class(
-  ## DESCRIPTION: A description of a method, e.g 'Customer Service'
+  ## DESCRIPTION: A description of an entity or a method, used with telephone numbers like 'Customer Service' and with entities like 'Sales Department'
   *id=d;
   *name=description;
   *superclass=str
@@ -233,7 +221,7 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## TELEPHONE: A telephone number in E.164 (https://en.wikipedia.org/wiki/E.164) format
+  ## TELEPHONE: A telephone number in E.164 (https://en.wikipedia.org/wiki/E.164) format, optional spacing allowed for display purposes
   *id=t;
   *name=telephone;
   *superclass=method;
@@ -244,7 +232,7 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## SMS: An SMS number for enquiries in E.164 (https://en.wikipedia.org/wiki/E.164) format
+  ## SMS: An SMS number for enquiries in E.164 (https://en.wikipedia.org/wiki/E.164) format, optional spacing allowed for display purposes
   *id=sm;
   *name=sms;
   *superclass=method;
@@ -255,6 +243,7 @@ _locale_file = "%L%-%C";
 );
 
 *class(
+  ## TODO: We should change the ID to "w" and name to "www_url", otherwise it could create confusion between WWW URLs and other URIs (e.g. NUM URI).
   ## URL: The organisation's webpage or a webpage about a particular topic or product.
   *id=u;
   *name=url;
@@ -266,6 +255,7 @@ _locale_file = "%L%-%C";
 );
 
 *class(
+  ## TODO: Change this to "uw" and "unsecure_www_url", see above
   ## UNSECURE_URL: The organisation's webpage or a webpage about a particular topic or product.
   *id=uu;
   *name=unsecure_url;
@@ -295,11 +285,11 @@ _locale_file = "%L%-%C";
   *name=address;
   *superclass=method;
   *assign=[
-    ## value, e.g. '441270123456'
+    ## value, e.g. '+441270123456'
     [al];
-    ## description and address lines, e.g. 'Sales:441270123456'
+    ## description and address lines, e.g. 'Sales:+441270123456'
     [d;al];
-    ## description, address lines and available hours, e.g. 'Sales:441270123456:wd@9-17'
+    ## description, address lines and available hours, e.g. 'Sales:+441270123456:wd@9-17'
     [d;al;h]
   ];
   object_display_name=%locale.a.name;
@@ -309,7 +299,7 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## FAX: A number for fax transmission in E.164 (https://en.wikipedia.org/wiki/E.164) format
+  ## FAX: A number for fax transmission in E.164 (https://en.wikipedia.org/wiki/E.164) format with optional spacing for display
   *id=fx;
   *name=fax;
   *superclass=method;
@@ -320,7 +310,7 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## EMAIL: An email address for enquiries. We do not recommend listing an email in the DNS.
+  ## EMAIL: An email address for enquiries.
   *id=em;
   *name=email;
   *superclass=method;
@@ -818,6 +808,3 @@ _locale_file = "%L%-%C";
   *name=replace_underscores_with_hyphens;
   *transform=replace<_,->
 );
-
-_CLAIM_TEXT = Claim this NUM record;
-_CLAIM_LINK = www.numserver.com/claim/;
