@@ -55,7 +55,7 @@ config(
   );
 
   dp(
-    fields=(n(label=Enter the name of the department, e.g. Customer Service))
+    fields=(n(label=Enter the name of the department, e.g. Customer Service);d(label=Enter a description for the department, e.g. Sales Team))
   );
 
   e(
