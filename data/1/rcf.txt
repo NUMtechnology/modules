@@ -243,10 +243,8 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## TODO: We should change the ID to "w" and name to "www_url", otherwise it could create confusion between WWW URLs and other URIs (e.g. NUM URI).
-  ## URL: The organisation's webpage or a webpage about a particular topic or product.
-  *id=u;
-  *name=url;
+  *id=w;
+  *name=web_url;
   *superclass=method;
   object_display_name=%locale.u.name;
   description_default=%locale.u.default;
@@ -255,10 +253,8 @@ _locale_file = "%L%-%C";
 );
 
 *class(
-  ## TODO: Change this to "uw" and "unsecure_www_url", see above
-  ## UNSECURE_URL: The organisation's webpage or a webpage about a particular topic or product.
-  *id=uu;
-  *name=unsecure_url;
+  *id=uw;
+  *name=unsecure_web_url;
   *superclass=method;
   object_display_name=%locale.uu.name;
   description_default=%locale.uu.default;
