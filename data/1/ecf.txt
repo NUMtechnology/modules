@@ -11,7 +11,7 @@ config(
   );
 
   contact(
-    placeholder=Add a contact method or a record link?
+    placeholder=Add a contact method? Or a link to another record?
   );
 
   l(
