@@ -319,7 +319,7 @@ _locale_file = "%L%-%C";
 *class(
   ## ANDROID APP: A download link for an app on the Google Play store.
   *id=aa;
-  *name=android-app;
+  *name=android_app;
   *superclass=method;
   object_display_name=%locale.aa.name;
   description_default=%locale.aa.default;
@@ -331,7 +331,7 @@ _locale_file = "%L%-%C";
 *class(
   ## IOS APP: A download link for an app on the Apple App Store.
   *id=as;
-  *name=ios-app;
+  *name=ios_app;
   *superclass=method;
   object_display_name=%locale.as.name;
   description_default=%locale.as.default;
@@ -595,7 +595,7 @@ _locale_file = "%L%-%C";
 *class(
   ## SINA WEIBO
   *id=sw;
-  *name=sina-weibo;
+  *name=sina_weibo;
   *superclass=method;
   object_display_name=%locale.sw.name;
   description_default=%locale.sw.default;
