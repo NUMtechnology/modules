@@ -28,11 +28,11 @@ _locale(
     name=SMS;
     default=Text
   );
-  u(
+  w(
     name="Web URL";
     default=Click
   );
-  uu(
+  uw(
     name="Web URL (http - unsecure)";
     default=Click
   );
