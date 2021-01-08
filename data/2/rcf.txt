@@ -21,18 +21,19 @@
   *superclass=str
 );
 *class(
-  *id=al;
-  *name=addressline;
-  *superclass=str
-);
-*class(
+  ## ADDRESS: A land / postal address.
   *id=a;
   *name=address;
-  *assign=[[al*]];
+  *superclass=map
+);
+*class(
+  *id=al;
+  *name=lines;
+  *assign=[[str*]];
   *superclass=arr
 );
 *class(
-  *id=p;
+  *id=pz;
   *name=postcode_zip;
   *superclass=str
 );
