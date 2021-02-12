@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "module": 1,
+    "version": 1
+  },
+  "mappings": [
+    {
+      "sourceKey": "o",
+      "destKey": "organisation",
+      "destType": "#root/organisation",
+      "params": [
+        "n",
+        "s",
+        "c"
+      ],
+      "properties": {
+        "n": "name",
+        "s": "slogan",
+        "c": "contacts"
+      },
+      "additional": {
+        "object_display_name": "%locale.o.name"
+      }
+    },
+    {
+      "sourceKey": "dp",
+      "destKey": "department",
+      "destType": "#root/department",
+      "params": [
+        "n",
+        "d",
+        "c"
+      ],
+      "properties": {
+        "n": "name",
+        "d": "description",
+        "c": "contacts"
+      },
+      "additional": {
+        "object_display_name": "%locale.dp.name"
+      }
+    },
+    {
+      "sourceKey": "fb",
+      "destKey": null,
+      "destType": "#root/contact",
+      "params": [
+        "v",
+        "d"
+      ],
+      "properties": {
+        "d": "description"
+      },
+      "additional": {
+        "type": "facebook",
+        "object_display_name": "%locale.fb.name",
+        "description_default": "%locale.fb.default",
+        "url": "https://www.facebook.com/$v",
+        "method_type": "third_party",
+        "controller": "facebook.com"
+      }
+    },
+    {
+      "sourceKey": "in",
+      "destKey": null,
+      "destType": "#root/contact",
+      "params": [
+        "v",
+        "d"
+      ],
+      "properties": {
+        "d": "description"
+      },
+      "additional": {
+        "type": "instagram",
+        "object_display_name": "%locale.in.name",
+        "description_default": "%locale.in.default",
+        "url": "https://www.instagram.com/$v",
+        "method_type": "third_party",
+        "controller": "instagram.com"
+      }
+    }
+  ]
+}
