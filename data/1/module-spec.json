@@ -1,0 +1,17 @@
+{
+  "module": 1,
+  "version": 1,
+  "compactSchema": "https://modules.numprotocol.com/1/compact-schema.json",
+  "expandedSchema": "https://modules.numprotocol.com/1/schema.json",
+  "schemaMap": "https://modules.numprotocol.com/1/schema-map.json",
+  "localeFiles": "https://modules.numprotocol.com/1/locales/",
+  "processingChain": {
+    "punydecode": true,
+    "modlToJson": true,
+    "validateCompactJson": true,
+    "unpack": true,
+    "resolveReferences": true,
+    "filterOutInternalKeys": true,
+    "validateExpandedJson": true
+  }
+}

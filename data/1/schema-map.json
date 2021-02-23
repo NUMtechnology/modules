@@ -1,84 +1,119 @@
 {
-  "metadata": {
-    "module": 1,
-    "version": 1
-  },
-  "mappings": [
-    {
-      "sourceKey": "o",
-      "destKey": "organisation",
-      "destType": "#root/organisation",
-      "params": [
-        "n",
-        "s",
-        "c"
-      ],
-      "properties": {
-        "n": "name",
-        "s": "slogan",
-        "c": "contacts"
-      },
-      "additional": {
-        "object_display_name": "%locale.o.name"
-      }
-    },
-    {
-      "sourceKey": "dp",
-      "destKey": "department",
-      "destType": "#root/department",
-      "params": [
-        "n",
-        "d",
-        "c"
-      ],
-      "properties": {
-        "n": "name",
-        "d": "description",
-        "c": "contacts"
-      },
-      "additional": {
-        "object_display_name": "%locale.dp.name"
-      }
-    },
-    {
-      "sourceKey": "fb",
-      "destKey": null,
-      "destType": "#root/contact",
-      "params": [
-        "v",
-        "d"
-      ],
-      "properties": {
-        "d": "description"
-      },
-      "additional": {
-        "type": "facebook",
-        "object_display_name": "%locale.fb.name",
-        "description_default": "%locale.fb.default",
-        "url": "https://www.facebook.com/$v",
-        "method_type": "third_party",
-        "controller": "facebook.com"
-      }
-    },
-    {
-      "sourceKey": "in",
-      "destKey": null,
-      "destType": "#root/contact",
-      "params": [
-        "v",
-        "d"
-      ],
-      "properties": {
-        "d": "description"
-      },
-      "additional": {
-        "type": "instagram",
-        "object_display_name": "%locale.in.name",
-        "description_default": "%locale.in.default",
-        "url": "https://www.instagram.com/$v",
-        "method_type": "third_party",
-        "controller": "instagram.com"
-      }
+  "@n": {
+    "return": {
+      "@n": "${@n}"
     }
-  ]
+  },
+  "o": {
+    "key": "organisation",
+    "assign": [
+      "n",
+      "s",
+      "c",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.o.name",
+      "key": "${n}",
+      "slogan": "${s}",
+      "contacts": "${c}",
+      "hours": "${h}"
+    }
+  },
+  "fb": {
+    "key": "facebook",
+    "assign": [
+      "v",
+      "d"
+    ],
+    "return": {
+      "object_display_name": "%locale.fb.name",
+      "description_default": "%locale.fb.default",
+      "description": "${d}",
+      "prefix": "https://www.facebook.com/",
+      "method_type": "third_party",
+      "controller": "facebook.com",
+      "value": "${v}"
+    }
+  },
+  "in": {
+    "key": "instagram",
+    "assign": [
+      "v",
+      "d"
+    ],
+    "return": {
+      "object_display_name": "%locale.in.name",
+      "description_default": "%locale.in.default",
+      "description": "${d}",
+      "prefix": "https://www.instagram.com/",
+      "method_type": "third_party",
+      "controller": "instagram.com",
+      "value": "${v}"
+    }
+  },
+  "li": {
+    "key": "linkedin",
+    "assign": [
+      "v",
+      "d"
+    ],
+    "return": {
+      "object_display_name": "%locale.li.name",
+      "description_default": "%locale.li.default",
+      "description": "${d}",
+      "prefix": "https://www.linkedin.com/",
+      "method_type": "third_party",
+      "controller": "linkedin.com",
+      "value": "${v}"
+    }
+  },
+  "pi": {
+    "key": "pinterest",
+    "assign": [
+      "v",
+      "d"
+    ],
+    "return": {
+      "object_display_name": "%locale.pi.name",
+      "description_default": "%locale.pi.default",
+      "description": "${d}",
+      "prefix": "https://www.pinterest.com/",
+      "method_type": "third_party",
+      "controller": "pinterest.com",
+      "value": "${v}"
+    }
+  },
+  "tw": {
+    "key": "twitter",
+    "assign": [
+      "v",
+      "d"
+    ],
+    "return": {
+      "object_display_name": "%locale.tw.name",
+      "description_default": "%locale.tw.default",
+      "description": "${d}",
+      "prefix": "https://www.twitter.com/",
+      "method_type": "third_party",
+      "controller": "twitter.com",
+      "value": "${v}",
+      "value_prefix": "@"
+    }
+  },
+  "t": {
+    "key": "telephone",
+    "assign": [
+      "v",
+      "d"
+    ],
+    "return": {
+      "object_display_name": "%locale.t.name",
+      "description_default": "%locale.t.default",
+      "description": "${d}",
+      "prefix": "tel:",
+      "method_type": "core",
+      "value": "${v}"
+    }
+  }
 }
