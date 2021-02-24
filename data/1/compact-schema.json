@@ -133,6 +133,14 @@
           },
           {
             "$ref": "#root/notNullString"
+          },
+          {
+            "type": "array",
+            "default": {},
+            "items": {
+              "$ref": "#root/notNullString"
+            },
+            "minItems": 1
           }
         ]
       }
