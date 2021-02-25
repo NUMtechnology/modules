@@ -221,8 +221,22 @@ _locale_file = "%L%-%C";
   ## ADDRESS LINES: A method array value, e.g. the lines of an address
   *id=al;
   *name=lines;
-  *assign=[[v*]];
+  *assign=[[str*]];
   *superclass=arr
+);
+
+*class(
+  ## POSTCODE: The postcode part of an address, e.g. E14 5AB
+  *id=pz;
+  *name=postcode;
+  *superclass=str
+);
+
+*class(
+  ## COUNTRY: The country part of an address, e.g. GB
+  *id=co;
+  *name=country;
+  *superclass=str
 );
 
 *class(

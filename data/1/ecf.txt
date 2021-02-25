@@ -102,7 +102,20 @@ config(
 
   al(
     component=textarea;
-    fields=(str())
+    fields=(str());
+    label=Enter the address, not including the postcode / zip or country;
+    required=true
+  );
+
+  pz(
+    label=Enter the postcode / zip;
+    required=true
+  );
+
+  co(
+    component=country;
+    label=Enter the country;
+    required=true
   );
 
   ac(
@@ -149,7 +162,7 @@ config(
   );
 
   a(
-    fields(al(label=Enter the lines of the address));
+    fields(al();pz();co());
     ignore=[v]
   );
 

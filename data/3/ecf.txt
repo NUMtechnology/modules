@@ -5,7 +5,7 @@ config(
     fields=(i())
   );
   i(
-    fields(n(required=true);t(required=true);v(required=true))
+    fields(t(required=true);v(required=true))
   );
   v(
     fields(variant())
