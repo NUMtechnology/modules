@@ -8,10 +8,10 @@ config(
     label=Is the owner an individual or an organisation?
   );
   i(
-    fields(n(label=Enter the individual's name);a();p();co();t();e();c())
+    fields(n(label=Enter the individual's name);a();t();e();c())
   );
   o(
-    fields(n(label=Enter the organisation's name);id();a();p();co();t();e();c())
+    fields(n(label=Enter the organisation's name);id();a();t();e();c())
   );
   n(
     label=Enter the name;
@@ -20,13 +20,17 @@ config(
   id(
     label="Enter an identifier for the organisation (e.g. company registration number)"
   );
+
   a(
+    fields(al();pz();co())
+  );
+  al(
     component=textarea;
     label=Enter the address, not including the postcode / zip or country;
-    fields(al());
+    fields(str());
     required=true
   );
-  p(
+  pz(
     label=Enter the postcode / zip;
     required=true
   );
@@ -48,6 +52,6 @@ config(
   contact(
     required=true;
     placeholder=Add a contact;
-    fields(n(label=Enter the name of the contact);a();p();co();t();e())
+    fields(n(label=Enter the name of the contact);a();t();e())
   )
 )
