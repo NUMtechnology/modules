@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://modules.numprotocol.com/1/schema.json",
+  "$id": "https://modules.numprotocol.com/1/compact-schema.json",
   "title": "Root",
   "type": "object",
   "definitions": {
@@ -9,6 +9,16 @@
       "title": "@n",
       "type": "integer",
       "default": 1
+    },
+    "index": {
+      "$id": "#root/index",
+      "title": "index",
+      "type": "array",
+      "default": {},
+      "items": {
+        "$ref": "#root/notNullString"
+      },
+      "minItems": 1
     },
     "notNullString": {
       "$id": "#root/notNullString",
@@ -28,13 +38,13 @@
       "title": "hours",
       "type": "object",
       "properties": {
-        "available": {
+        "av": {
           "type": "array",
           "items": {
             "$ref": "#root/notNullString"
           }
         },
-        "time_zone_location": {
+        "tz": {
           "$ref": "#root/notNullString"
         }
       },
@@ -49,7 +59,7 @@
         "@L": {
           "$ref": "#root/notEmptyString"
         },
-        "description": {
+        "d": {
           "$ref": "#root/notNullString"
         }
       },
@@ -64,39 +74,18 @@
       "type": "object",
       "default": {},
       "properties": {
-        "value": {
+        "v": {
           "$ref": "#root/notNullString"
         },
-        "description": {
+        "d": {
           "$ref": "#root/notNullString"
         },
-        "hours": {
+        "h": {
           "$ref": "#root/hours"
-        },
-        "prefix": {
-          "$ref": "#root/notNullString"
-        },
-        "description_default": {
-          "$ref": "#root/notNullString"
-        },
-        "object_display_name": {
-          "$ref": "#root/notEmptyString"
-        },
-        "controller": {
-          "$ref": "#root/notEmptyString"
-        },
-        "value_prefix": {
-          "$ref": "#root/notEmptyString"
-        },
-        "method_type": {
-          "enum": [
-            "core",
-            "third_party"
-          ]
         }
       },
       "required": [
-        "value"
+        "v"
       ],
       "additionalProperties": false
     },
@@ -106,42 +95,27 @@
       "type": "object",
       "default": {},
       "properties": {
-        "description": {
+        "d": {
           "$ref": "#root/notNullString"
         },
-        "hours": {
+        "h": {
           "$ref": "#root/hours"
         },
-        "prefix": {
-          "$ref": "#root/notNullString"
-        },
-        "description_default": {
-          "$ref": "#root/notNullString"
-        },
-        "object_display_name": {
-          "$ref": "#root/notEmptyString"
-        },
-        "method_type": {
-          "enum": [
-            "core",
-            "third_party"
-          ]
-        },
-        "lines": {
+        "al": {
           "type": "array",
           "items": {
             "type": "string"
           }
         },
-        "postcode": {
+        "pz": {
           "$ref": "#root/notNullString"
         },
-        "country": {
+        "co": {
           "$ref": "#root/notNullString"
         }
       },
       "required": [
-        "lines"
+        "al"
       ],
       "additionalProperties": false
     },
@@ -151,15 +125,30 @@
       "type": "object",
       "default": {},
       "properties": {
-        "link": {
+        "l": {
           "$ref": "#root/link"
         },
-        "address": {
+        "a": {
           "$ref": "#root/address"
         }
       },
       "additionalProperties": {
-        "$ref": "#root/method"
+        "oneOf": [
+          {
+            "$ref": "#root/method"
+          },
+          {
+            "$ref": "#root/notNullString"
+          },
+          {
+            "type": "array",
+            "default": {},
+            "items": {
+              "$ref": "#root/notNullString"
+            },
+            "minItems": 1
+          }
+        ]
       }
     },
     "contacts": {
@@ -178,24 +167,18 @@
       "type": "object",
       "default": {},
       "required": [
-        "name",
-        "contacts"
+        "n",
+        "c"
       ],
       "properties": {
-        "name": {
+        "n": {
           "$ref": "#root/notEmptyString"
         },
-        "role": {
+        "r": {
           "$ref": "#root/notEmptyString"
         },
-        "contacts": {
+        "c": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
-        },
-        "object_display_name": {
-          "$ref": "#root/notEmptyString"
         }
       },
       "additionalProperties": false
@@ -206,24 +189,18 @@
       "type": "object",
       "default": {},
       "required": [
-        "name",
-        "contacts"
+        "n",
+        "c"
       ],
       "properties": {
-        "name": {
+        "n": {
           "$ref": "#root/notEmptyString"
         },
-        "bio": {
+        "b": {
           "$ref": "#root/notEmptyString"
         },
-        "contacts": {
+        "c": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
-        },
-        "object_display_name": {
-          "$ref": "#root/notEmptyString"
         }
       },
       "additionalProperties": false
@@ -234,24 +211,18 @@
       "type": "object",
       "default": {},
       "required": [
-        "name",
-        "contacts"
+        "n",
+        "c"
       ],
       "properties": {
-        "name": {
+        "n": {
           "$ref": "#root/notEmptyString"
         },
-        "slogan": {
+        "s": {
           "$ref": "#root/notEmptyString"
         },
-        "contacts": {
+        "c": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
-        },
-        "object_display_name": {
-          "$ref": "#root/notEmptyString"
         }
       },
       "additionalProperties": false
@@ -262,24 +233,18 @@
       "type": "object",
       "default": {},
       "required": [
-        "name",
-        "contacts"
+        "n",
+        "c"
       ],
       "properties": {
-        "name": {
+        "n": {
           "$ref": "#root/notEmptyString"
         },
-        "description": {
+        "d": {
           "$ref": "#root/notEmptyString"
         },
-        "contacts": {
+        "c": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
-        },
-        "object_display_name": {
-          "$ref": "#root/notEmptyString"
         }
       },
       "additionalProperties": false
@@ -290,24 +255,18 @@
       "type": "object",
       "default": {},
       "required": [
-        "name",
-        "contacts"
+        "n",
+        "c"
       ],
       "properties": {
-        "name": {
+        "n": {
           "$ref": "#root/notEmptyString"
         },
-        "description": {
+        "d": {
           "$ref": "#root/notEmptyString"
         },
-        "contacts": {
+        "c": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
-        },
-        "object_display_name": {
-          "$ref": "#root/notEmptyString"
         }
       },
       "additionalProperties": false
@@ -318,24 +277,18 @@
       "type": "object",
       "default": {},
       "required": [
-        "name",
-        "contacts"
+        "n",
+        "c"
       ],
       "properties": {
-        "name": {
+        "n": {
           "$ref": "#root/notEmptyString"
         },
-        "description": {
+        "d": {
           "$ref": "#root/notEmptyString"
         },
-        "contacts": {
+        "c": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
-        },
-        "object_display_name": {
-          "$ref": "#root/notEmptyString"
         }
       },
       "additionalProperties": false
@@ -351,22 +304,25 @@
     "@p": {
       "type": "boolean"
     },
-    "organisation": {
+    "?": {
+      "$ref": "#root/index"
+    },
+    "o": {
       "$ref": "#root/organisation"
     },
-    "department": {
+    "dp": {
       "$ref": "#root/department"
     },
-    "group": {
+    "gp": {
       "$ref": "#root/group"
     },
-    "location": {
+    "lc": {
       "$ref": "#root/location"
     },
-    "person": {
+    "p": {
       "$ref": "#root/person"
     },
-    "employee": {
+    "e": {
       "$ref": "#root/employee"
     }
   },
@@ -379,7 +335,10 @@
       "@p": {
         "type": "boolean"
       },
-      "organisation": {
+      "?": {
+        "$ref": "#root/index"
+      },
+      "o": {
         "$ref": "#root/organisation"
       }
     },
@@ -390,7 +349,10 @@
       "@p": {
         "type": "boolean"
       },
-      "department": {
+      "?": {
+        "$ref": "#root/index"
+      },
+      "dp": {
         "$ref": "#root/department"
       }
     },
@@ -401,7 +363,10 @@
       "@p": {
         "type": "boolean"
       },
-      "group": {
+      "?": {
+        "$ref": "#root/index"
+      },
+      "gp": {
         "$ref": "#root/group"
       }
     },
@@ -412,7 +377,10 @@
       "@p": {
         "type": "boolean"
       },
-      "location": {
+      "?": {
+        "$ref": "#root/index"
+      },
+      "lc": {
         "$ref": "#root/location"
       }
     },
@@ -423,7 +391,10 @@
       "@p": {
         "type": "boolean"
       },
-      "person": {
+      "?": {
+        "$ref": "#root/index"
+      },
+      "p": {
         "$ref": "#root/person"
       }
     },
@@ -434,7 +405,10 @@
       "@p": {
         "type": "boolean"
       },
-      "employee": {
+      "?": {
+        "$ref": "#root/index"
+      },
+      "e": {
         "$ref": "#root/employee"
       }
     }
