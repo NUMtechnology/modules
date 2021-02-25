@@ -132,6 +132,12 @@
           "items": {
             "type": "string"
           }
+        },
+        "postcode": {
+          "$ref": "#root/notNullString"
+        },
+        "country": {
+          "$ref": "#root/notNullString"
         }
       },
       "required": [

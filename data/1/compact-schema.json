@@ -106,6 +106,12 @@
           "items": {
             "type": "string"
           }
+        },
+        "pz": {
+          "$ref": "#root/notNullString"
+        },
+        "co": {
+          "$ref": "#root/notNullString"
         }
       },
       "required": [
