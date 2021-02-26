@@ -14,7 +14,8 @@
     ],
     "return": {
       "object_display_name": "%locale.o.name",
-      "key": "${n}",
+      "description_default": "%locale.o.default",
+      "name": "${n}",
       "slogan": "${s}",
       "contacts": "${c}",
       "hours": "${h}"

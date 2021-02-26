@@ -9,8 +9,6 @@
     "modlToJson": true,
     "validateCompactJson": true,
     "unpack": true,
-    "resolveReferences": true,
-    "removeInternalValues": true,
     "validateExpandedJson": true
   }
 }
