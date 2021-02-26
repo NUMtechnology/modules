@@ -1,0 +1,88 @@
+{
+  "@n": {
+    "return": {
+      "@n": "${@n}"
+    }
+  },
+  "o": {
+    "key": "organisation",
+    "assign": [
+      "n",
+      "id",
+      "a",
+      "pz",
+      "co",
+      "t",
+      "e",
+      "c"
+    ],
+    "return": {
+      "name": "${n}",
+      "identifier": "${id}",
+      "address": "${a}",
+      "postcode_zip": "${pz}",
+      "country": "${co}",
+      "telephone": "${t}",
+      "email": "${e}",
+      "contacts": "${c}",
+      "object_display_name": "Organisation"
+    }
+  },
+  "AD": {
+    "key": "AD",
+    "assign": [
+      "n",
+      "a",
+      "pz",
+      "co",
+      "e",
+      "t"
+    ],
+    "return": {
+      "name": "${n}",
+      "address": "${a}",
+      "postcode_zip": "${pz}",
+      "country": "${co}",
+      "telephone": "${t}",
+      "email": "${e}"
+    }
+  },
+  "TC": {
+    "key": "TC",
+    "assign": [
+      "n",
+      "a",
+      "pz",
+      "co",
+      "e",
+      "t"
+    ],
+    "return": {
+      "name": "${n}",
+      "address": "${a}",
+      "postcode_zip": "${pz}",
+      "country": "${co}",
+      "telephone": "${t}",
+      "email": "${e}"
+    }
+  },
+  "SC": {
+    "key": "SC",
+    "assign": [
+      "n",
+      "a",
+      "pz",
+      "co",
+      "e",
+      "t"
+    ],
+    "return": {
+      "name": "${n}",
+      "address": "${a}",
+      "postcode_zip": "${pz}",
+      "country": "${co}",
+      "telephone": "${t}",
+      "email": "${e}"
+    }
+  }
+}
