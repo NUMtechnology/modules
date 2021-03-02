@@ -1,24 +1,20 @@
 {
   "i": {
     "key": "images",
-    "assign": [
-      "i"
-    ],
-    "return": "${i}"
+    "type": "image"
   },
-  "im": {
-    "assign": [
-      "n",
-      "t",
-      "v"
-    ],
-    "return": {
-      "name": "${n}",
-      "type": "${t}",
-      "variants": "${v}"
-    }
+  "image": {},
+  "n": {
+    "key": "name"
   },
-  "p": {
+  "t": {
+    "key": "type"
+  },
+  "v": {
+    "key": "variants",
+    "type": "variant"
+  },
+  "variant": {
     "assign": [
       "u",
       "m",
