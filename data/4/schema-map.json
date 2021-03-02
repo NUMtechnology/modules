@@ -1,0 +1,24 @@
+{
+  "b": {
+    "key": "branches"
+  },
+  "c": {
+    "key": "custodians"
+  },
+  "pe": {
+    "assign": [
+      "pe"
+    ],
+    "return": "${pe}"
+  },
+  "p": {
+    "assign": [
+      "h",
+      "perms"
+    ],
+    "return": {
+      "hash": "${h}",
+      "permissions": "${perms}"
+    }
+  }
+}
