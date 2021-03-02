@@ -3,18 +3,19 @@
     "key": "images",
     "type": "image"
   },
-  "image": {},
-  "n": {
-    "key": "name"
-  },
-  "t": {
-    "key": "type"
+  "image": {
+    "assign": [
+      "n",
+      "t",
+      "v"
+    ],
+    "return": {
+      "name": "${n}",
+      "type": "${t}",
+      "variants": "${v}"
+    }
   },
   "v": {
-    "key": "variants",
-    "type": "variant"
-  },
-  "variant": {
     "assign": [
       "u",
       "m",
