@@ -9,23 +9,97 @@
     "assign": [
       "n",
       "s",
-      "c",
-      "h"
+      "c"
     ],
     "return": {
       "object_display_name": "%locale.o.name",
       "description_default": "%locale.o.default",
       "name": "${n}",
       "slogan": "${s}",
-      "contacts": "${c}",
-      "hours": "${h}"
+      "contacts": "${c}"
+    }
+  },
+  "p": {
+    "key": "person",
+    "assign": [
+      "n",
+      "b",
+      "c"
+    ],
+    "return": {
+      "object_display_name": "%locale.p.name",
+      "description_default": "%locale.p.default",
+      "name": "${n}",
+      "bio": "${b}",
+      "contacts": "${c}"
+    }
+  },
+  "gp": {
+    "key": "group",
+    "assign": [
+      "n",
+      "d",
+      "c"
+    ],
+    "return": {
+      "object_display_name": "%locale.gp.name",
+      "description_default": "%locale.gp.default",
+      "name": "${n}",
+      "description": "${d}",
+      "contacts": "${c}"
+    }
+  },
+  "dp": {
+    "key": "department",
+    "assign": [
+      "n",
+      "d",
+      "c"
+    ],
+    "return": {
+      "object_display_name": "%locale.dp.name",
+      "description_default": "%locale.dp.default",
+      "name": "${n}",
+      "description": "${d}",
+      "contacts": "${c}"
+    }
+  },
+  "e": {
+    "key": "employee",
+    "assign": [
+      "n",
+      "r",
+      "c"
+    ],
+    "return": {
+      "object_display_name": "%locale.e.name",
+      "description_default": "%locale.e.default",
+      "name": "${n}",
+      "role": "${r}",
+      "contacts": "${c}"
+    }
+  },
+  "lc": {
+    "key": "location",
+    "assign": [
+      "n",
+      "d",
+      "c"
+    ],
+    "return": {
+      "object_display_name": "%locale.lc.name",
+      "description_default": "%locale.lc.default",
+      "name": "${n}",
+      "description": "${d}",
+      "contacts": "${c}"
     }
   },
   "fb": {
     "key": "facebook",
     "assign": [
       "v",
-      "d"
+      "d",
+      "h"
     ],
     "return": {
       "object_display_name": "%locale.fb.name",
@@ -34,14 +108,16 @@
       "prefix": "https://www.facebook.com/",
       "method_type": "third_party",
       "controller": "facebook.com",
-      "value": "${v}"
+      "value": "${v}",
+      "hours": "${h}"
     }
   },
   "in": {
     "key": "instagram",
     "assign": [
       "v",
-      "d"
+      "d",
+      "h"
     ],
     "return": {
       "object_display_name": "%locale.in.name",
@@ -50,14 +126,16 @@
       "prefix": "https://www.instagram.com/",
       "method_type": "third_party",
       "controller": "instagram.com",
-      "value": "${v}"
+      "value": "${v}",
+      "hours": "${h}"
     }
   },
   "li": {
     "key": "linkedin",
     "assign": [
       "v",
-      "d"
+      "d",
+      "h"
     ],
     "return": {
       "object_display_name": "%locale.li.name",
@@ -66,14 +144,16 @@
       "prefix": "https://www.linkedin.com/",
       "method_type": "third_party",
       "controller": "linkedin.com",
-      "value": "${v}"
+      "value": "${v}",
+      "hours": "${h}"
     }
   },
   "pi": {
     "key": "pinterest",
     "assign": [
       "v",
-      "d"
+      "d",
+      "h"
     ],
     "return": {
       "object_display_name": "%locale.pi.name",
@@ -82,14 +162,16 @@
       "prefix": "https://www.pinterest.com/",
       "method_type": "third_party",
       "controller": "pinterest.com",
-      "value": "${v}"
+      "value": "${v}",
+      "hours": "${h}"
     }
   },
   "tw": {
     "key": "twitter",
     "assign": [
       "v",
-      "d"
+      "d",
+      "h"
     ],
     "return": {
       "object_display_name": "%locale.tw.name",
@@ -99,14 +181,16 @@
       "method_type": "third_party",
       "controller": "twitter.com",
       "value": "${v}",
-      "value_prefix": "@"
+      "value_prefix": "@",
+      "hours": "${h}"
     }
   },
   "t": {
     "key": "telephone",
     "assign": [
       "v",
-      "d"
+      "d",
+      "h"
     ],
     "return": {
       "object_display_name": "%locale.t.name",
@@ -114,7 +198,685 @@
       "description": "${d}",
       "prefix": "tel:",
       "method_type": "core",
-      "value": "${v}"
+      "value": "${v}",
+      "hours": "${h}"
+    }
+  },
+  "sm": {
+    "key": "sms",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.sm.name",
+      "description_default": "%locale.sm.default",
+      "description": "${d}",
+      "prefix": "sms:",
+      "method_type": "core",
+      "value": "${v}",
+      "hours": "${h}"
+    }
+  },
+  "u": {
+    "key": "url",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.u.name",
+      "description_default": "%locale.u.default",
+      "description": "${d}",
+      "prefix": "https://",
+      "method_type": "core",
+      "value": "${v}",
+      "hours": "${h}"
+    }
+  },
+  "uu": {
+    "key": "unsecure_url",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.uu.name",
+      "description_default": "%locale.uu.default",
+      "description": "${d}",
+      "prefix": "http://",
+      "method_type": "core",
+      "value": "${v}",
+      "hours": "${h}"
+    }
+  },
+  "g": {
+    "key": "gps",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.g.name",
+      "description_default": "%locale.g.default",
+      "description": "${d}",
+      "prefix": "",
+      "method_type": "core",
+      "value": "${v}",
+      "hours": "${h}"
+    }
+  },
+  "a": {
+    "key": "address",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.a.name",
+      "description_default": "%locale.a.default",
+      "description": "${d}",
+      "prefix": "",
+      "method_type": "core",
+      "value": "${v}",
+      "hours": "${h}"
+    }
+  },
+  "fx": {
+    "key": "fax",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.fx.name",
+      "description_default": "%locale.fx.default",
+      "description": "${d}",
+      "prefix": "tel:",
+      "method_type": "core",
+      "value": "${v}",
+      "hours": "${h}"
+    }
+  },
+  "em": {
+    "key": "email",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.em.name",
+      "description_default": "%locale.em.default",
+      "description": "${d}",
+      "prefix": "mailto:",
+      "method_type": "core",
+      "value": "${v}",
+      "hours": "${h}"
+    }
+  },
+  "aa": {
+    "key": "android-app",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.aa.name",
+      "description_default": "%locale.aa.default",
+      "description": "${d}",
+      "prefix": "https://play.google.com/store/apps/details?id=",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "play.google.com"
+    }
+  },
+  "as": {
+    "key": "ios-app",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.as.name",
+      "description_default": "%locale.as.default",
+      "description": "${d}",
+      "prefix": "https://itunes.apple.com/app/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "apps.apple.com"
+    }
+  },
+  "bt": {
+    "key": "baidu_tieba",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.bt.name",
+      "description_default": "%locale.bt.default",
+      "description": "${d}",
+      "prefix": "https://tieba.baidu.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "tieba.baidu.com"
+    }
+  },
+  "fs": {
+    "key": "foursquare",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.fs.name",
+      "description_default": "%locale.fs.default",
+      "description": "${d}",
+      "prefix": "https://www.foursquare.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "foursquare.com"
+    }
+  },
+  "ft": {
+    "key": "facetime",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.ft.name",
+      "description_default": "%locale.ft.default",
+      "description": "${d}",
+      "prefix": "facetime://",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "facetime@apple.com"
+    }
+  },
+  "gh": {
+    "key": "github",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.gh.name",
+      "description_default": "%locale.gh.default",
+      "description": "${d}",
+      "prefix": "https://www.github.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "github.com"
+    }
+  },
+  "im": {
+    "key": "imessage",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.im.name",
+      "description_default": "%locale.im.default",
+      "description": "${d}",
+      "prefix": "imessage://",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "imessage@apple.com"
+    }
+  },
+  "kk": {
+    "key": "kik",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.kk.name",
+      "description_default": "%locale.kk.default",
+      "description": "${d}",
+      "prefix": "https://www.kik.com/u/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "kik.com"
+    }
+  },
+  "ln": {
+    "key": "line",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.ln.name",
+      "description_default": "%locale.ln.default",
+      "description": "${d}",
+      "prefix": "line://",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "line.me"
+    }
+  },
+  "md": {
+    "key": "medium",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.md.name",
+      "description_default": "%locale.md.default",
+      "description": "${d}",
+      "prefix": "https://www.medium.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "medium.com"
+    }
+  },
+  "pr": {
+    "key": "periscope",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.pr.name",
+      "description_default": "%locale.pr.default",
+      "description": "${d}",
+      "prefix": "https://www.periscope.tv/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "periscope.tv"
+    }
+  },
+  "qq": {
+    "key": "qq",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.qq.name",
+      "description_default": "%locale.qq.default",
+      "description": "${d}",
+      "prefix": "https://www.qq.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "qq.com"
+    }
+  },
+  "qz": {
+    "key": "qzone",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.qz.name",
+      "description_default": "%locale.qz.default",
+      "description": "${d}",
+      "prefix": "https://www.qzone.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "qzone.com"
+    }
+  },
+  "rd": {
+    "key": "reddit",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.rd.name",
+      "description_default": "%locale.rd.default",
+      "description": "${d}",
+      "prefix": "https://www.reddit.com/r/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "reddit.com"
+    }
+  },
+  "rn": {
+    "key": "renren",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.rn.name",
+      "description_default": "%locale.rn.default",
+      "description": "${d}",
+      "prefix": "https://www.renren.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "renren.com"
+    }
+  },
+  "sc": {
+    "key": "soundcloud",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.sc.name",
+      "description_default": "%locale.sc.default",
+      "description": "${d}",
+      "prefix": "https://www.soundcloud.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "soundcloud.com"
+    }
+  },
+  "sk": {
+    "key": "skype",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.sk.name",
+      "description_default": "%locale.sk.default",
+      "description": "${d}",
+      "prefix": "skype:",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "skype.com"
+    }
+  },
+  "sr": {
+    "key": "swarm",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.sr.name",
+      "description_default": "%locale.sr.default",
+      "description": "${d}",
+      "prefix": "https://www.swarmapp.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "swarmapp.com"
+    }
+  },
+  "sn": {
+    "key": "snapchat",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.sn.name",
+      "description_default": "%locale.sn.default",
+      "description": "${d}",
+      "prefix": "snapchat://add/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "snapchat.com"
+    }
+  },
+  "sw": {
+    "key": "sina-weibo",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.sw.name",
+      "description_default": "%locale.sw.default",
+      "description": "${d}",
+      "prefix": "https://www.weibo.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "weibo.com"
+    }
+  },
+  "tb": {
+    "key": "tumblr",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.tb.name",
+      "description_default": "%locale.tb.default",
+      "description": "${d}",
+      "prefix": "https://<val>.tumblr.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "tumblr.com"
+    }
+  },
+  "tl": {
+    "key": "telegram",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.tl.name",
+      "description_default": "%locale.tl.default",
+      "description": "${d}",
+      "prefix": "https://www.telegram.me/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "telegram.com"
+    }
+  },
+  "to": {
+    "key": "twoo",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.to.name",
+      "description_default": "%locale.to.default",
+      "description": "${d}",
+      "prefix": "https://www.twoo.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "twoo.com"
+    }
+  },
+  "vb": {
+    "key": "viber",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.vb.name",
+      "description_default": "%locale.vb.default",
+      "description": "${d}",
+      "prefix": "https://www.viber.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "viber.com"
+    }
+  },
+  "vk": {
+    "key": "vkontakte",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.vk.name",
+      "description_default": "%locale.vk.default",
+      "description": "${d}",
+      "prefix": "https://www.vk.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "vk.com"
+    }
+  },
+  "vm": {
+    "key": "vimeo",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.vm.name",
+      "description_default": "%locale.vm.default",
+      "description": "${d}",
+      "prefix": "https://www.vimeo.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "vimeo.com"
+    }
+  },
+  "wa": {
+    "key": "whatsapp",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.wa.name",
+      "description_default": "%locale.wa.default",
+      "description": "${d}",
+      "prefix": "whatsapp://",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "whatsapp.com"
+    }
+  },
+  "wc": {
+    "key": "wechat",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.wc.name",
+      "description_default": "%locale.wc.default",
+      "description": "${d}",
+      "prefix": "https://www.wechat.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "wechat.com"
+    }
+  },
+  "xi": {
+    "key": "xing",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.xi.name",
+      "description_default": "%locale.xi.default",
+      "description": "${d}",
+      "prefix": "https://www.xing.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "xing.com"
+    }
+  },
+  "yt": {
+    "key": "youtube",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.yt.name",
+      "description_default": "%locale.yt.default",
+      "description": "${d}",
+      "prefix": "https://www.youtube.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "youtube.com"
+    }
+  },
+  "yy": {
+    "key": "yy",
+    "assign": [
+      "v",
+      "d",
+      "h"
+    ],
+    "return": {
+      "object_display_name": "%locale.yy.name",
+      "description_default": "%locale.yy.default",
+      "description": "${d}",
+      "prefix": "https://www.yy.com/",
+      "method_type": "third_party",
+      "value": "${v}",
+      "hours": "${h}",
+      "controller": "yy.com"
     }
   }
 }

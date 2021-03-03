@@ -191,9 +191,6 @@
         "contacts": {
           "$ref": "#root/contacts"
         },
-        "hours": {
-          "$ref": "#root/hours"
-        },
         "object_display_name": {
           "$ref": "#root/notEmptyString"
         }
@@ -218,9 +215,6 @@
         },
         "contacts": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
         },
         "object_display_name": {
           "$ref": "#root/notEmptyString"
@@ -247,9 +241,6 @@
         "contacts": {
           "$ref": "#root/contacts"
         },
-        "hours": {
-          "$ref": "#root/hours"
-        },
         "object_display_name": {
           "$ref": "#root/notEmptyString"
         }
@@ -274,9 +265,6 @@
         },
         "contacts": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
         },
         "object_display_name": {
           "$ref": "#root/notEmptyString"
@@ -303,9 +291,6 @@
         "contacts": {
           "$ref": "#root/contacts"
         },
-        "hours": {
-          "$ref": "#root/hours"
-        },
         "object_display_name": {
           "$ref": "#root/notEmptyString"
         }
@@ -330,9 +315,6 @@
         },
         "contacts": {
           "$ref": "#root/contacts"
-        },
-        "hours": {
-          "$ref": "#root/hours"
         },
         "object_display_name": {
           "$ref": "#root/notEmptyString"
