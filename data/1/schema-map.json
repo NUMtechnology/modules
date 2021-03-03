@@ -273,9 +273,10 @@
   "a": {
     "key": "address",
     "assign": [
-      "v",
-      "d",
-      "h"
+      "al",
+      "pz",
+      "co",
+      "d"
     ],
     "return": {
       "object_display_name": "%locale.a.name",
@@ -283,8 +284,9 @@
       "description": "${d}",
       "prefix": "",
       "method_type": "core",
-      "value": "${v}",
-      "hours": "${h}"
+      "lines": "${al}",
+      "postcode": "${pz}",
+      "country": "${co}"
     }
   },
   "fx": {
