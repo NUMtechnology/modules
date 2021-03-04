@@ -13,7 +13,6 @@
     ],
     "return": {
       "object_display_name": "%locale.o.name",
-      "description_default": "%locale.o.default",
       "name": "${n}",
       "slogan": "${s}",
       "contacts": "${c}"
@@ -28,7 +27,6 @@
     ],
     "return": {
       "object_display_name": "%locale.p.name",
-      "description_default": "%locale.p.default",
       "name": "${n}",
       "bio": "${b}",
       "contacts": "${c}"
@@ -43,7 +41,6 @@
     ],
     "return": {
       "object_display_name": "%locale.gp.name",
-      "description_default": "%locale.gp.default",
       "name": "${n}",
       "description": "${d}",
       "contacts": "${c}"
@@ -58,7 +55,6 @@
     ],
     "return": {
       "object_display_name": "%locale.dp.name",
-      "description_default": "%locale.dp.default",
       "name": "${n}",
       "description": "${d}",
       "contacts": "${c}"
@@ -73,7 +69,6 @@
     ],
     "return": {
       "object_display_name": "%locale.e.name",
-      "description_default": "%locale.e.default",
       "name": "${n}",
       "role": "${r}",
       "contacts": "${c}"
@@ -88,7 +83,6 @@
     ],
     "return": {
       "object_display_name": "%locale.lc.name",
-      "description_default": "%locale.lc.default",
       "name": "${n}",
       "description": "${d}",
       "contacts": "${c}"
