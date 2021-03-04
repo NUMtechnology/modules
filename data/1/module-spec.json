@@ -1,10 +1,10 @@
 {
   "module": 1,
   "version": 1,
-  "compactSchemaUrl": "https: //modules.numprotocol.com/1/compact-schema.json",
-  "expandedSchemaUrl": "https: //modules.numprotocol.com/1/schema.json",
-  "schemaMapUrl": "https: //modules.numprotocol.com/1/schema-map.json",
-  "localeFilesBaseUrl": "https: //modules.numprotocol.com/1/locales/",
+  "compactSchemaUrl": "https://modules.numprotocol.com/1/compact-schema.json",
+  "expandedSchemaUrl": "https://modules.numprotocol.com/1/schema.json",
+  "schemaMapUrl": "https://modules.numprotocol.com/1/schema-map.json",
+  "localeFilesBaseUrl": "https://modules.numprotocol.com/1/locales/",
   "processingChain": {
     "modlToJson": true,
     "validateCompactJson": true,

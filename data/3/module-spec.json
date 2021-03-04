@@ -1,0 +1,14 @@
+{
+  "module": 3,
+  "version": 1,
+  "compactSchemaUrl": null,
+  "expandedSchemaUrl": "https://modules.numprotocol.com/3/schema.json",
+  "schemaMapUrl": "https://modules.numprotocol.com/3/schema-map.json",
+  "localeFilesBaseUrl": null,
+  "processingChain": {
+    "modlToJson": true,
+    "validateCompactJson": true,
+    "unpack": true,
+    "validateExpandedJson": true
+  }
+}

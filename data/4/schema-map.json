@@ -1,0 +1,19 @@
+{
+  "b": {
+    "key": "branches"
+  },
+  "c": {
+    "key": "custodians",
+    "type": "custodian"
+  },
+  "custodian": {
+    "assign": [
+      "h",
+      "perms"
+    ],
+    "return": {
+      "hash": "${h}",
+      "permissions": "${perms}"
+    }
+  }
+}

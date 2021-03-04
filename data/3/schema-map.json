@@ -1,0 +1,32 @@
+{
+  "i": {
+    "key": "images",
+    "type": "image"
+  },
+  "image": {
+    "assign": [
+      "n",
+      "t",
+      "v"
+    ],
+    "return": {
+      "name": "${n}",
+      "type": "${t}",
+      "variants": "${v}"
+    }
+  },
+  "v": {
+    "assign": [
+      "u",
+      "m",
+      "w",
+      "h"
+    ],
+    "return": {
+      "url": "${u}",
+      "mime": "${m}",
+      "width": "${w}",
+      "height": "${h}"
+    }
+  }
+}
