@@ -221,7 +221,6 @@ _locale_file = "%L%-%C";
   ## ADDRESS LINES: A method array value, e.g. the lines of an address
   *id=al;
   *name=lines;
-  *assign=[[str*]];
   *superclass=arr
 );
 
