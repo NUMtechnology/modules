@@ -1,32 +1,38 @@
 {
+  "@n": {
+    "rewriteValue": "%/compact.@n"
+  },
   "i": {
-    "key": "images",
-    "type": "image"
+    "rewriteKey": "images",
+    "arrayItems": "image"
   },
   "image": {
-    "assign": [
+    "assignKeys": [
       "n",
       "t",
       "v"
     ],
-    "return": {
-      "name": "${n}",
-      "type": "${t}",
-      "variants": "${v}"
+    "replacePair": {
+      "name": "%n",
+      "type": "%t",
+      "variants": "%v"
     }
   },
   "v": {
-    "assign": [
+    "arrayItems": "variant"
+  },
+  "variant": {
+    "assignKeys": [
       "u",
       "m",
       "w",
       "h"
     ],
-    "return": {
-      "url": "${u}",
-      "mime": "${m}",
-      "width": "${w}",
-      "height": "${h}"
+    "replacePair": {
+      "url": "%u",
+      "mime": "%m",
+      "width": "%w",
+      "height": "%h"
     }
   }
 }

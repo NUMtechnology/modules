@@ -1,19 +1,19 @@
 {
   "b": {
-    "key": "branches"
+    "rewriteKey": "branches"
   },
   "c": {
-    "key": "custodians",
-    "type": "custodian"
+    "rewriteKey": "custodians",
+    "arrayItems": "custodian"
   },
   "custodian": {
-    "assign": [
+    "assignKeys": [
       "h",
       "perms"
     ],
-    "return": {
-      "hash": "${h}",
-      "permissions": "${perms}"
+    "replacePair": {
+      "hash": "%h",
+      "permissions": "%perms"
     }
   }
 }

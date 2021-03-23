@@ -1,12 +1,10 @@
 {
   "@n": {
-    "return": {
-      "@n": "${@n}"
-    }
+    "rewriteValue": "%/compact.@n"
   },
   "o": {
-    "key": "organisation",
-    "assign": [
+    "rewriteKey": "organisation",
+    "assignKeys": [
       "n",
       "id",
       "a",
@@ -16,21 +14,21 @@
       "e",
       "c"
     ],
-    "return": {
-      "name": "${n}",
-      "identifier": "${id}",
-      "address": "${a}",
-      "postcode_zip": "${pz}",
-      "country": "${co}",
-      "telephone": "${t}",
-      "email": "${e}",
-      "contacts": "${c}",
+    "rewriteValue": {
+      "name": "%n",
+      "identifier": "%id",
+      "address": "%a",
+      "postcode_zip": "%pz",
+      "country": "%co",
+      "telephone": "%t",
+      "email": "%e",
+      "contacts": "%c",
       "object_display_name": "Organisation"
     }
   },
   "AD": {
-    "key": "AD",
-    "assign": [
+    "rewriteKey": "AD",
+    "assignKeys": [
       "n",
       "a",
       "pz",
@@ -38,18 +36,18 @@
       "e",
       "t"
     ],
-    "return": {
-      "name": "${n}",
-      "address": "${a}",
-      "postcode_zip": "${pz}",
-      "country": "${co}",
-      "telephone": "${t}",
-      "email": "${e}"
+    "rewriteValue": {
+      "name": "%n",
+      "address": "%a",
+      "postcode_zip": "%pz",
+      "country": "%co",
+      "telephone": "%t",
+      "email": "%e"
     }
   },
   "TC": {
-    "key": "TC",
-    "assign": [
+    "rewriteKey": "TC",
+    "assignKeys": [
       "n",
       "a",
       "pz",
@@ -57,18 +55,18 @@
       "e",
       "t"
     ],
-    "return": {
-      "name": "${n}",
-      "address": "${a}",
-      "postcode_zip": "${pz}",
-      "country": "${co}",
-      "telephone": "${t}",
-      "email": "${e}"
+    "rewriteValue": {
+      "name": "%n",
+      "address": "%a",
+      "postcode_zip": "%pz",
+      "country": "%co",
+      "telephone": "%t",
+      "email": "%e"
     }
   },
   "SC": {
-    "key": "SC",
-    "assign": [
+    "rewriteKey": "SC",
+    "assignKeys": [
       "n",
       "a",
       "pz",
@@ -76,13 +74,31 @@
       "e",
       "t"
     ],
-    "return": {
-      "name": "${n}",
-      "address": "${a}",
-      "postcode_zip": "${pz}",
-      "country": "${co}",
-      "telephone": "${t}",
-      "email": "${e}"
+    "rewriteValue": {
+      "name": "%n",
+      "address": "%a",
+      "postcode_zip": "%pz",
+      "country": "%co",
+      "telephone": "%t",
+      "email": "%e"
     }
+  },
+  "n": {
+    "rewriteKey": "name"
+  },
+  "e": {
+    "rewriteKey": "email"
+  },
+  "t": {
+    "rewriteKey": "telephone"
+  },
+  "al": {
+    "rewriteKey": "lines"
+  },
+  "pz": {
+    "rewriteKey": "postcode_zip"
+  },
+  "co": {
+    "rewriteKey": "country"
   }
 }
