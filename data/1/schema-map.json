@@ -7,15 +7,13 @@
     "assignKeys": [
       "n",
       "s",
-      "c",
-      "h"
+      "c"
     ],
     "rewriteValue": {
       "object_display_name": "%/subs.locale.o.name",
       "name": "%n",
       "slogan": "%s",
-      "contacts": "%c",
-      "hours": "%h"
+      "contacts": "%c"
     }
   },
   "p": {
