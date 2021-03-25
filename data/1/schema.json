@@ -10,18 +10,17 @@
       "type": "integer",
       "default": 1
     },
-    "notNullString": {
-      "$id": "#root/notNullString",
-      "title": "notNullString",
-      "type": "string",
-      "nullable": false
-    },
-    "notEmptyString": {
-      "$id": "#root/notEmptyString",
-      "title": "notEmptyString",
-      "type": "string",
-      "minLength": 1,
-      "nullable": false
+    "nullOrString": {
+      "$id": "#root/nullOrString",
+      "title": "nullOrString",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "hours": {
       "$id": "#root/hours",
@@ -31,11 +30,11 @@
         "available": {
           "type": "array",
           "items": {
-            "$ref": "#root/notNullString"
+            "$ref": "#root/nullOrString"
           }
         },
         "time_zone_location": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         }
       },
       "additionalProperties": false
@@ -47,10 +46,10 @@
       "default": {},
       "properties": {
         "@L": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "description": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         }
       },
       "required": [
@@ -65,28 +64,28 @@
       "default": {},
       "properties": {
         "value": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         },
         "description": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         },
         "hours": {
           "$ref": "#root/hours"
         },
         "prefix": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         },
         "description_default": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         },
         "object_display_name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "controller": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "value_prefix": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "method_type": {
           "enum": [
@@ -107,19 +106,19 @@
       "default": {},
       "properties": {
         "description": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         },
         "hours": {
           "$ref": "#root/hours"
         },
         "prefix": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         },
         "description_default": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         },
         "object_display_name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "method_type": {
           "enum": [
@@ -134,10 +133,10 @@
           }
         },
         "postcode": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         },
         "country": {
-          "$ref": "#root/notNullString"
+          "$ref": "#root/nullOrString"
         }
       },
       "required": [
@@ -183,16 +182,16 @@
       ],
       "properties": {
         "name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "role": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "contacts": {
           "$ref": "#root/contacts"
         },
         "object_display_name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         }
       },
       "additionalProperties": false
@@ -208,16 +207,16 @@
       ],
       "properties": {
         "name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "bio": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "contacts": {
           "$ref": "#root/contacts"
         },
         "object_display_name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         }
       },
       "additionalProperties": false
@@ -233,16 +232,16 @@
       ],
       "properties": {
         "name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "slogan": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "contacts": {
           "$ref": "#root/contacts"
         },
         "object_display_name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         }
       },
       "additionalProperties": false
@@ -258,16 +257,16 @@
       ],
       "properties": {
         "name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "description": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "contacts": {
           "$ref": "#root/contacts"
         },
         "object_display_name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         }
       },
       "additionalProperties": false
@@ -283,16 +282,16 @@
       ],
       "properties": {
         "name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "description": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "contacts": {
           "$ref": "#root/contacts"
         },
         "object_display_name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         }
       },
       "additionalProperties": false
@@ -308,16 +307,16 @@
       ],
       "properties": {
         "name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "description": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         },
         "contacts": {
           "$ref": "#root/contacts"
         },
         "object_display_name": {
-          "$ref": "#root/notEmptyString"
+          "$ref": "#root/nullOrString"
         }
       },
       "additionalProperties": false
