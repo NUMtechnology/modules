@@ -11,7 +11,7 @@ config(
   );
 
   contact(
-    placeholder=Add a contact method or a record link?
+    placeholder=Add a contact method? Or a link to another record?
   );
 
   l(
@@ -180,7 +180,7 @@ config(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/play.google.com-100.png
+    icon="https://www.logos.uk/num/play.google.com-100.png"
   );
 
   as(
@@ -188,47 +188,47 @@ config(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/apps.apple.com-100.png
+    icon="https://www.logos.uk/num/apps.apple.com-100.png"
   );
 
   bt(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/tieba.baidu.com-100.png
+    icon="https://www.logos.uk/num/tieba.baidu.com-100.png"
   );
 
   fb(
     fields(v(label=Enter the Facebook page name));
-    icon=https://www.logos.uk/num/facebook.com-100.png
+    icon="https://www.logos.uk/num/facebook.com-100.png"
   );
 
   fs(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/foursquare.com-100.png
+    icon="https://www.logos.uk/num/foursquare.com-100.png"
   );
 
   ft(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/facetime@apple.com-100.png
+    icon="https://www.logos.uk/num/facetime@apple.com-100.png"
   );
 
   gh(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/plus.google.com-100.png
+    icon="https://www.logos.uk/num/plus.google.com-100.png"
   );
 
   im(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/imessage@apple.com-100.png
+    icon="https://www.logos.uk/num/imessage@apple.com-100.png"
   );
 
   in(
@@ -236,14 +236,14 @@ config(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/instagram.com-100.png
+    icon="https://www.logos.uk/num/instagram.com-100.png"
   );
 
   kk(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/kik.com-100.png
+    icon="https://www.logos.uk/num/kik.com-100.png"
   );
 
   li(
@@ -251,112 +251,112 @@ config(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/linkedin.com-100.png
+    icon="https://www.logos.uk/num/linkedin.com-100.png"
   );
 
   ln(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/line.me-100.png
+    icon="https://www.logos.uk/num/line.me-100.png"
   );
 
   md(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/medium.com-100.png
+    icon="https://www.logos.uk/num/medium.com-100.png"
   );
 
   pr(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/periscope.tv-100.png
+    icon="https://www.logos.uk/num/periscope.tv-100.png"
   );
 
   pi(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/pinterest.com-100.png
+    icon="https://www.logos.uk/num/pinterest.com-100.png"
   );
 
   qq(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/qq.com-100.png
+    icon="https://www.logos.uk/num/qq.com-100.png"
   );
 
   qz(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/qzone.com-100.png
+    icon="https://www.logos.uk/num/qzone.com-100.png"
   );
 
   rd(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/reddit.com-100.png
+    icon="https://www.logos.uk/num/reddit.com-100.png"
   );
 
   rn(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/renren.com-100.png
+    icon="https://www.logos.uk/num/renren.com-100.png"
   );
 
   sc(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/soundcloud.com-100.png
+    icon="https://www.logos.uk/num/soundcloud.com-100.png"
   );
 
   sk(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/skype.com-100.png
+    icon="https://www.logos.uk/num/skype.com-100.png"
   );
 
   sr(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/swarmapp.com-100.png
+    icon="https://www.logos.uk/num/swarmapp.com-100.png"
   );
 
   sn(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/snapchat.com-100.png
+    icon="https://www.logos.uk/num/snapchat.com-100.png"
   );
 
   sw(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/weibo.com-100.png
+    icon="https://www.logos.uk/num/weibo.com-100.png"
   );
 
   tb(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/tumblr.com-100.png
+    icon="https://www.logos.uk/num/tumblr.com-100.png"
   );
 
   tl(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/telegram.com-100.png
+    icon="https://www.logos.uk/num/telegram.com-100.png"
   );
 
   tw(
@@ -365,69 +365,69 @@ config(
       method=href;
       value_validate_prefix=@
     );
-    icon=https://www.logos.uk/num/twitter.com-100.png
+    icon="https://www.logos.uk/num/twitter.com-100.png"
   );
 
   to(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/twoo.com-100.png
+    icon="https://www.logos.uk/num/twoo.com-100.png"
   );
 
   vb(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/viber.com-100.png
+    icon="https://www.logos.uk/num/viber.com-100.png"
   );
 
   vk(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/vk.com-100.png
+    icon="https://www.logos.uk/num/vk.com-100.png"
   );
 
   vm(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/vimeo.com-100.png
+    icon="https://www.logos.uk/num/vimeo.com-100.png"
   );
 
   wa(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/whatsapp.com-100.png
+    icon="https://www.logos.uk/num/whatsapp.com-100.png"
   );
 
   wc(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/wechat.com-100.png
+    icon="https://www.logos.uk/num/wechat.com-100.png"
   );
 
   xi(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/xing.com-100.png
+    icon="https://www.logos.uk/num/xing.com-100.png"
   );
 
   yt(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/youtube.com-100.png
+    icon="https://www.logos.uk/num/youtube.com-100.png"
   );
 
   yy(
     validate(
       method=href
     );
-    icon=https://www.logos.uk/num/yy.com-100.png
+    icon="https://www.logos.uk/num/yy.com-100.png"
   )
 );
