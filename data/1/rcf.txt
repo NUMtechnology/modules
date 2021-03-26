@@ -34,18 +34,6 @@ _locale_file = "%L%-%C";
   *superclass=map
 );
 
-## LINK: A link to someone or something to make contact with
-*class(
-  *id=l;
-  *name=link;
-  object_display_name=Link to another NUM record;
-  *superclass=contact;
-  *assign=[
-    [@L];
-    [d;@L];
-  ]
-);
-
 ## METHOD: A contact method
 *class(
   *id=method;
@@ -59,6 +47,18 @@ _locale_file = "%L%-%C";
     [d;v];
     ## description, value and available hours, e.g. 'Sales:441270123456:wd@9-17'
     [d;v;h]
+  ]
+);
+
+## LINK: A link to someone or something to make contact with
+*class(
+  *id=l;
+  *name=link;
+  object_display_name=Link to another NUM record;
+  *superclass=contact;
+  *assign=[
+    [@L];
+    [d;@L];
   ]
 );
 
