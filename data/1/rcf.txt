@@ -38,7 +38,7 @@ _locale_file = "%L%-%C";
 *class(
   *id=l;
   *name=link;
-  object_display_name=Link;
+  object_display_name=Link to another NUM record;
   *superclass=contact;
   *assign=[
     [@L];
