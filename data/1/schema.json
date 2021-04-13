@@ -13,13 +13,9 @@
     "nullOrString": {
       "$id": "#root/nullOrString",
       "title": "nullOrString",
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
+      "type": [
+        "string",
+        "null"
       ]
     },
     "hours": {
@@ -354,70 +350,106 @@
   "additionalProperties": false,
   "anyOf": [
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "organisation": {
+          "$ref": "#root/organisation"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "organisation": {
-        "$ref": "#root/organisation"
-      }
+      "required": [
+        "@n",
+        "organisation"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "department": {
+          "$ref": "#root/department"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "department": {
-        "$ref": "#root/department"
-      }
+      "required": [
+        "@n",
+        "department"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "group": {
+          "$ref": "#root/group"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "group": {
-        "$ref": "#root/group"
-      }
+      "required": [
+        "@n",
+        "group"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "location": {
+          "$ref": "#root/location"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "location": {
-        "$ref": "#root/location"
-      }
+      "required": [
+        "@n",
+        "location"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "person": {
+          "$ref": "#root/person"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "person": {
-        "$ref": "#root/person"
-      }
+      "required": [
+        "@n",
+        "person"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "employee": {
+          "$ref": "#root/employee"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "employee": {
-        "$ref": "#root/employee"
-      }
+      "required": [
+        "@n",
+        "employee"
+      ]
     }
   ]
 }

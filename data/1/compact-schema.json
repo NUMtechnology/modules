@@ -329,88 +329,124 @@
   "additionalProperties": false,
   "anyOf": [
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "?": {
+          "$ref": "#root/index"
+        },
+        "o": {
+          "$ref": "#root/organisation"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "?": {
-        "$ref": "#root/index"
-      },
-      "o": {
-        "$ref": "#root/organisation"
-      }
+      "required": [
+        "@n",
+        "o"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "?": {
+          "$ref": "#root/index"
+        },
+        "dp": {
+          "$ref": "#root/department"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "?": {
-        "$ref": "#root/index"
-      },
-      "dp": {
-        "$ref": "#root/department"
-      }
+      "required": [
+        "@n",
+        "dp"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "?": {
+          "$ref": "#root/index"
+        },
+        "gp": {
+          "$ref": "#root/group"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "?": {
-        "$ref": "#root/index"
-      },
-      "gp": {
-        "$ref": "#root/group"
-      }
+      "required": [
+        "@n",
+        "gp"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "?": {
+          "$ref": "#root/index"
+        },
+        "lc": {
+          "$ref": "#root/location"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "?": {
-        "$ref": "#root/index"
-      },
-      "lc": {
-        "$ref": "#root/location"
-      }
+      "required": [
+        "@n",
+        "lc"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "?": {
+          "$ref": "#root/index"
+        },
+        "p": {
+          "$ref": "#root/person"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "?": {
-        "$ref": "#root/index"
-      },
-      "p": {
-        "$ref": "#root/person"
-      }
+      "required": [
+        "@n",
+        "p"
+      ]
     },
     {
-      "@n": {
-        "$ref": "#root/@n"
+      "properties": {
+        "@n": {
+          "$ref": "#root/@n"
+        },
+        "@p": {
+          "type": "boolean"
+        },
+        "?": {
+          "$ref": "#root/index"
+        },
+        "e": {
+          "$ref": "#root/employee"
+        }
       },
-      "@p": {
-        "type": "boolean"
-      },
-      "?": {
-        "$ref": "#root/index"
-      },
-      "e": {
-        "$ref": "#root/employee"
-      }
+      "required": [
+        "@n",
+        "e"
+      ]
     }
   ]
 }
