@@ -21,10 +21,16 @@
     "hours": {
       "$id": "#root/hours",
       "title": "hours",
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "available": {
-          "type": "array",
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
             "$ref": "#root/nullOrString"
           }
@@ -38,7 +44,10 @@
     "link": {
       "$id": "#root/link",
       "title": "link",
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "default": {},
       "properties": {
         "@L": {
