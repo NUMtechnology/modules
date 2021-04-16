@@ -109,14 +109,11 @@
     "rewriteKey": "link",
     "assignKeys": [
       "@L",
-      "d",
-      "n"
+      "d"
     ],
     "rewriteValue": {
       "@L": "%@L",
-      "description": "%d",
-      "name": "%n",
-      "object_display_name": "Link"
+      "description": "%d"
     }
   },
   "fb": {
