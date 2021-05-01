@@ -10,8 +10,8 @@ config(
   p(
     name=post;
     superclass=map;
-    fields=(t();b();tg();a();c();u());
-    required=[t;b;a;c;u]
+    fields=(t();b();tg();a();ca();ua());
+    required=[t;b;a;ca;ua]
   );
   t(
     label=Title
@@ -27,17 +27,17 @@ config(
   a(
     label=Author
   );
-  c(
+  ca(
     label="Created at"
   );
-  u(
+  ua(
     label="Updated at"
   );
   rp(
     name=repost;
     superclass=map;
-    fields=(@L();d();c();u());
-    required=[@L;c;u]
+    fields=(@L();d();ca();ua());
+    required=[@L;ca;ua]
   );
   @L(
     label=Enter link address
@@ -49,7 +49,7 @@ config(
   l(
     name=like;
     superclass=map;
-    fields=(@L();c();u());
-    required=[@L;c;u]
+    fields=(@L();ca();ua());
+    required=[@L;ca;ua]
   )
 )

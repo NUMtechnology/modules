@@ -31,12 +31,12 @@
   *superclass=str
 );
 *class(
-  *id=c;
+  *id=ca;
   *name=created_at;
   *superclass=str
 );
 *class(
-  *id=u;
+  *id=ua;
   *name=updated_at;
   *superclass=str
 );
