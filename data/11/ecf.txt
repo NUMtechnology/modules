@@ -1,0 +1,36 @@
+config(
+  root(
+    name=root;
+    superclass=map;
+    fields=(e())
+  );
+  e(
+    label="What type of entry do you want to make?"
+  );
+  p(
+    name=post;
+    superclass=map;
+    fields=(t();b();tg();a();c();u());
+    required=[t;b;a;c;u]
+  );
+  t(
+    label=Title
+  );
+  b(
+    label=Body;
+    component=textarea
+  );
+  tg(
+    label=Tags;
+    fields=(str())
+  );
+  a(
+    label=Author
+  );
+  c(
+    label="Created at"
+  );
+  u(
+    label="Updated at"
+  )
+)

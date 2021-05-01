@@ -1,0 +1,42 @@
+*class(
+  *id=e;
+  *name=entry;
+  *superclass=map
+);
+*class(
+  *id=p;
+  *name=post;
+  *superclass=e;
+  object_display_name=Post
+);
+*class(
+  *id=t;
+  *name=title;
+  *superclass=str
+);
+*class(
+  *id=b;
+  *name=body;
+  *superclass=str
+);
+*class(
+  *id=tg;
+  *name=tags;
+  *superclass=arr;
+  *assign=[[str*]]
+);
+*class(
+  *id=a;
+  *name=author;
+  *superclass=str
+);
+*class(
+  *id=c;
+  *name=created_at;
+  *superclass=str
+);
+*class(
+  *id=u;
+  *name=updated_at;
+  *superclass=str
+);
