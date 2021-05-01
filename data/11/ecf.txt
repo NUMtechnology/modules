@@ -32,5 +32,18 @@ config(
   );
   u(
     label="Updated at"
+  );
+  rp(
+    name=repost;
+    superclass=map;
+    fields=(@L();d();c();u());
+    required=[@L;c;u]
+  );
+  @L(
+    label=Enter link address
+  );
+  d(
+    label=Add an optional comment;
+    component=textarea
   )
 )

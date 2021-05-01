@@ -40,3 +40,14 @@
   *name=updated_at;
   *superclass=str
 );
+*class(
+  *id=rp;
+  *name=repost;
+  *superclass=e;
+  object_display_name=Repost
+);
+*class(
+  *id=d;
+  *name=description;
+  *superclass=str
+);
