@@ -41,10 +41,10 @@
   *superclass=str
 );
 *class(
-  *id=rp;
-  *name=repost;
+  *id=c;
+  *name=comment;
   *superclass=e;
-  object_display_name=Repost
+  object_display_name=Comment
 );
 *class(
   *id=d;
