@@ -47,11 +47,6 @@
   object_display_name=Comment
 );
 *class(
-  *id=d;
-  *name=description;
-  *superclass=str
-);
-*class(
   *id=l;
   *name=like;
   *superclass=e;

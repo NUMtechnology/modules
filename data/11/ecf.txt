@@ -36,15 +36,11 @@ config(
   c(
     name=comment;
     superclass=map;
-    fields=(@L();d();ca();ua());
+    fields=(@L();b(label=Add an optional comment);ca();ua());
     required=[@L;ca;ua]
   );
   @L(
     label=Enter link address
-  );
-  d(
-    label=Add an optional comment;
-    component=textarea
   );
   l(
     name=like;
