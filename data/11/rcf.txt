@@ -51,3 +51,9 @@
   *name=description;
   *superclass=str
 );
+*class(
+  *id=l;
+  *name=like;
+  *superclass=e;
+  object_display_name=Like
+);

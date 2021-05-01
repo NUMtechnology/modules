@@ -45,5 +45,11 @@ config(
   d(
     label=Add an optional comment;
     component=textarea
+  );
+  l(
+    name=like;
+    superclass=map;
+    fields=(@L();c();u());
+    required=[@L;c;u]
   )
 )
