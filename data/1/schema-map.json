@@ -89,6 +89,7 @@
       "d"
     ],
     "replacePair": {
+      "method_type" : "link",
       "@L": "%@L",
       "description": "%d"
     }
@@ -225,96 +226,6 @@
       "hours": "%h"
     }
   },
-  "fb": {
-    "assignKeys": [
-      "v",
-      "d"
-    ],
-    "replacePair": {
-      "method_type" : "facebook",
-      "method_display_name": "%/subs.locale.fb.name",
-      "description_default": "%/subs.locale.fb.default",
-      "description": "%d",
-      "action": "https://www.facebook.com/%v",
-      "controller": "facebook.com",
-      "value": "/%v"
-    }
-  },
-  "in": {
-    "assignKeys": [
-      "v",
-      "d"
-    ],
-    "replacePair": {
-      "method_type": "instagram",
-      "method_display_name": "%/subs.locale.in.name",
-      "description_default": "%/subs.locale.in.default",
-      "description": "%d",
-      "action": "https://www.instagram.com/%v",
-      "controller": "instagram.com",
-      "value": "@%v"
-    }
-  },
-  "li": {
-    "assignKeys": [
-      "v",
-      "d"
-    ],
-    "replacePair": {
-      "method_type": "linkedin",
-      "method_display_name": "%/subs.locale.li.name",
-      "description_default": "%/subs.locale.li.default",
-      "description": "%d",
-      "action": "https://www.linkedin.com/%v",
-      "controller": "linkedin.com",
-      "value": "/%v"
-    }
-  },
-  "yt": {
-    "assignKeys": [
-      "v",
-      "d"
-    ],
-    "replacePair": {
-      "method_type": "youtube",
-      "method_display_name": "%/subs.locale.yt.name",
-      "description_default": "%/subs.locale.yt.default",
-      "description": "%d",
-      "action": "https://www.youtube.com/%v",
-      "controller": "youtube.com",
-      "value": "/%v"
-    }
-  },
-  "pi": {
-    "assignKeys": [
-      "v",
-      "d"
-    ],
-    "replacePair": {
-      "method_type": "pinterest",
-      "method_display_name": "%/subs.locale.pi.name",
-      "description_default": "%/subs.locale.pi.default",
-      "description": "%d",
-      "action": "https://www.pinterest.com/%v",
-      "controller": "pinterest.com",
-      "value": "/%v"
-    }
-  },
-  "tw": {
-    "assignKeys": [
-      "v",
-      "d"
-    ],
-    "replacePair": {
-      "method_type": "twitter",
-      "method_display_name": "%/subs.locale.tw.name",
-      "description_default": "%/subs.locale.tw.default",
-      "description": "%d",
-      "action": "https://www.twitter.com/%v",
-      "controller": "twitter.com",
-      "value": "@%v"
-    }
-  },
   "aa": {
     "assignKeys": [
       "v",
@@ -357,6 +268,21 @@
       "value" : "%v"
     }
   },
+  "fb": {
+    "assignKeys": [
+      "v",
+      "d"
+    ],
+    "replacePair": {
+      "method_type" : "facebook",
+      "method_display_name": "%/subs.locale.fb.name",
+      "description_default": "%/subs.locale.fb.default",
+      "description": "%d",
+      "action": "https://www.facebook.com/%v",
+      "controller": "facebook.com",
+      "value": "/%v"
+    }
+  },  
   "fs": {
     "assignKeys": [
       "v",
@@ -427,6 +353,21 @@
       "value" : "%v"
     }
   },
+  "li": {
+    "assignKeys": [
+      "v",
+      "d"
+    ],
+    "replacePair": {
+      "method_type": "linkedin",
+      "method_display_name": "%/subs.locale.li.name",
+      "description_default": "%/subs.locale.li.default",
+      "description": "%d",
+      "action": "https://www.linkedin.com/%v",
+      "controller": "linkedin.com",
+      "value": "/%v"
+    }
+  },  
   "ln": {
     "assignKeys": [
       "v",
@@ -455,6 +396,36 @@
       "value" : "%v"
     }
   },
+  "in": {
+    "assignKeys": [
+      "v",
+      "d"
+    ],
+    "replacePair": {
+      "method_type": "instagram",
+      "method_display_name": "%/subs.locale.in.name",
+      "description_default": "%/subs.locale.in.default",
+      "description": "%d",
+      "action": "https://www.instagram.com/%v",
+      "controller": "instagram.com",
+      "value": "@%v"
+    }
+  },  
+  "pi": {
+    "assignKeys": [
+      "v",
+      "d"
+    ],
+    "replacePair": {
+      "method_type": "pinterest",
+      "method_display_name": "%/subs.locale.pi.name",
+      "description_default": "%/subs.locale.pi.default",
+      "description": "%d",
+      "action": "https://www.pinterest.com/%v",
+      "controller": "pinterest.com",
+      "value": "/%v"
+    }
+  },  
   "pr": {
     "assignKeys": [
       "v",
@@ -637,6 +608,21 @@
       "value" : "%v"
     }
   },
+  "tw": {
+    "assignKeys": [
+      "v",
+      "d"
+    ],
+    "replacePair": {
+      "method_type": "twitter",
+      "method_display_name": "%/subs.locale.tw.name",
+      "description_default": "%/subs.locale.tw.default",
+      "description": "%d",
+      "action": "https://www.twitter.com/%v",
+      "controller": "twitter.com",
+      "value": "@%v"
+    }
+  },  
   "vb": {
     "assignKeys": [
       "v",
@@ -721,6 +707,21 @@
       "value" : "%v"
     }
   },
+  "yt": {
+    "assignKeys": [
+      "v",
+      "d"
+    ],
+    "replacePair": {
+      "method_type": "youtube",
+      "method_display_name": "%/subs.locale.yt.name",
+      "description_default": "%/subs.locale.yt.default",
+      "description": "%d",
+      "action": "https://www.youtube.com/%v",
+      "controller": "youtube.com",
+      "value": "/%v"
+    }
+  },  
   "yy": {
     "assignKeys": [
       "v",
