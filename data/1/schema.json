@@ -119,6 +119,9 @@
     "name": {
       "$ref": "#root/nullOrString"
     },
+    "description": {
+      "$ref": "#root/nullOrString"
+    },
     "role": {
       "$ref": "#root/nullOrString"
     },
