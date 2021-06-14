@@ -6,7 +6,7 @@
       "c"
     ],
     "replacePair": {
-      "object_type" : "organization",
+      "object_type": "organization",
       "object_display_name": "%/subs.locale.o.name",
       "name": "%n",
       "slogan": "%s",
@@ -20,7 +20,7 @@
       "c"
     ],
     "replacePair": {
-      "object_type" : "person",
+      "object_type": "person",
       "object_display_name": "%/subs.locale.p.name",
       "name": "%n",
       "bio": "%b",
@@ -34,7 +34,7 @@
       "c"
     ],
     "replacePair": {
-      "object_type" : "employee",
+      "object_type": "employee",
       "object_display_name": "%/subs.locale.e.name",
       "name": "%n",
       "role": "%r",
@@ -48,7 +48,7 @@
       "c"
     ],
     "replacePair": {
-      "object_type" : "location",
+      "object_type": "location",
       "object_display_name": "%/subs.locale.lc.name",
       "name": "%n",
       "description": "%d",
@@ -62,7 +62,7 @@
       "c"
     ],
     "replacePair": {
-      "object_type": "group",      
+      "object_type": "group",
       "object_display_name": "%/subs.locale.gp.name",
       "name": "%n",
       "description": "%d",
@@ -89,7 +89,7 @@
       "d"
     ],
     "replacePair": {
-      "method_type" : "link",
+      "method_type": "link",
       "@L": "%@L",
       "description": "%d"
     }
@@ -99,7 +99,7 @@
   },
   "tz": {
     "rewriteKey": "time_zone_location"
-  },  
+  },
   "a": {
     "assignKeys": [
       "al",
@@ -108,15 +108,15 @@
       "d"
     ],
     "replacePair": {
-      "method_type" : "address",
+      "method_type": "address",
       "method_display_name": "%/subs.locale.a.name",
       "description": "%d",
       "description_default": "%/subs.locale.a.default",
       "lines": "%al",
       "postcode": "%pz",
       "country": "%co",
-      "action" : null,
-      "controller" : null
+      "action": null,
+      "controller": null
     }
   },
   "g": {
@@ -125,15 +125,15 @@
       "d"
     ],
     "replacePair": {
-      "method_type" : "gps",
+      "method_type": "gps",
       "method_display_name": "%/subs.locale.g.name",
       "description_default": "%/subs.locale.g.default",
       "description": "%d",
       "value": "%v",
-      "action" : null,
-      "controller" : null
+      "action": null,
+      "controller": null
     }
-  },  
+  },
   "em": {
     "assignKeys": [
       "v",
@@ -145,7 +145,7 @@
       "description": "%d",
       "value": "%v",
       "action": "mailto:%v",
-      "controller" : null
+      "controller": null
     }
   },
   "fx": {
@@ -160,7 +160,7 @@
       "description": "%d",
       "action": "tel:%v",
       "value": "%v",
-      "controller" : null      
+      "controller": null
     }
   },
   "u": {
@@ -168,14 +168,14 @@
       "v",
       "d"
     ],
-    "rewriteValue": {
+    "replacePair": {
       "method_type": "url",
       "method_display_name": "%/subs.locale.u.name",
       "description_default": "%/subs.locale.u.default",
       "description": "%d",
       "action": "https://%v",
       "value": "%v",
-      "controller" : null      
+      "controller": null
     }
   },
   "uu": {
@@ -190,7 +190,7 @@
       "description": "%d",
       "action": "http://%v",
       "value": "%v",
-      "controller" : null
+      "controller": null
     }
   },
   "t": {
@@ -206,7 +206,7 @@
       "description": "%d",
       "action": "tel:%v",
       "value": "%v",
-      "controller" : null,
+      "controller": null,
       "hours": "%h"
     }
   },
@@ -217,7 +217,7 @@
       "h"
     ],
     "replacePair": {
-      "method_type": "sms",    
+      "method_type": "sms",
       "method_display_name": "%/subs.locale.sm.name",
       "description_default": "%/subs.locale.sm.default",
       "description": "%d",
@@ -237,7 +237,7 @@
       "description_default": "locale.aa.default",
       "action": "https://play.google.com/store/apps/details?id=%v",
       "controller": "play.google.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "as": {
@@ -251,7 +251,7 @@
       "description_default": "locale.as.default",
       "action": "https://itunes.apple.com/app/%v",
       "controller": "apps.apple.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "bt": {
@@ -265,7 +265,7 @@
       "description_default": "locale.bt.default",
       "action": "https://tieba.baidu.com/%v",
       "controller": "tieba.baidu.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "fb": {
@@ -274,7 +274,7 @@
       "d"
     ],
     "replacePair": {
-      "method_type" : "facebook",
+      "method_type": "facebook",
       "method_display_name": "%/subs.locale.fb.name",
       "description_default": "%/subs.locale.fb.default",
       "description": "%d",
@@ -282,7 +282,7 @@
       "controller": "facebook.com",
       "value": "/%v"
     }
-  },  
+  },
   "fs": {
     "assignKeys": [
       "v",
@@ -294,7 +294,7 @@
       "description_default": "locale.fs.default",
       "action": "https://www.foursquare.com/%v",
       "controller": "foursquare.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "ft": {
@@ -308,7 +308,7 @@
       "description_default": "locale.ft.default",
       "action": "facetime://%v",
       "controller": "apple.com/facetime",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "gh": {
@@ -322,7 +322,7 @@
       "description_default": "locale.gh.default",
       "action": "https://www.github.com/%v",
       "controller": "github.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "im": {
@@ -336,7 +336,7 @@
       "description_default": "locale.im.default",
       "action": "imessage://%v",
       "controller": "apple.com/imessage",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "kk": {
@@ -350,7 +350,7 @@
       "description_default": "locale.kk.default",
       "action": "https://www.kik.com/u/%v",
       "controller": "kik.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "li": {
@@ -367,7 +367,7 @@
       "controller": "linkedin.com",
       "value": "/%v"
     }
-  },  
+  },
   "ln": {
     "assignKeys": [
       "v",
@@ -379,7 +379,7 @@
       "description_default": "locale.ln.default",
       "action": "line://%v",
       "controller": "line.me",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "md": {
@@ -393,7 +393,7 @@
       "description_default": "locale.md.default",
       "action": "https://www.medium.com/%v",
       "controller": "medium.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "in": {
@@ -410,7 +410,7 @@
       "controller": "instagram.com",
       "value": "@%v"
     }
-  },  
+  },
   "pi": {
     "assignKeys": [
       "v",
@@ -425,7 +425,7 @@
       "controller": "pinterest.com",
       "value": "/%v"
     }
-  },  
+  },
   "pr": {
     "assignKeys": [
       "v",
@@ -437,7 +437,7 @@
       "description_default": "locale.pr.default",
       "action": "https://www.periscope.tv/%v",
       "controller": "periscope.tv",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "qq": {
@@ -451,7 +451,7 @@
       "description_default": "locale.qq.default",
       "action": "https://www.qq.com/%v",
       "controller": "qq.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "qz": {
@@ -465,7 +465,7 @@
       "description_default": "locale.qz.default",
       "action": "https://www.qzone.com/%v",
       "controller": "qzone.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "rd": {
@@ -479,7 +479,7 @@
       "description_default": "locale.rd.default",
       "action": "https://www.reddit.com/r/%v",
       "controller": "reddit.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "rn": {
@@ -493,7 +493,7 @@
       "description_default": "locale.rn.default",
       "action": "https://www.renren.com/%v",
       "controller": "renren.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "sc": {
@@ -507,7 +507,7 @@
       "description_default": "locale.sc.default",
       "action": "https://www.soundcloud.com/%v",
       "controller": "soundcloud.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "sk": {
@@ -521,7 +521,7 @@
       "description_default": "locale.sk.default",
       "action": "skype:%v",
       "controller": "skype.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "sr": {
@@ -535,7 +535,7 @@
       "description_default": "locale.sr.default",
       "action": "https://www.swarmapp.com/%v",
       "controller": "swarmapp.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "sn": {
@@ -549,7 +549,7 @@
       "description_default": "locale.sn.default",
       "action": "snapchat://add/%v",
       "controller": "snapchat.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "sw": {
@@ -563,7 +563,7 @@
       "description_default": "locale.sw.default",
       "action": "https://www.weibo.com/%v",
       "controller": "weibo.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "tb": {
@@ -577,7 +577,7 @@
       "description_default": "locale.tb.default",
       "action": "https://%v.tumblr.com/",
       "controller": "tumblr.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "tl": {
@@ -591,7 +591,7 @@
       "description_default": "locale.tl.default",
       "action": "https://www.telegram.me/%v",
       "controller": "telegram.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "to": {
@@ -605,7 +605,7 @@
       "description_default": "locale.to.default",
       "action": "https://www.twoo.com/%v",
       "controller": "twoo.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "tw": {
@@ -622,7 +622,7 @@
       "controller": "twitter.com",
       "value": "@%v"
     }
-  },  
+  },
   "vb": {
     "assignKeys": [
       "v",
@@ -634,7 +634,7 @@
       "description_default": "locale.vb.default",
       "action": "https://www.viber.com/%v",
       "controller": "viber.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "vk": {
@@ -648,7 +648,7 @@
       "description_default": "locale.vk.default",
       "action": "https://www.vk.com/%v",
       "controller": "vk.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "vm": {
@@ -662,7 +662,7 @@
       "description_default": "locale.vm.default",
       "action": "https://www.vimeo.com/%v",
       "controller": "vimeo.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "wa": {
@@ -676,7 +676,7 @@
       "description_default": "locale.wa.default",
       "action": "whatsapp://%v",
       "controller": "whatsapp.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "wc": {
@@ -690,7 +690,7 @@
       "description_default": "locale.wc.default",
       "action": "https://www.wechat.com/%v",
       "controller": "wechat.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "xi": {
@@ -704,7 +704,7 @@
       "description_default": "locale.xi.default",
       "action": "https://www.xing.com/%v",
       "controller": "xing.com",
-      "value" : "%v"
+      "value": "%v"
     }
   },
   "yt": {
@@ -721,7 +721,7 @@
       "controller": "youtube.com",
       "value": "/%v"
     }
-  },  
+  },
   "yy": {
     "assignKeys": [
       "v",
@@ -733,7 +733,7 @@
       "description_default": "locale.yy.default",
       "action": "https://www.yy.com/%v",
       "controller": "yy.com",
-      "value" : "%v"
+      "value": "%v"
     }
   }
 }
