@@ -1,0 +1,51 @@
+config(
+  root(
+    name=root;
+    superclass=map;
+    fields=(e())
+  );
+  e(
+    label="What type of entry do you want to make?"
+  );
+  p(
+    name=post;
+    superclass=map;
+    fields=(t();b();tg();a();ca();ua());
+    required=[t;b;a;ca;ua]
+  );
+  t(
+    label=Title
+  );
+  b(
+    label=Body;
+    component=textarea
+  );
+  tg(
+    label=Tags;
+    fields=(str())
+  );
+  a(
+    label=Author
+  );
+  ca(
+    label="Created at"
+  );
+  ua(
+    label="Updated at"
+  );
+  c(
+    name=comment;
+    superclass=map;
+    fields=(@L();b(label=Add an optional comment);ca();ua());
+    required=[@L;ca;ua]
+  );
+  @L(
+    label=Enter link address
+  );
+  l(
+    name=like;
+    superclass=map;
+    fields=(@L();ca();ua());
+    required=[@L;ca;ua]
+  )
+)
