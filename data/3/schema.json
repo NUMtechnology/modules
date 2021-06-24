@@ -93,7 +93,7 @@
       "$ref": "#root/@n"
     },
     "@p": {
-      "type": "boolean"
+      "type": "integer"
     },
     "images": {
       "$ref": "#root/images"

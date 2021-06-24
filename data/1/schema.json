@@ -111,7 +111,7 @@
       "$ref": "#root/@n"
     },
     "@p": {
-      "type": "boolean"
+      "type": "integer"
     },
     "object_type": {
       "type": "string"

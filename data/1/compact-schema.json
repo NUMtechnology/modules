@@ -302,7 +302,7 @@
       "$ref": "#root/@n"
     },
     "@p": {
-      "type": "boolean"
+      "type": "integer"
     },
     "?": {
       "$ref": "#root/index"
@@ -334,7 +334,7 @@
           "$ref": "#root/@n"
         },
         "@p": {
-          "type": "boolean"
+          "type": "integer"
         },
         "?": {
           "$ref": "#root/index"
@@ -354,7 +354,7 @@
           "$ref": "#root/@n"
         },
         "@p": {
-          "type": "boolean"
+          "type": "integer"
         },
         "?": {
           "$ref": "#root/index"
@@ -374,7 +374,7 @@
           "$ref": "#root/@n"
         },
         "@p": {
-          "type": "boolean"
+          "type": "integer"
         },
         "?": {
           "$ref": "#root/index"
@@ -394,7 +394,7 @@
           "$ref": "#root/@n"
         },
         "@p": {
-          "type": "boolean"
+          "type": "integer"
         },
         "?": {
           "$ref": "#root/index"
@@ -414,7 +414,7 @@
           "$ref": "#root/@n"
         },
         "@p": {
-          "type": "boolean"
+          "type": "integer"
         },
         "?": {
           "$ref": "#root/index"
@@ -434,7 +434,7 @@
           "$ref": "#root/@n"
         },
         "@p": {
-          "type": "boolean"
+          "type": "integer"
         },
         "?": {
           "$ref": "#root/index"
